@@ -1,0 +1,63 @@
+cdsource 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '10.0'
+
+use_frameworks!
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+target 'LifeSign' do
+
+  pod 'EmptyDataSet-Swift', '~> 5.0.0'
+  pod 'R.swift', '5.0.0'
+  pod 'ObjectMapper', '~> 3.5'
+  pod 'Alamofire', '~> 5.2'
+  pod 'MaterialComponents'
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'RevealingSplashView'
+  pod 'AdvancedPageControl'
+  pod 'SkeletonView'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+  #pod 'Starscream', '~> 4.0.0'
+  pod "CBPinEntryView"
+  pod 'CountryPickerView'
+  pod 'SwipeCellKit'
+  pod 'TimeZonePicker'
+  #pod "GetSocial/Core"
+  #pod "GetSocial/UI" # add this pod only if you plan to use GetSocial UI
+  pod 'YPImagePicker'
+  pod 'Lightbox'
+  pod 'LanguageManager-iOS'
+  pod 'IQKeyboardManagerSwift'
+  pod 'SYBadgeButton'
+  pod 'PopBounceButton'
+  pod 'netfox'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
+  pod 'Kingfisher', '~> 6.0'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
+  pod 'FBSDKLoginKit'
+  pod 'SwiftyContacts'
+  pod 'SwiftySound'
+  pod 'ImageViewer.swift', '~> 3.0'
+  pod 'Cache'
+  pod 'DateTimePicker'
+  pod 'MessageKit'
+  pod 'Lightbox'
+  
+  target 'LifeSignTests' do
+    inherit! :search_paths
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+      config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+      config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+    end
+  end
+end

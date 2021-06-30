@@ -1,0 +1,6 @@
+framework module Pods_LifeSign {
+  umbrella header "Pods-LifeSign-umbrella.h"
+
+  export *
+  module * { export * }
+}

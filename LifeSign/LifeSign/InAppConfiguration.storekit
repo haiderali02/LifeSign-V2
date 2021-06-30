@@ -1,0 +1,288 @@
+{
+  "identifier" : "EA0C3F54",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "EEA8F69B",
+      "localizations" : [
+        {
+          "description" : "Acquire 2 extra contacts",
+          "displayName" : "2 Extra Contacts",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.2extra_contacts",
+      "referenceName" : "2 Extra Contacts",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "141319F9",
+      "localizations" : [
+        {
+          "description" : "Acquire 10 extra contacts",
+          "displayName" : "10 Extra Contacts",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.10extra_contacts",
+      "referenceName" : "10 Extra Contacts",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "EDF11E54",
+      "localizations" : [
+        {
+          "description" : "Buy 20 Autoclicks",
+          "displayName" : "20 Autoclicks",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.20autoclicks",
+      "referenceName" : "20 Autoclicks",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "7.99",
+      "familyShareable" : false,
+      "internalID" : "110941CD",
+      "localizations" : [
+        {
+          "description" : "Buy 200 Autoclicks",
+          "displayName" : "200 Autoclicks",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.200autoclicks",
+      "referenceName" : "200 Autoclicks",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "14.99",
+      "familyShareable" : false,
+      "internalID" : "F33F21A0",
+      "localizations" : [
+        {
+          "description" : "Buy 500 Autoclicks",
+          "displayName" : "500 Autoclicks",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.500autoclicks",
+      "referenceName" : "500 Autoclicks",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "24.99",
+      "familyShareable" : false,
+      "internalID" : "76A6EC30",
+      "localizations" : [
+        {
+          "description" : "Buy 1000 Autoclicks",
+          "displayName" : "1000 Autoclicks",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.1000autoclicks",
+      "referenceName" : "1000 Autoclicks",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "99.99",
+      "familyShareable" : false,
+      "internalID" : "5A8639E8",
+      "localizations" : [
+        {
+          "description" : "Buy 5000 Autoclicks",
+          "displayName" : "5000 Autoclicks",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.5000autoclicks",
+      "referenceName" : "5000 Autoclicks",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "B1A62083",
+      "localizations" : [
+        {
+          "description" : "Buy 2 Extra Poke Games",
+          "displayName" : "2 Extra Poke Games",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.2extragames",
+      "referenceName" : "2 Extra Poke Games",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "C80C3739",
+      "localizations" : [
+        {
+          "description" : "Buy 10 Extra Poke Games",
+          "displayName" : "10 Extra Poke Games",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.10extragames",
+      "referenceName" : "10 Extra Poke Games",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "F195F057",
+      "localizations" : [
+        {
+          "description" : "Buy 8 Extra SMS",
+          "displayName" : "8 Extra SMS",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.8extra_sms",
+      "referenceName" : "8 Extra SMS",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "57C69FF4",
+      "localizations" : [
+        {
+          "description" : "Buy 25 Extra SMS",
+          "displayName" : "25 Extra SMS",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.25extra_sms",
+      "referenceName" : "25 Extra SMS",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "48D0D1F9",
+      "localizations" : [
+        {
+          "description" : "Buy 100 Extra SMS",
+          "displayName" : "100 Extra SMS",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.100extra_sms",
+      "referenceName" : "100 Extra SMS",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "99.99",
+      "familyShareable" : false,
+      "internalID" : "DD719BE8",
+      "localizations" : [
+        {
+          "description" : "Acquire unlimited contacts",
+          "displayName" : "Unlimited Contacts",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.unlimited_friend_contacts",
+      "referenceName" : "Unlimited Contacts",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "49.99",
+      "familyShareable" : false,
+      "internalID" : "AC5A7B9E",
+      "localizations" : [
+        {
+          "description" : "Buy Unlimited Extra Games",
+          "displayName" : "Unlimited Extra Games",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.unlimitedextragames",
+      "referenceName" : "Unlimited Extra Games",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "3DA7AF46",
+      "localizations" : [
+        {
+          "description" : "Buy Remove Ads in bottom",
+          "displayName" : "Remove Ads in bottom",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.removeads",
+      "referenceName" : "Remove Ads",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "0FC2BB88",
+      "localizations" : [
+        {
+          "description" : "Buy Mess 140 ch. to 1 Contacts",
+          "displayName" : "Mess 140 ch. to 1 Contacts",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.over140ch_1contact",
+      "referenceName" : "Mess 140 ch. to 1 Contacts",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "7.99",
+      "familyShareable" : false,
+      "internalID" : "326BA979",
+      "localizations" : [
+        {
+          "description" : "Buy Mess 140 ch. to 10 Contacts",
+          "displayName" : "Mess 140 ch. to 10 Contacts",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.over140ch_10contact",
+      "referenceName" : "Mess 140 ch. to 10 Contacts",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "4D6CCDBE",
+      "localizations" : [
+        {
+          "description" : "Buy Mess 140 ch. to unlimited Contacts",
+          "displayName" : "Mess 140 ch. to unlimited Cont",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.LifeSignDev.over140ch_unlimitedcontact",
+      "referenceName" : "Mess 140 ch. to unlimited Contacts",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}

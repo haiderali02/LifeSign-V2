@@ -1,0 +1,70 @@
+/* 
+  Localizable.strings
+  LifeSign
+
+  Copyright © softwarealliance. All rights reserved.
+*/
+
+// MARK: Common
+
+"common.ok" = "Ok";
+"common.cancel" = "Cancel";
+"common.error" = "Error";
+"common.name" = "LifeSign";
+"common.send" = "Send";
+"common.back" = "Back";
+"common.placeholderEmail" = "eg. jone@doe.com";
+
+// MARK: Welcome
+
+"welcome.toLifeSign" = "Welcome to LifeSign";
+"welcome.facebookLogin" = "Login with Facebook";
+"welcome.createAccount" = "Register new account";
+"welcome.login" = "Login";
+"welcome.appleLogin" = "Sign in with Apple";
+"welcome.newUser" = "Are you a new user?";
+// MARK: WalkThrough Boards
+
+"okSignBoard.title" = "OkSign";
+"okSignBoard.title" = "An easy way to let ypur loved ones know you're OK";
+"okSignBoard.first" = "Find your friends via";
+"okSignBoard.second" = "Find your friends via";
+"okSignBoard.third" = "Find your friends via";
+"okSignBoard.forth" = "Find your friends via";
+
+"dailySignBoard.title" = "Daily Sign";
+"dailySignBoard.subTitle" = "Have you talk to your parents or loved ones today";
+"dailySignBoard.second" = "Find your friends via";
+"dailySignBoard.third" = "Find your friends via";
+"dailySignBoard.forth" = "Find your friends via";
+
+"friendsBoard.title" = "Friends";
+"friendsBoard.subTitle" = "How to make friends";
+"friendsBoard.second" = "Find your friends via";
+"friendsBoard.third" = "Find your friends via";
+"friendsBoard.forth" = "Find your friends via";
+
+"friendsUnknown.title" = "Friends you don't know";
+"friendsUnknown.subTitle" = "Are you lonely or do you just want new friends around the world?";
+"friendsUnknown.second" = "Find your friends via";
+"friendsUnknown.third" = "Find your friends via";
+"friendsUnknown.forth" = "Find your friends via";
+
+"game.title" = "Poke Game";
+"game.subTitle" = "Easy way to be Top of Mind with your family or loved one";
+"game.second" = "Find your friends via";
+"game.third" = "Find your friends via";
+"game.forth" = "Find your friends via";
+
+"sos.title" = "SOS";
+"sos.subTitle" = "If you are in need, send SOS easily";
+"sos.second" = "Find your friends via";
+"sos.third" = "Find your friends via";
+"sos.forth" = "Find your friends via";
+
+// MARK: Reset Password
+
+"reset.title" = "Reset Password";
+"reset.description" = "Please enter your email address";
+
+

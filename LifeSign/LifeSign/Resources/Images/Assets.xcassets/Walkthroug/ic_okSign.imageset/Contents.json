@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_dailySign.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

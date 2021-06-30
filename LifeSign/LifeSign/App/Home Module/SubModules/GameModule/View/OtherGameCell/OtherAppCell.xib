@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="OtherAppCell" reuseIdentifier="OtherAppCell" id="gTV-IL-0wX" customClass="OtherAppCell" customModule="LifeSign" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="137" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="137" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-9v-CUF">
+                        <rect key="frame" x="8" y="8" width="121" height="144"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doozy Robot Runner Doozy Robot Runner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9A-Ec-0GX">
+                                <rect key="frame" x="5" y="112" width="111" height="27"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowBox" translatesAutoresizingMaskIntoConstraints="NO" id="Y0G-hp-LSb">
+                                <rect key="frame" x="10.5" y="7" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RJ3-cG-fUK"/>
+                                    <constraint firstAttribute="width" constant="100" id="u7C-8U-c9g"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="subscribed" translatesAutoresizingMaskIntoConstraints="NO" id="Dyl-r2-JbG">
+                                <rect key="frame" x="92.5" y="89" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="dLA-FY-VWl"/>
+                                    <constraint firstAttribute="width" constant="18" id="ukU-jm-5vK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="appBoxesColor"/>
+                        <constraints>
+                            <constraint firstItem="Dyl-r2-JbG" firstAttribute="trailing" secondItem="Y0G-hp-LSb" secondAttribute="trailing" id="7CR-vn-I24"/>
+                            <constraint firstItem="D9A-Ec-0GX" firstAttribute="leading" secondItem="jgL-9v-CUF" secondAttribute="leading" constant="5" id="Bfw-Sg-3Fo"/>
+                            <constraint firstItem="Y0G-hp-LSb" firstAttribute="centerX" secondItem="jgL-9v-CUF" secondAttribute="centerX" id="Itf-G5-9z1"/>
+                            <constraint firstItem="D9A-Ec-0GX" firstAttribute="top" secondItem="Y0G-hp-LSb" secondAttribute="bottom" constant="5" id="PBs-MD-dlz"/>
+                            <constraint firstItem="Y0G-hp-LSb" firstAttribute="centerY" secondItem="jgL-9v-CUF" secondAttribute="centerY" constant="-15" id="YjR-yx-loL"/>
+                            <constraint firstAttribute="bottom" secondItem="D9A-Ec-0GX" secondAttribute="bottom" constant="5" id="cFq-Rz-KEW"/>
+                            <constraint firstAttribute="trailing" secondItem="D9A-Ec-0GX" secondAttribute="trailing" constant="5" id="pxs-Uk-imq"/>
+                            <constraint firstItem="Dyl-r2-JbG" firstAttribute="bottom" secondItem="Y0G-hp-LSb" secondAttribute="bottom" id="zIG-di-NYO"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jgL-9v-CUF" secondAttribute="bottom" constant="8" id="0cV-ZB-XTI"/>
+                <constraint firstItem="jgL-9v-CUF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="A61-cG-ryJ"/>
+                <constraint firstAttribute="trailing" secondItem="jgL-9v-CUF" secondAttribute="trailing" constant="8" id="kbA-u3-pU0"/>
+                <constraint firstItem="jgL-9v-CUF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="oW3-yO-ryx"/>
+            </constraints>
+            <size key="customSize" width="137" height="172"/>
+            <connections>
+                <outlet property="appImageView" destination="Y0G-hp-LSb" id="sK2-Ca-CtN"/>
+                <outlet property="appName" destination="D9A-Ec-0GX" id="Ghw-Dq-uUx"/>
+                <outlet property="installedIcon" destination="Dyl-r2-JbG" id="YUH-OI-OyP"/>
+            </connections>
+            <point key="canvasLocation" x="-80.434782608695656" y="144.64285714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="subscribed" width="512" height="512"/>
+        <image name="yellowBox" width="179" height="182"/>
+        <namedColor name="appBoxesColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

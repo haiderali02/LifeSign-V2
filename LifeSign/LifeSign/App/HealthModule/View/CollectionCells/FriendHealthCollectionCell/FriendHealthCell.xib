@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendHealthCell" id="gTV-IL-0wX" customClass="FriendHealthCell" customModule="LifeSign" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="142" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="142" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYg-Ye-t6D" userLabel="BackView">
+                        <rect key="frame" x="0.0" y="0.0" width="142" height="160"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JdO-y4-hzn">
+                                <rect key="frame" x="26" y="8" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="ZFh-Ki-bxr"/>
+                                    <constraint firstAttribute="height" constant="90" id="iew-zH-zIk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppLigtGray"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEF-GP-FPm">
+                                <rect key="frame" x="7" y="105" width="128" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jEF-GP-FPm" firstAttribute="top" secondItem="JdO-y4-hzn" secondAttribute="bottom" constant="7" id="58R-y8-hTf"/>
+                            <constraint firstItem="jEF-GP-FPm" firstAttribute="leading" secondItem="mYg-Ye-t6D" secondAttribute="leading" constant="7" id="I9g-gd-iI7"/>
+                            <constraint firstItem="JdO-y4-hzn" firstAttribute="top" secondItem="mYg-Ye-t6D" secondAttribute="top" constant="8" id="mGc-AL-scM"/>
+                            <constraint firstItem="JdO-y4-hzn" firstAttribute="centerX" secondItem="mYg-Ye-t6D" secondAttribute="centerX" id="tpH-zx-dXc"/>
+                            <constraint firstAttribute="trailing" secondItem="jEF-GP-FPm" secondAttribute="trailing" constant="7" id="w40-y5-q8j"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="mYg-Ye-t6D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6hV-eN-PSs"/>
+                <constraint firstAttribute="trailing" secondItem="mYg-Ye-t6D" secondAttribute="trailing" id="LIS-hW-TdW"/>
+                <constraint firstAttribute="bottom" secondItem="mYg-Ye-t6D" secondAttribute="bottom" id="Wwa-tB-Iby"/>
+                <constraint firstItem="mYg-Ye-t6D" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="r7K-aJ-B6u"/>
+            </constraints>
+            <size key="customSize" width="142" height="160"/>
+            <connections>
+                <outlet property="nameLbl" destination="jEF-GP-FPm" id="ovH-mu-Xfo"/>
+                <outlet property="profileImage" destination="JdO-y4-hzn" id="F4h-W7-ohb"/>
+            </connections>
+            <point key="canvasLocation" x="28.985507246376812" y="81.026785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppLigtGray">
+            <color red="0.94499999284744263" green="0.94499999284744263" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

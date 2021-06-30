@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="DailySignHomeCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="DailySignHomeCell" rowHeight="697" id="hZ3-i0-OAp" customClass="DailySignHomeCell" customModule="LifeSign" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="374"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZ3-i0-OAp" id="jVw-sX-9ND">
+                <rect key="frame" x="0.0" y="0.0" width="429" height="374"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jN-dK-98X" customClass="MDCCard">
+                        <rect key="frame" x="10" y="10" width="409" height="354"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B9M-Gg-vGx">
+                                <rect key="frame" x="10" y="5" width="389" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-ep-dDx">
+                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="daily_sign" image="ic_dailySign_cell"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2j5-5F-FMO">
+                                        <rect key="frame" x="129.5" y="0.0" width="130" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKP-Qh-ZRP">
+                                        <rect key="frame" x="259.5" y="0.0" width="129.5" height="40"/>
+                                        <color key="backgroundColor" name="appSeperatorColor"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="See All">
+                                            <color key="titleColor" name="appYellowColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TfD-uV-Kdv"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hYY-fC-EEd">
+                                <rect key="frame" x="10" y="78" width="389" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-fx-x4G">
+                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="friends(06)"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lun-AR-GPo">
+                                        <rect key="frame" x="129.5" y="0.0" width="130" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOF-B5-GWS">
+                                        <rect key="frame" x="259.5" y="0.0" width="129.5" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="Add New" image="ic_add_new">
+                                            <color key="titleColor" name="appYellowColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TTM-aM-ihl"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lWU-4j-vlw">
+                                <rect key="frame" x="10" y="134" width="389" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="AYJ-Cn-AB8"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QPX-Ua-4ae">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OgA-rN-Khd">
+                                <rect key="frame" x="0.0" y="314" width="409" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIV-gD-Rvu">
+                                        <rect key="frame" x="0.0" y="0.0" width="409" height="40"/>
+                                        <color key="backgroundColor" name="appSeperatorColor"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" title="View Request (06)">
+                                            <color key="titleColor" name="appYellowColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xKV-Dj-Bby"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJ8-5l-I6Z">
+                                <rect key="frame" x="10" y="61" width="389" height="1"/>
+                                <color key="backgroundColor" name="appSeperatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cMs-SW-LCW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="appBoxesColor"/>
+                        <constraints>
+                            <constraint firstItem="B9M-Gg-vGx" firstAttribute="top" secondItem="2jN-dK-98X" secondAttribute="top" constant="5" id="0V0-Nv-jgM"/>
+                            <constraint firstItem="lWU-4j-vlw" firstAttribute="leading" secondItem="2jN-dK-98X" secondAttribute="leading" constant="10" id="3Ip-kk-bnR"/>
+                            <constraint firstAttribute="bottom" secondItem="OgA-rN-Khd" secondAttribute="bottom" id="4eb-q2-gS0"/>
+                            <constraint firstItem="hYY-fC-EEd" firstAttribute="top" secondItem="WJ8-5l-I6Z" secondAttribute="bottom" constant="16" id="Lcm-eF-OSp"/>
+                            <constraint firstItem="B9M-Gg-vGx" firstAttribute="leading" secondItem="2jN-dK-98X" secondAttribute="leading" constant="10" id="LrV-sm-NyW"/>
+                            <constraint firstItem="WJ8-5l-I6Z" firstAttribute="top" secondItem="B9M-Gg-vGx" secondAttribute="bottom" constant="16" id="MIj-8D-O3o"/>
+                            <constraint firstItem="hYY-fC-EEd" firstAttribute="leading" secondItem="2jN-dK-98X" secondAttribute="leading" constant="10" id="Q4a-g1-aS5"/>
+                            <constraint firstItem="WJ8-5l-I6Z" firstAttribute="leading" secondItem="2jN-dK-98X" secondAttribute="leading" constant="10" id="XaZ-HS-kxA"/>
+                            <constraint firstItem="OgA-rN-Khd" firstAttribute="leading" secondItem="2jN-dK-98X" secondAttribute="leading" id="Zeq-hE-vuS"/>
+                            <constraint firstAttribute="trailing" secondItem="lWU-4j-vlw" secondAttribute="trailing" constant="10" id="Zrg-zY-IRZ"/>
+                            <constraint firstItem="lWU-4j-vlw" firstAttribute="top" secondItem="hYY-fC-EEd" secondAttribute="bottom" constant="16" id="aTh-S8-HEu"/>
+                            <constraint firstAttribute="trailing" secondItem="WJ8-5l-I6Z" secondAttribute="trailing" constant="10" id="hcz-AP-3A5"/>
+                            <constraint firstAttribute="trailing" secondItem="OgA-rN-Khd" secondAttribute="trailing" id="mhl-KJ-5Ws"/>
+                            <constraint firstAttribute="trailing" secondItem="B9M-Gg-vGx" secondAttribute="trailing" constant="10" id="qlQ-wn-tdD"/>
+                            <constraint firstAttribute="trailing" secondItem="hYY-fC-EEd" secondAttribute="trailing" constant="10" id="yF9-Ur-KwA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="2jN-dK-98X" firstAttribute="top" secondItem="jVw-sX-9ND" secondAttribute="top" constant="10" id="4gK-x2-m1t"/>
+                    <constraint firstAttribute="bottom" secondItem="2jN-dK-98X" secondAttribute="bottom" constant="10" id="B3Z-xb-iok"/>
+                    <constraint firstAttribute="trailing" secondItem="2jN-dK-98X" secondAttribute="trailing" constant="10" id="R96-eD-kKA"/>
+                    <constraint firstItem="2jN-dK-98X" firstAttribute="leading" secondItem="jVw-sX-9ND" secondAttribute="leading" constant="10" id="jis-gM-3dI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="FET-aA-pX0"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addNewDailySignFriendBtn" destination="mOF-B5-GWS" id="xCZ-s4-4r1"/>
+                <outlet property="dailySignBtn" destination="LiA-ep-dDx" id="4ev-nV-fDM"/>
+                <outlet property="dailySignCollectionView" destination="lWU-4j-vlw" id="Aap-tG-jnm"/>
+                <outlet property="seeAllBtn" destination="aKP-Qh-ZRP" id="nvd-Hh-Tfb"/>
+                <outlet property="totalFriendsBtn" destination="DAI-fx-x4G" id="Tf7-Bf-Zrc"/>
+                <outlet property="viewDailySignRequest" destination="HIV-gD-Rvu" id="Icb-2A-YcZ"/>
+            </connections>
+            <point key="canvasLocation" x="500.72463768115944" y="3.3482142857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_add_new" width="24" height="24"/>
+        <image name="ic_dailySign_cell" width="24" height="24"/>
+        <namedColor name="appBoxesColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appSeperatorColor">
+            <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appYellowColor">
+            <color red="1" green="0.14900000393390656" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

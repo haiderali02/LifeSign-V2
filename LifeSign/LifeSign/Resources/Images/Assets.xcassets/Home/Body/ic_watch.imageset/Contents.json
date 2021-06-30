@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_watch.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

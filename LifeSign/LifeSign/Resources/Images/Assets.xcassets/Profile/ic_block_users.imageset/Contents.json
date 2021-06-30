@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_block_users.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
