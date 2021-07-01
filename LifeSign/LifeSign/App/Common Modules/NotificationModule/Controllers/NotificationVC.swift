@@ -134,7 +134,10 @@ extension NotificationVC: ListViewMethods, SwipeTableViewCellDelegate {
             cell?.removeAnimation()
             let notificationData = self.notificationList[indexPath.row]
             cell?.contentView.backgroundColor = notificationData.status == 0 ? .appBoxColor : .black
+            
             cell?.seperatorView.backgroundColor = notificationData.status == 0 ? .white : .white
+//            cell?.msgStatusView.isHidden = false
+            cell?.msgStatusView.isHidden = notificationData.status != 0 ? true : false
             
             cell?.configureCell(withTitle: notificationData.message, subTitle: notificationData.created_at, userImage: notificationData.profile_image, type: .notification, timeAgo: notificationData.full_name)
             cell?.seperatorView.isHidden = false

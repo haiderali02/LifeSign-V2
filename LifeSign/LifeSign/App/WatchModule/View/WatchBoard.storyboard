@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SP0-Is-C5x">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vr-H1-FCS" userLabel="Header">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vr-H1-FCS" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOb-yf-21f">
@@ -30,27 +29,30 @@
                                                 <state key="normal" title="Back" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapBackBtn:" destination="W5c-A0-6gS" eventType="touchUpInside" id="Coa-L2-9Bn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
                                             <constraint firstItem="IOb-yf-21f" firstAttribute="leading" secondItem="8Vr-H1-FCS" secondAttribute="leading" constant="16" id="Eob-cV-fHD"/>
                                             <constraint firstAttribute="height" constant="50" id="FGw-Sk-JWh"/>
                                             <constraint firstItem="IOb-yf-21f" firstAttribute="centerY" secondItem="8Vr-H1-FCS" secondAttribute="centerY" id="jYf-Fj-oSS"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSQ-Pb-xat" userLabel="Body">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSQ-Pb-xat" userLabel="Body">
                                         <rect key="frame" x="0.0" y="50" width="414" height="718"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-lm-M7V">
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-lm-M7V">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xfI-Sv-Jmj">
+                                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xfI-Sv-Jmj">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TsB-K8-gcJ" userLabel="SpacerView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" name="appBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="8f6-nm-9Q5"/>
                                                                 </constraints>
@@ -97,7 +99,7 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" name="appBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="edf-Sp-5Ha" secondAttribute="trailing" constant="25" id="3gb-J4-iNk"/>
                                                                     <constraint firstItem="zqC-jf-4zf" firstAttribute="leading" secondItem="cex-7T-8uU" secondAttribute="leading" constant="25" id="8Tp-ig-KhM"/>
@@ -114,8 +116,10 @@
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="appBackgroundColor"/>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" name="appBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="xfI-Sv-Jmj" firstAttribute="leading" secondItem="jKo-lm-M7V" secondAttribute="leading" id="X31-C6-GPi"/>
                                                     <constraint firstAttribute="bottom" secondItem="xfI-Sv-Jmj" secondAttribute="bottom" id="X59-oY-RCx"/>
@@ -125,7 +129,7 @@
                                                 </constraints>
                                             </scrollView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="appBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="jKo-lm-M7V" firstAttribute="leading" secondItem="FSQ-Pb-xat" secondAttribute="leading" id="2t6-VN-75A"/>
                                             <constraint firstItem="jKo-lm-M7V" firstAttribute="top" secondItem="FSQ-Pb-xat" secondAttribute="top" id="CFi-xy-KXk"/>
@@ -135,16 +139,16 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-vn-5p2" userLabel="Footer">
                                         <rect key="frame" x="0.0" y="768" width="414" height="50"/>
-                                        <color key="backgroundColor" name="appBoxesColor"/>
+                                        <color key="backgroundColor" name="appBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="pbK-0X-AGs"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-Bu-aHR">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-Bu-aHR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" name="appBoxesColor"/>
+                                <color key="backgroundColor" name="appBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r9O-pV-gLn"/>
@@ -164,6 +168,7 @@
                     <connections>
                         <outlet property="addDeviceBtn" destination="edf-Sp-5Ha" id="vSO-Aa-swE"/>
                         <outlet property="addWatchImage" destination="4pv-sO-9Ud" id="SDJ-WU-ld7"/>
+                        <outlet property="backBtn" destination="IOb-yf-21f" id="qNC-yT-IJP"/>
                         <outlet property="noDeviceDetailLbl" destination="tsD-qh-whA" id="10u-yN-2ye"/>
                         <outlet property="noDeviceLbl" destination="zqC-jf-4zf" id="y4b-Zj-w7R"/>
                     </connections>
@@ -180,10 +185,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xU9-fo-GiW">
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xU9-fo-GiW">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbl-yQ-C8Z" userLabel="Header">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbl-yQ-C8Z" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66z-Uv-auh">
@@ -202,25 +207,25 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4x6-Hi-FL9"/>
                                             <constraint firstItem="66z-Uv-auh" firstAttribute="leading" secondItem="dbl-yQ-C8Z" secondAttribute="leading" constant="16" id="J1x-bV-kuE"/>
                                             <constraint firstItem="66z-Uv-auh" firstAttribute="centerY" secondItem="dbl-yQ-C8Z" secondAttribute="centerY" id="aPX-I2-6ei"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-vs-P1l" userLabel="Body">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="718"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-vs-P1l" userLabel="Body">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="768"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1E-FJ-Yei">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1E-FJ-Yei">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G2J-sA-3Ok">
+                                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G2J-sA-3Ok">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="775"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tQ-Fm-Dgu" userLabel="SpacerView">
+                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tQ-Fm-Dgu" userLabel="SpacerView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" name="appBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="EDz-Av-EeZ"/>
                                                                 </constraints>
@@ -229,34 +234,34 @@
                                                                 <rect key="frame" x="0.0" y="25" width="414" height="750"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_black_ecllipse" translatesAutoresizingMaskIntoConstraints="NO" id="EQC-x7-ls9">
-                                                                        <rect key="frame" x="107" y="40" width="200" height="200"/>
+                                                                        <rect key="frame" x="107" y="35" width="200" height="200"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="200" id="JMG-6g-k3j"/>
                                                                             <constraint firstAttribute="height" constant="200" id="xO6-u1-H6C"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H706 - 6271 Connected" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skm-eE-edO">
-                                                                        <rect key="frame" x="25" y="265" width="364" height="24"/>
+                                                                        <rect key="frame" x="25" y="260" width="364" height="24"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <color key="textColor" name="appYellowColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_ecllipse" translatesAutoresizingMaskIntoConstraints="NO" id="SrW-Rk-kQj">
-                                                                        <rect key="frame" x="122" y="55" width="170" height="170"/>
+                                                                        <rect key="frame" x="122" y="50" width="170" height="170"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="170" id="UC3-z8-CGi"/>
                                                                             <constraint firstAttribute="height" constant="170" id="duo-1E-Q4N"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_watch_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-hq-kCz">
-                                                                        <rect key="frame" x="184.5" y="97.5" width="45" height="85"/>
+                                                                        <rect key="frame" x="184.5" y="92.5" width="45" height="85"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="85" id="4xE-Oz-gFH"/>
                                                                             <constraint firstAttribute="width" constant="45" id="JXN-JK-fVh"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDe-9p-493" userLabel="HeartView">
-                                                                        <rect key="frame" x="15" y="314" width="384" height="60"/>
+                                                                        <rect key="frame" x="15" y="309" width="384" height="60"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healt_profile" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-vT-gzI">
                                                                                 <rect key="frame" x="20" y="17.5" width="25" height="25"/>
@@ -281,7 +286,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" name="appBoxesColor"/>
                                                                         <constraints>
                                                                             <constraint firstItem="MzN-70-KOE" firstAttribute="leading" secondItem="3lq-vT-gzI" secondAttribute="trailing" constant="16" id="4PX-SS-HUA"/>
                                                                             <constraint firstItem="ta7-Ye-2LO" firstAttribute="centerY" secondItem="eDe-9p-493" secondAttribute="centerY" id="8Hx-gM-xdT"/>
@@ -299,9 +304,9 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="We5-i6-u4x" userLabel="SleepView">
-                                                                        <rect key="frame" x="15" y="382" width="384" height="60"/>
+                                                                        <rect key="frame" x="15" y="377" width="384" height="60"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healt_profile" translatesAutoresizingMaskIntoConstraints="NO" id="5Vv-7p-uai">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sleep_yellow-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5Vv-7p-uai">
                                                                                 <rect key="frame" x="20" y="17.5" width="25" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="25" id="C8u-kR-20t"/>
@@ -324,7 +329,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" name="appBoxesColor"/>
                                                                         <constraints>
                                                                             <constraint firstItem="8sG-S9-3ri" firstAttribute="centerY" secondItem="5Vv-7p-uai" secondAttribute="centerY" id="2lV-Rn-j4L"/>
                                                                             <constraint firstAttribute="height" constant="60" id="B5I-6j-mhm"/>
@@ -342,9 +347,9 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H84-As-NVB" userLabel="StepsView">
-                                                                        <rect key="frame" x="15" y="450" width="384" height="60"/>
+                                                                        <rect key="frame" x="15" y="445" width="384" height="60"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healt_profile" translatesAutoresizingMaskIntoConstraints="NO" id="30f-Kh-k8F">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_steps-yellow-icon" translatesAutoresizingMaskIntoConstraints="NO" id="30f-Kh-k8F">
                                                                                 <rect key="frame" x="20" y="17.5" width="25" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="25" id="eLn-Xm-yQu"/>
@@ -367,7 +372,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" name="appBoxesColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="trailing" secondItem="0OE-7m-vOh" secondAttribute="trailing" constant="15" id="FVy-Km-DQo"/>
                                                                             <constraint firstItem="0OE-7m-vOh" firstAttribute="centerY" secondItem="H84-As-NVB" secondAttribute="centerY" id="J7J-jQ-OEM"/>
@@ -385,7 +390,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLj-oH-OnF">
-                                                                        <rect key="frame" x="25" y="638" width="364" height="42"/>
+                                                                        <rect key="frame" x="25" y="618" width="364" height="42"/>
                                                                         <color key="backgroundColor" name="appRedColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="42" id="A8M-Ee-Vhu"/>
@@ -403,9 +408,9 @@
                                                                         </connections>
                                                                     </button>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KG1-Bx-5go" userLabel="CaloriesView">
-                                                                        <rect key="frame" x="15" y="518" width="384" height="60"/>
+                                                                        <rect key="frame" x="15" y="513" width="384" height="60"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_healt_profile" translatesAutoresizingMaskIntoConstraints="NO" id="p7q-fi-uS0">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calories_yellow-icon" translatesAutoresizingMaskIntoConstraints="NO" id="p7q-fi-uS0">
                                                                                 <rect key="frame" x="20" y="17.5" width="25" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="0JN-9X-zpQ"/>
@@ -428,7 +433,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" name="appBoxesColor"/>
                                                                         <constraints>
                                                                             <constraint firstItem="i1Q-IJ-pcr" firstAttribute="leading" secondItem="LE5-T8-Eel" secondAttribute="trailing" constant="15" id="OpY-L2-f9T"/>
                                                                             <constraint firstItem="p7q-fi-uS0" firstAttribute="centerY" secondItem="KG1-Bx-5go" secondAttribute="centerY" id="VUm-sN-AYw"/>
@@ -446,7 +451,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" name="appBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstItem="H84-As-NVB" firstAttribute="leading" secondItem="IID-g7-w6c" secondAttribute="leading" constant="15" id="3x0-Bo-PBZ"/>
                                                                     <constraint firstAttribute="height" constant="750" id="4lH-nP-bRG"/>
@@ -469,15 +474,17 @@
                                                                     <constraint firstItem="We5-i6-u4x" firstAttribute="leading" secondItem="IID-g7-w6c" secondAttribute="leading" constant="15" id="asa-XL-iJS"/>
                                                                     <constraint firstAttribute="trailing" secondItem="eDe-9p-493" secondAttribute="trailing" constant="15" id="c0P-CB-hJP"/>
                                                                     <constraint firstItem="Skm-eE-edO" firstAttribute="top" secondItem="EQC-x7-ls9" secondAttribute="bottom" constant="25" id="dRk-vu-vhB"/>
-                                                                    <constraint firstItem="EQC-x7-ls9" firstAttribute="top" secondItem="IID-g7-w6c" secondAttribute="top" constant="40" id="lJg-HY-dJl"/>
+                                                                    <constraint firstItem="EQC-x7-ls9" firstAttribute="top" secondItem="IID-g7-w6c" secondAttribute="top" constant="35" id="lJg-HY-dJl"/>
                                                                     <constraint firstItem="H84-As-NVB" firstAttribute="top" secondItem="We5-i6-u4x" secondAttribute="bottom" constant="8" id="tGH-IJ-lkB"/>
                                                                     <constraint firstItem="Skm-eE-edO" firstAttribute="leading" secondItem="IID-g7-w6c" secondAttribute="leading" constant="25" id="yZd-h1-4og"/>
-                                                                    <constraint firstItem="uLj-oH-OnF" firstAttribute="top" secondItem="KG1-Bx-5go" secondAttribute="bottom" constant="60" id="zoi-vK-oKt"/>
+                                                                    <constraint firstItem="uLj-oH-OnF" firstAttribute="top" secondItem="KG1-Bx-5go" secondAttribute="bottom" constant="45" id="zoi-vK-oKt"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="appBackgroundColor"/>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" name="appBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="G2J-sA-3Ok" secondAttribute="trailing" id="0Bp-Ns-jbQ"/>
                                                     <constraint firstAttribute="bottom" secondItem="G2J-sA-3Ok" secondAttribute="bottom" id="8xW-T5-obV"/>
@@ -487,7 +494,7 @@
                                                 </constraints>
                                             </scrollView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="appBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="l1E-FJ-Yei" secondAttribute="trailing" id="HpG-yV-oHQ"/>
                                             <constraint firstAttribute="bottom" secondItem="l1E-FJ-Yei" secondAttribute="bottom" id="WR3-c4-BVs"/>
@@ -495,18 +502,12 @@
                                             <constraint firstItem="l1E-FJ-Yei" firstAttribute="top" secondItem="wpi-vs-P1l" secondAttribute="top" id="qvH-XV-fqp"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jER-Du-fu2" userLabel="Footer">
-                                        <rect key="frame" x="0.0" y="768" width="414" height="50"/>
-                                        <color key="backgroundColor" name="appBoxesColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Nfu-2v-rjr"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
+                                <color key="backgroundColor" name="appBackgroundColor"/>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UsA-Ew-Fqp">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UsA-Ew-Fqp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" name="appBoxesColor"/>
+                                <color key="backgroundColor" name="appBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vwe-LQ-fBv"/>
@@ -554,8 +555,11 @@
     <resources>
         <image name="ic_back" width="24" height="24"/>
         <image name="ic_black_ecllipse" width="196" height="196"/>
+        <image name="ic_calories_yellow-icon" width="14" height="21"/>
         <image name="ic_green_ecllipse" width="172" height="172"/>
         <image name="ic_healt_profile" width="24" height="24"/>
+        <image name="ic_sleep_yellow-icon" width="18" height="20"/>
+        <image name="ic_steps-yellow-icon" width="22" height="11"/>
         <image name="ic_watch_connect" width="196" height="196"/>
         <image name="ic_watch_icon" width="138" height="246"/>
         <namedColor name="appBackgroundColor">
@@ -570,8 +574,5 @@
         <namedColor name="appYellowColor">
             <color red="1" green="0.14900000393390656" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

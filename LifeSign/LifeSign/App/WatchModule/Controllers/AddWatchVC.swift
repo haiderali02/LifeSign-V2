@@ -39,11 +39,17 @@ class AddWatchVC: LifeSignBaseVC{
     
     //MARK:- METHODS -
     @objc func setText(){
-        
+        noDeviceLbl.text = "No device added"
+        noDeviceDetailLbl.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut duis tortor orci, vitae, neque sem egestas. Venenatis, at malesuada gravida dui convallis. "
+        addDeviceBtn.setTitle("Add Device", for: .normal)
     }
     
     func setUI() {
-        
+        noDeviceLbl.font = Constants.headerTitleFont
+        noDeviceLbl.textColor = R.color.appYellowColor()
+        noDeviceDetailLbl.font = Constants.labelFont
+        noDeviceDetailLbl.textColor = .white
+        addDeviceBtn.titleLabel?.font = Constants.bigButtonFont
     }
     
     func observers(){

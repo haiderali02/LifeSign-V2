@@ -20,8 +20,7 @@ class HealthVC: LifeSignBaseVC {
             }
         }
     }
-    @IBOutlet weak var shareBtn: UIButton!
-    @IBOutlet weak var notificationBtn: UIButton!
+    @IBOutlet weak var addFriendBtn: UIButton!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var myHealthView: UIView!
     @IBOutlet weak var myHealthBottomView: UIView!
@@ -80,6 +79,11 @@ class HealthVC: LifeSignBaseVC {
             
             print("Index: \(index)")
         }
+        
+        myHealthBtn.titleLabel?.font = Constants.headerTitleFont
+        friendsHealthBtn.titleLabel?.font = Constants.headerTitleFont
+        friendRequestBtn.titleLabel?.font = Constants.headerTitleFont
+        
         //updateCounters()
     }
     
@@ -94,13 +98,7 @@ class HealthVC: LifeSignBaseVC {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func didTapShareBtn(_ sender: UIButton) {
-        sender.showAnimation {
-            
-        }
-    }
-    
-    @IBAction func didTapNotificationBtn(_ sender: UIButton) {
+    @IBAction func didTapAddFriendBtn(_ sender: UIButton) {
         sender.showAnimation {
             
         }

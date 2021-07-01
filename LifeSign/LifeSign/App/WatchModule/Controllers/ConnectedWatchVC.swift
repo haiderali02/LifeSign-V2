@@ -54,10 +54,40 @@ class ConnectedWatchVC: LifeSignBaseVC{
     
     //MARK:- METHODS -
     @objc func setText(){
-        
+        deviceNameLbl.text = "H706 - 6271 Connected"
+        heartLbl.text = "Heart rate"
+        heartRateLbl.text = "120/90"
+        sleepLbl.text = "Sleep"
+        sleepTimeLbl.text = "7 Hours"
+        stepsLbl.text = "Steps"
+        stepsCountLbl.text = "235487"
+        caloriesLbl.text = "Calories"
+        caloriesCountLbl.text = "2145"
+        disconnectWatchBtn.setTitle("Want to disconnect watch", for: .normal)
     }
     
     func setUI() {
+        deviceNameLbl.font = Constants.headerTitleFont
+        deviceNameLbl.textColor = R.color.appYellowColor()
+        heartLbl.font = Constants.headerSubTitleFont
+        heartLbl.textColor = R.color.appYellowColor()
+        heartRateLbl.font = Constants.headerSubTitleFont
+        heartRateLbl.textColor = R.color.appYellowColor()
+        sleepLbl.font = Constants.headerSubTitleFont
+        sleepLbl.textColor = R.color.appYellowColor()
+        sleepTimeLbl.font = Constants.headerSubTitleFont
+        sleepTimeLbl.textColor = R.color.appYellowColor()
+        stepsLbl.font = Constants.headerSubTitleFont
+        stepsLbl.textColor = R.color.appYellowColor()
+        stepsCountLbl.font = Constants.headerSubTitleFont
+        stepsCountLbl.textColor = R.color.appYellowColor()
+        caloriesLbl.font = Constants.headerSubTitleFont
+        caloriesLbl.textColor = R.color.appYellowColor()
+        caloriesCountLbl.font = Constants.headerSubTitleFont
+        caloriesCountLbl.textColor = R.color.appYellowColor()
+        disconnectWatchBtn.titleLabel?.font = Constants.bigButtonFont
+        disconnectWatchBtn.setTitleColor(.white, for: .normal)
+        disconnectWatchBtn.backgroundColor = R.color.appRedColor()
         
     }
     
