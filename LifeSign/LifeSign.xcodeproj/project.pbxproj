@@ -64,6 +64,7 @@
 		944D25C02681B65800241053 /* HealthHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944D25BE2681B65800241053 /* HealthHomeCell.xib */; };
 		945624E2267A25AC0092EFAC /* StringsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945624E1267A25AC0092EFAC /* StringsManager.swift */; };
 		94611FC525F0F0A100206DEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94611FC425F0F0A100206DEA /* Constants.swift */; };
+		9463D97C268DB01600922DDF /* HealthShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463D97B268DB01600922DDF /* HealthShareVC.swift */; };
 		9468A60E265D12C200441725 /* ChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9468A60D265D12C200441725 /* ChatVCExtension.swift */; };
 		946E018925F8CC2E00E50229 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 946E017C25F8CC2E00E50229 /* Roboto-Medium.ttf */; };
 		946E018A25F8CC2E00E50229 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 946E017D25F8CC2E00E50229 /* Roboto-Light.ttf */; };
@@ -283,6 +284,7 @@
 		944D25BE2681B65800241053 /* HealthHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthHomeCell.xib; sourceTree = "<group>"; };
 		945624E1267A25AC0092EFAC /* StringsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsManager.swift; sourceTree = "<group>"; };
 		94611FC425F0F0A100206DEA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9463D97B268DB01600922DDF /* HealthShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthShareVC.swift; sourceTree = "<group>"; };
 		9468A60D265D12C200441725 /* ChatVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVCExtension.swift; sourceTree = "<group>"; };
 		946E017C25F8CC2E00E50229 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		946E017D25F8CC2E00E50229 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				1841E1B1268B2A1D00BE0C5F /* MyHealthVC.swift */,
 				1841E1B3268B2A3A00BE0C5F /* FriendHealthVC.swift */,
 				1841E1B5268B2A5500BE0C5F /* FriendRequestVC.swift */,
+				9463D97B268DB01600922DDF /* HealthShareVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1977,6 +1980,7 @@
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,
 				944D25BF2681B65800241053 /* HealthHomeCell.swift in Sources */,
 				94D8A0262620679F00DC9E66 /* ChangePasswordVC.swift in Sources */,
+				9463D97C268DB01600922DDF /* HealthShareVC.swift in Sources */,
 				94146946261DE8730064B11B /* SOSListData.swift in Sources */,
 				94369D0D2625A19300719F68 /* OkSignVC.swift in Sources */,
 				94BB84A0261B2CE60008D5B4 /* FriendsCollectionViewCell.swift in Sources */,

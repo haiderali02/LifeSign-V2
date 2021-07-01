@@ -50,6 +50,19 @@ class AppStrings: NSObject {
         return StringsManager.shared.done ?? "Done"
     }
     
+    static func getHealthString () -> String {
+        return  "Health"
+    }
+    static func getStepsString () -> String {
+        return  "Steps"
+    }
+    static func getSleepString () -> String {
+        return  "Sleep"
+    }
+    static func getCaloriesString () -> String {
+        return  "Calories"
+    }
+    
     static func getErrorTitleString () -> String {
         return StringsManager.shared.error ?? "Error"
     }

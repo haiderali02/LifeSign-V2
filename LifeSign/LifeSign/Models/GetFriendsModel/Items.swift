@@ -52,9 +52,13 @@ struct Items : Mappable {
     var game_start_status: String = ""
     var game_winner: Int = 0
     var game_initiator: Int = 0
-    
     var points: Int = 0
     var position: Int = 0
+    
+    // HEALTH
+    
+    var health_friend_status: String = ""
+    var health_friend_request: String = ""
     
 	init?(map: Map) {
 
@@ -110,6 +114,8 @@ struct Items : Mappable {
         points <- map["points"]
         position <- map["position"]
         
+        health_friend_status <- map["health_friend_status"]
+        health_friend_request <- map["health_friend_request"]
 	}
 }
 
