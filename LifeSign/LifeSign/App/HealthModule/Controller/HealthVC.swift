@@ -84,7 +84,6 @@ class HealthVC: LifeSignBaseVC {
         friendsHealthBtn.titleLabel?.font = Constants.headerTitleFont
         friendRequestBtn.titleLabel?.font = Constants.headerTitleFont
         
-        //updateCounters()
     }
     
     func observers(){

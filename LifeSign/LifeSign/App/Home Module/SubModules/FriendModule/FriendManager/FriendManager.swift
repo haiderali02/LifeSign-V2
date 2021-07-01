@@ -27,7 +27,7 @@ struct FriendManager {
     
     static var authHeaders: HTTPHeaders {
         HTTPHeaders(["Authorization": "Bearer" + " " + UserManager.shared.access_token,
-                     "X-localization": LangObjectModel.shared.symbol ?? "en",
+                     "X-localization": LangObjectModel.shared.symbol,
                      "Tag": UIDevice.current.identifierForVendor?.uuidString ?? "",
                      "Cache-Control": "no-cache"])
     }
@@ -602,5 +602,63 @@ extension FriendManager {
     }
     
     
+    
+    
+    //
+    // MARK: - USER HEALTH FRIENDS -
+    //
+    
+    
+    static func getUserHealthFriends(type: String,limit: Int?, PageNumber: Int?, _ completion: @escaping (_ lifeSinUsers: FriendsData?, _ error: [String]?, _ links: Links?) -> Void) {
+        
+        
+        
+        if Network.isAvailable {
+            let params = [
+                "limit": limit ?? 10,
+                "page": PageNumber ?? 1,
+                "type": type
+            ] as [String : Any]
+           
+            manager.request(baseURL + "health/friends",
+                            method: .get,
+                            parameters: params,
+                            headers: authHeaders).validate().responseJSON { (response) in
+                                switch response.result {
+                                case .success(let data):
+                                    print("Print: \(data)")
+                                    
+                                    if let response = data as? [String: Any] {
+                                        let friendsRrsponse = FriendsResponse(JSON: response)
+                                        
+                                        if let reqStatus = friendsRrsponse?.success {
+                                            if reqStatus == true {
+                                                completion(friendsRrsponse?.data, nil, friendsRrsponse?.data?.links)
+                                            } else {
+                                                if let errors = response["errors"] as? [String] {
+                                                    completion(nil, errors, nil)
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                case .failure(let error):
+                                    if response.response?.statusCode == 401 {
+                                        UserManager.shared.deleteUser()
+                                        if let welcomeBoard = R.storyboard.authentication.authNavigationController() {
+                                            UIApplication.shared.windows.first?.rootViewController = welcomeBoard
+                                            UIApplication.shared.windows.first?.makeKeyAndVisible()
+                                        }
+                                    } else {
+                                        completion(nil, [AppStrings.getSomwthingWentWrong()], nil)
+                                    }
+                                    print("Error: \(error.localizedDescription)")
+                                }
+                            }
+            
+        } else {
+            completion(nil, [AppStrings.getNetworkNotAvailableString()], nil)
+        }
+    }
     
 }
