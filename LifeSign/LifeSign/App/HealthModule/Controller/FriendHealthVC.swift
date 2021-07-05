@@ -59,6 +59,9 @@ class FriendHealthVC: LifeSignBaseVC{
     
     func setUI() {
         getUserHealthFriends()
+        self.friendHealthCollectionView.emptyDataSetView { (dataSet) in
+            dataSet.detailLabelString(NSAttributedString(string: AppStrings.getNoDatFoundString()))
+        }
     }
     
     func observers(){

@@ -115,6 +115,16 @@
 		9490B2962611F07B000FE873 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490B2942611F07B000FE873 /* FriendsTableViewCell.swift */; };
 		9490B2972611F07B000FE873 /* FriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9490B2952611F07B000FE873 /* FriendsTableViewCell.xib */; };
 		949CA2C12626D1AF0050BAFA /* SOSMultiAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949CA2C02626D1AF0050BAFA /* SOSMultiAlertVC.swift */; };
+		949DEC122692DBFB007BD1D5 /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC042692DBF6007BD1D5 /* UserStats.swift */; };
+		949DEC132692DBFB007BD1D5 /* MKReadInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC072692DBFA007BD1D5 /* MKReadInterface.swift */; };
+		949DEC142692DBFB007BD1D5 /* MKClockStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC092692DBFA007BD1D5 /* MKClockStatusModel.swift */; };
+		949DEC152692DBFB007BD1D5 /* MKDateTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC0A2692DBFA007BD1D5 /* MKDateTimeModel.swift */; };
+		949DEC162692DBFB007BD1D5 /* MKCustomScreenDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC0B2692DBFA007BD1D5 /* MKCustomScreenDisplayModel.swift */; };
+		949DEC172692DBFB007BD1D5 /* MKAncsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC0C2692DBFA007BD1D5 /* MKAncsModel.swift */; };
+		949DEC182692DBFB007BD1D5 /* MKConfigUserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC0D2692DBFB007BD1D5 /* MKConfigUserDataModel.swift */; };
+		949DEC192692DBFB007BD1D5 /* MKConfigPeriodTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC0E2692DBFB007BD1D5 /* MKConfigPeriodTimeModel.swift */; };
+		949DEC1A2692DBFB007BD1D5 /* MKConfigInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC102692DBFB007BD1D5 /* MKConfigInterface.swift */; };
+		949DEC1B2692DBFB007BD1D5 /* WatchFunctionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DEC112692DBFB007BD1D5 /* WatchFunctionsVC.swift */; };
 		94A14FCF26541094000AD1FC /* GameHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A14FCD26541094000AD1FC /* GameHeaderReusableView.swift */; };
 		94A14FD026541094000AD1FC /* GameHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A14FCE26541094000AD1FC /* GameHeaderReusableView.xib */; };
 		94A366052671DE830027F7EE /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A366042671DE830027F7EE /* UnityAds.framework */; };
@@ -336,6 +346,16 @@
 		9490B2942611F07B000FE873 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		9490B2952611F07B000FE873 /* FriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsTableViewCell.xib; sourceTree = "<group>"; };
 		949CA2C02626D1AF0050BAFA /* SOSMultiAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSMultiAlertVC.swift; sourceTree = "<group>"; };
+		949DEC042692DBF6007BD1D5 /* UserStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
+		949DEC072692DBFA007BD1D5 /* MKReadInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKReadInterface.swift; sourceTree = "<group>"; };
+		949DEC092692DBFA007BD1D5 /* MKClockStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKClockStatusModel.swift; sourceTree = "<group>"; };
+		949DEC0A2692DBFA007BD1D5 /* MKDateTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKDateTimeModel.swift; sourceTree = "<group>"; };
+		949DEC0B2692DBFA007BD1D5 /* MKCustomScreenDisplayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCustomScreenDisplayModel.swift; sourceTree = "<group>"; };
+		949DEC0C2692DBFA007BD1D5 /* MKAncsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKAncsModel.swift; sourceTree = "<group>"; };
+		949DEC0D2692DBFB007BD1D5 /* MKConfigUserDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKConfigUserDataModel.swift; sourceTree = "<group>"; };
+		949DEC0E2692DBFB007BD1D5 /* MKConfigPeriodTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKConfigPeriodTimeModel.swift; sourceTree = "<group>"; };
+		949DEC102692DBFB007BD1D5 /* MKConfigInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKConfigInterface.swift; sourceTree = "<group>"; };
+		949DEC112692DBFB007BD1D5 /* WatchFunctionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchFunctionsVC.swift; sourceTree = "<group>"; };
 		94A14FCD26541094000AD1FC /* GameHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeaderReusableView.swift; sourceTree = "<group>"; };
 		94A14FCE26541094000AD1FC /* GameHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameHeaderReusableView.xib; sourceTree = "<group>"; };
 		94A366042671DE830027F7EE /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
@@ -577,6 +597,7 @@
 		2A1E77351F384BFC006C84D4 /* LifeSign */ = {
 			isa = PBXGroup;
 			children = (
+				949DEC022692DB75007BD1D5 /* FitPoloWatch */,
 				94BA25D12611CBC6009D3010 /* sos_sent_sound.mp3 */,
 				94BA25D32611CBC6009D3010 /* sos_alert_sound.mp3 */,
 				94BA25932611BDE7009D3010 /* LifeSign.entitlements */,
@@ -1106,6 +1127,63 @@
 				94902E302683489C002A8DD9 /* OtherAppCell.xib */,
 			);
 			path = OtherGameCell;
+			sourceTree = "<group>";
+		};
+		949DEC022692DB75007BD1D5 /* FitPoloWatch */ = {
+			isa = PBXGroup;
+			children = (
+				949DEC032692DBF6007BD1D5 /* UserStats */,
+				949DEC052692DBFA007BD1D5 /* WatchFunctions */,
+			);
+			path = FitPoloWatch;
+			sourceTree = "<group>";
+		};
+		949DEC032692DBF6007BD1D5 /* UserStats */ = {
+			isa = PBXGroup;
+			children = (
+				949DEC042692DBF6007BD1D5 /* UserStats.swift */,
+			);
+			path = UserStats;
+			sourceTree = "<group>";
+		};
+		949DEC052692DBFA007BD1D5 /* WatchFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				949DEC062692DBFA007BD1D5 /* MKReadInterface */,
+				949DEC082692DBFA007BD1D5 /* Models */,
+				949DEC0F2692DBFB007BD1D5 /* MKConfigInterface */,
+				949DEC112692DBFB007BD1D5 /* WatchFunctionsVC.swift */,
+			);
+			path = WatchFunctions;
+			sourceTree = "<group>";
+		};
+		949DEC062692DBFA007BD1D5 /* MKReadInterface */ = {
+			isa = PBXGroup;
+			children = (
+				949DEC072692DBFA007BD1D5 /* MKReadInterface.swift */,
+			);
+			path = MKReadInterface;
+			sourceTree = "<group>";
+		};
+		949DEC082692DBFA007BD1D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				949DEC092692DBFA007BD1D5 /* MKClockStatusModel.swift */,
+				949DEC0A2692DBFA007BD1D5 /* MKDateTimeModel.swift */,
+				949DEC0B2692DBFA007BD1D5 /* MKCustomScreenDisplayModel.swift */,
+				949DEC0C2692DBFA007BD1D5 /* MKAncsModel.swift */,
+				949DEC0D2692DBFB007BD1D5 /* MKConfigUserDataModel.swift */,
+				949DEC0E2692DBFB007BD1D5 /* MKConfigPeriodTimeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		949DEC0F2692DBFB007BD1D5 /* MKConfigInterface */ = {
+			isa = PBXGroup;
+			children = (
+				949DEC102692DBFB007BD1D5 /* MKConfigInterface.swift */,
+			);
+			path = MKConfigInterface;
 			sourceTree = "<group>";
 		};
 		94A829FD261344FA0078DA7C /* Animations */ = {
@@ -1843,7 +1921,7 @@
 			);
 			name = R.swift;
 			outputPaths = (
-				"$SRCROOT/LifeSign/Resources/Generated/R.generated.swift",
+				$SRCROOT/LifeSign/Resources/Generated/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1889,12 +1967,14 @@
 				94E59E2725FF342D0092A1D8 /* FriendInfoVC.swift in Sources */,
 				94AE802F26131BF500445CF5 /* FriendManager.swift in Sources */,
 				94AEB0C6260C957100C68742 /* AlertController.swift in Sources */,
+				949DEC132692DBFB007BD1D5 /* MKReadInterface.swift in Sources */,
 				94B8FA10260B5E380054BA2F /* HomeViewHolderVC.swift in Sources */,
 				94365F2C2637E29400BE56F6 /* InteractivePopRecognizer.swift in Sources */,
 				94AE803B26131D6E00445CF5 /* FriendsData.swift in Sources */,
 				94AE803C26131D6E00445CF5 /* Links.swift in Sources */,
 				94ED6FF2260B6DE7000109D4 /* SOSListingVC.swift in Sources */,
 				94BA25ED2611D788009D3010 /* PushManager.swift in Sources */,
+				949DEC152692DBFB007BD1D5 /* MKDateTimeModel.swift in Sources */,
 				94E59E6225FF55640092A1D8 /* ContentSizedTableView.swift in Sources */,
 				948CB57625EFA53000F32ED1 /* ForgotPasswordVC.swift in Sources */,
 				94E856A0266B4BE100008474 /* GameManager.swift in Sources */,
@@ -1908,6 +1988,7 @@
 				94B8FA3B260B62450054BA2F /* GameVC.swift in Sources */,
 				94E856A3266B4C2100008474 /* InfoVC.swift in Sources */,
 				94E59E6D25FF7EEC0092A1D8 /* Notification+Extension.swift in Sources */,
+				949DEC172692DBFB007BD1D5 /* MKAncsModel.swift in Sources */,
 				94ED6FEE260B6DCC000109D4 /* SOSFriendVC.swift in Sources */,
 				946E01F025F8F2EB00E50229 /* WalkThroughVC.swift in Sources */,
 				94236D972631476800CBC627 /* InboxVC.swift in Sources */,
@@ -1935,6 +2016,7 @@
 				945624E2267A25AC0092EFAC /* StringsManager.swift in Sources */,
 				94902E2D26830AD8002A8DD9 /* OtherAppsVC.swift in Sources */,
 				947E3D392681CB7000FF877A /* RoundUserCell.swift in Sources */,
+				949DEC122692DBFB007BD1D5 /* UserStats.swift in Sources */,
 				9414693E261D91540064B11B /* LSProtocols.swift in Sources */,
 				9407F89D2657F29C00BEB2F9 /* MessageDateReusableView.swift in Sources */,
 				C90395241FC622D2006F1DC0 /* main.swift in Sources */,
@@ -1951,6 +2033,8 @@
 				94AD3C672615DA440012CCF4 /* NotificationManager.swift in Sources */,
 				94AE7F9F2612F18C00445CF5 /* Friends+Extensions.swift in Sources */,
 				94751DEE26679D2F001C526E /* LeaderBoardCell.swift in Sources */,
+				949DEC162692DBFB007BD1D5 /* MKCustomScreenDisplayModel.swift in Sources */,
+				949DEC1A2692DBFB007BD1D5 /* MKConfigInterface.swift in Sources */,
 				94146945261DE8730064B11B /* SOSListObject.swift in Sources */,
 				94AE803926131D6E00445CF5 /* FriendsResponse.swift in Sources */,
 				946E01EA25F8F2D100E50229 /* SplashVC.swift in Sources */,
@@ -1959,6 +2043,7 @@
 				94E59E2B25FF349E0092A1D8 /* WalkThroughContainerVC.swift in Sources */,
 				553FC23C214047CB001D9362 /* R.generated.swift in Sources */,
 				9468A60E265D12C200441725 /* ChatVCExtension.swift in Sources */,
+				949DEC142692DBFB007BD1D5 /* MKClockStatusModel.swift in Sources */,
 				94E59E5825FF4FE20092A1D8 /* WalkthroughCell.swift in Sources */,
 				942EF7922604B9540033D1C1 /* OkSignInfoVC.swift in Sources */,
 				94AE7FE8261309AE00445CF5 /* NotificationVC.swift in Sources */,
@@ -1977,8 +2062,10 @@
 				94236DA126314E4600CBC627 /* InboxCollectionCell.swift in Sources */,
 				94AD3C5C2615D97C0012CCF4 /* Notifications.swift in Sources */,
 				944210B8260A0CD70012A997 /* HomeBaseNavigationVC.swift in Sources */,
+				949DEC192692DBFB007BD1D5 /* MKConfigPeriodTimeModel.swift in Sources */,
 				94E59E6725FF5B1A0092A1D8 /* HeaderView.swift in Sources */,
 				948CB58625EFAB0E00F32ED1 /* LifeSignNavigationController.swift in Sources */,
+				949DEC182692DBFB007BD1D5 /* MKConfigUserDataModel.swift in Sources */,
 				2A1DD4E11F389E2100712195 /* NotificationsHandler.swift in Sources */,
 				944D25BF2681B65800241053 /* HealthHomeCell.swift in Sources */,
 				94D8A0262620679F00DC9E66 /* ChangePasswordVC.swift in Sources */,
@@ -2011,6 +2098,7 @@
 				1841E1B6268B2A5500BE0C5F /* FriendRequestVC.swift in Sources */,
 				948CB56325EFA37600F32ED1 /* LifeSignBaseVC.swift in Sources */,
 				947B2DE9264BAD47006CC6DE /* MyPurchasesVC.swift in Sources */,
+				949DEC1B2692DBFB007BD1D5 /* WatchFunctionsVC.swift in Sources */,
 				94BA25632611B5D0009D3010 /* UIApplication+Extension.swift in Sources */,
 				1841E1B4268B2A3A00BE0C5F /* FriendHealthVC.swift in Sources */,
 				2A1DD4DF1F389C2200712195 /* DeeplinkHandler.swift in Sources */,
