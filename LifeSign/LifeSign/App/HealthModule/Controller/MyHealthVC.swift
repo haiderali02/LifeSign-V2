@@ -18,69 +18,189 @@ class MyHealthVC: LifeSignBaseVC{
             heartBtn.layer.cornerRadius = heartBtn.frame.height / 2
         }
     }
-    @IBOutlet weak var heartRateLbl: UILabel!
+    @IBOutlet weak var heartRateLbl: UILabel! {
+        didSet {
+            heartRateLbl.font = Constants.labelFont
+        }
+    }
     @IBOutlet weak var sleepBtn: UIButton!{
         didSet{
             sleepBtn.tag = 1
             sleepBtn.layer.cornerRadius = sleepBtn.frame.height / 2
         }
     }
-    @IBOutlet weak var sleepLbl: UILabel!
+    @IBOutlet weak var sleepLbl: UILabel! {
+        didSet {
+            sleepLbl.font = Constants.labelFont
+        }
+    }
     @IBOutlet weak var stepsBtn: UIButton!{
         didSet{
             stepsBtn.tag = 2
             stepsBtn.layer.cornerRadius = stepsBtn.frame.height / 2
         }
     }
-    @IBOutlet weak var stepsLbl: UILabel!
+    @IBOutlet weak var stepsLbl: UILabel! {
+        didSet {
+            stepsLbl.font = Constants.labelFont
+        }
+    }
     @IBOutlet weak var calorieBtn: UIButton!{
         didSet{
             calorieBtn.tag = 3
             calorieBtn.layer.cornerRadius = calorieBtn.frame.height / 2
         }
     }
-    @IBOutlet weak var calorieLbl: UILabel!
+    @IBOutlet weak var calorieLbl: UILabel! {
+        didSet {
+            calorieLbl.font = Constants.labelFont
+        }
+    }
     
     @IBOutlet weak var chartBackView: UIView!
     @IBOutlet weak var restingHeartBackView: UIView!
     @IBOutlet weak var heartRateBackView: UIView!
     @IBOutlet weak var restingHeartImage: UIImageView!
-    @IBOutlet weak var RestingHeartLbl: UILabel!
-    @IBOutlet weak var restingHeartRateLbl: UILabel!
-    @IBOutlet weak var maxHeartView: UIView!
-    @IBOutlet weak var maxHeartRateLbl: UILabel!
-    @IBOutlet weak var maxHeartLbl: UILabel!
+    @IBOutlet weak var RestingHeartLbl: UILabel!  {
+        didSet {
+            RestingHeartLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var restingHeartRateLbl: UILabel! {
+        didSet {
+            restingHeartRateLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var maxHeartView: UIView! 
+    @IBOutlet weak var maxHeartRateLbl: UILabel! {
+        didSet {
+            maxHeartRateLbl.font = Constants.bigButtonFont
+        }
+    }
+    @IBOutlet weak var maxHeartLbl: UILabel! {
+        didSet {
+            maxHeartLbl.font = Constants.labelFont
+        }
+    }
     @IBOutlet weak var minHeartView: UIView!
-    @IBOutlet weak var minHeartRateLbl: UILabel!
-    @IBOutlet weak var minHeartLbl: UILabel!
+    @IBOutlet weak var minHeartRateLbl: UILabel! {
+        didSet {
+            minHeartRateLbl.font = Constants.bigButtonFont
+        }
+    }
+    @IBOutlet weak var minHeartLbl: UILabel! {
+        didSet {
+            minHeartLbl.font = Constants.labelFont
+        }
+    }
     @IBOutlet weak var averageHeartView: UIView!
-    @IBOutlet weak var averageHeartRateLbl: UILabel!
-    @IBOutlet weak var averageHeartLbl: UILabel!
+    @IBOutlet weak var averageHeartRateLbl: UILabel! {
+        didSet {
+            averageHeartRateLbl.font = Constants.bigButtonFont
+        }
+    }
+    @IBOutlet weak var averageHeartLbl: UILabel! {
+        didSet {
+            averageHeartLbl.font = Constants.labelFont
+        }
+    }
     
     @IBOutlet weak var sleepBackView: UIView!
-    @IBOutlet weak var asleepLbl: UILabel!
-    @IBOutlet weak var asleepTimeLbl: UILabel!
-    @IBOutlet weak var deepLbl: UILabel!
-    @IBOutlet weak var deepTimeLbl: UILabel!
-    @IBOutlet weak var lightLbl: UILabel!
-    @IBOutlet weak var lightTimeLbl: UILabel!
-    @IBOutlet weak var awakeLbl: UILabel!
-    @IBOutlet weak var awakeTimeLbl: UILabel!
+    @IBOutlet weak var asleepLbl: UILabel! {
+        didSet {
+            asleepLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var asleepTimeLbl: UILabel! {
+        didSet {
+            asleepTimeLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var deepLbl: UILabel! {
+        didSet {
+            deepLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var deepTimeLbl: UILabel! {
+        didSet {
+            deepTimeLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var lightLbl: UILabel! {
+        didSet {
+            lightLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var lightTimeLbl: UILabel! {
+        didSet {
+            lightTimeLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var awakeLbl: UILabel! {
+        didSet {
+            awakeLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var awakeTimeLbl: UILabel! {
+        didSet {
+            awakeTimeLbl.font = Constants.labelFont
+        }
+    }
     
     @IBOutlet weak var stepsDistanceBackView: UIView!
     @IBOutlet weak var stepsActivityBackView: UIView!
-    @IBOutlet weak var stepDistanceLbl: UILabel!
-    @IBOutlet weak var stepDistanceDetailLbl: UILabel!
-    @IBOutlet weak var todayActivityLbl: UILabel!
-    @IBOutlet weak var activityWalkingLbl: UILabel!
-    @IBOutlet weak var activitytimeLbl: UILabel!
-    @IBOutlet weak var activityStepsLbl: UILabel!
-    @IBOutlet weak var activityDistanceLbl: UILabel!
-    @IBOutlet weak var activityCalorieLbl: UILabel!
+    @IBOutlet weak var stepDistanceLbl: UILabel!  {
+        didSet {
+            stepDistanceLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var stepDistanceDetailLbl: UILabel! {
+        didSet {
+            stepDistanceDetailLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var todayActivityLbl: UILabel! {
+        didSet {
+            todayActivityLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var activityWalkingLbl: UILabel! {
+        didSet {
+            activityWalkingLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var activitytimeLbl: UILabel! {
+        didSet {
+            activitytimeLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var activityStepsLbl: UILabel! {
+        didSet {
+            activityStepsLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var activityDistanceLbl: UILabel! {
+        didSet {
+            activityDistanceLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var activityCalorieLbl: UILabel! {
+        didSet {
+            activityCalorieLbl.font = Constants.labelFont
+        }
+    }
     
     @IBOutlet weak var caloriBackView: UIView!
-    @IBOutlet weak var calorieBurnLbl: UILabel!
-    @IBOutlet weak var calorieBurnDetailLbl: UILabel!
+    @IBOutlet weak var calorieBurnLbl: UILabel! {
+        didSet {
+            calorieBurnLbl.font = Constants.labelFont
+        }
+    }
+    @IBOutlet weak var calorieBurnDetailLbl: UILabel! {
+        didSet {
+            calorieBurnDetailLbl.font = Constants.labelFont
+        }
+    }
     
     @IBOutlet weak var chartImage: UIImageView!
     
