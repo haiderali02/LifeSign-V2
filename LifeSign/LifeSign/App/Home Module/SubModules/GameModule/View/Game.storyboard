@@ -101,8 +101,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RK-LN-HzC" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hD-gX-pt6">
-                                                <rect key="frame" x="16" y="13" width="107" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hD-gX-pt6">
+                                                <rect key="frame" x="16" y="16" width="332" height="18"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Edit Profile" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -112,7 +112,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YF-qV-LZI">
-                                                <rect key="frame" x="349" y="13" width="49" height="24"/>
+                                                <rect key="frame" x="348" y="13" width="50" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="V1c-76-OEl"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="tintColor" name="appYellowColor"/>
                                                 <inset key="contentEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -138,6 +141,9 @@
                                             <constraint firstItem="716-le-wpM" firstAttribute="leading" secondItem="7YF-qV-LZI" secondAttribute="trailing" id="FZv-xz-auv"/>
                                             <constraint firstAttribute="height" constant="50" id="Ryu-Bd-6hP"/>
                                             <constraint firstItem="7YF-qV-LZI" firstAttribute="centerY" secondItem="4RK-LN-HzC" secondAttribute="centerY" id="XNS-oU-U4t"/>
+                                            <constraint firstItem="9hD-gX-pt6" firstAttribute="top" secondItem="4RK-LN-HzC" secondAttribute="top" constant="16" id="ifx-EK-AdN"/>
+                                            <constraint firstAttribute="bottom" secondItem="9hD-gX-pt6" secondAttribute="bottom" constant="16" id="jMo-vH-VQh"/>
+                                            <constraint firstItem="7YF-qV-LZI" firstAttribute="leading" secondItem="9hD-gX-pt6" secondAttribute="trailing" id="re8-mM-EHb"/>
                                             <constraint firstItem="9hD-gX-pt6" firstAttribute="leading" secondItem="4RK-LN-HzC" secondAttribute="leading" constant="16" id="s5P-ES-zIc"/>
                                             <constraint firstItem="9hD-gX-pt6" firstAttribute="centerY" secondItem="4RK-LN-HzC" secondAttribute="centerY" id="xvc-Pe-sbA"/>
                                             <constraint firstItem="716-le-wpM" firstAttribute="centerY" secondItem="4RK-LN-HzC" secondAttribute="centerY" id="ype-Lv-fEr"/>
@@ -306,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrL-sj-qPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718.84057971014499" y="-830.35714285714278"/>
+            <point key="canvasLocation" x="883" y="-570"/>
         </scene>
         <!--OtherAppsVC-->
         <scene sceneID="tgo-zy-G2i">
@@ -322,8 +328,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44y-aK-2WA" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJe-rG-Vdd">
-                                                <rect key="frame" x="16" y="13" width="62" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJe-rG-Vdd">
+                                                <rect key="frame" x="16" y="0.0" width="366" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="apps" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -343,6 +349,9 @@
                                         <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
                                             <constraint firstItem="eJe-rG-Vdd" firstAttribute="centerY" secondItem="44y-aK-2WA" secondAttribute="centerY" id="9ME-ru-X5P"/>
+                                            <constraint firstItem="eJe-rG-Vdd" firstAttribute="top" secondItem="44y-aK-2WA" secondAttribute="top" id="CaZ-Vm-82I"/>
+                                            <constraint firstAttribute="bottom" secondItem="eJe-rG-Vdd" secondAttribute="bottom" id="IPk-0L-dMn"/>
+                                            <constraint firstItem="abj-wG-pMK" firstAttribute="leading" secondItem="eJe-rG-Vdd" secondAttribute="trailing" constant="16" id="KIX-2Y-g17"/>
                                             <constraint firstItem="eJe-rG-Vdd" firstAttribute="leading" secondItem="44y-aK-2WA" secondAttribute="leading" constant="16" id="QXA-EZ-CbD"/>
                                             <constraint firstAttribute="trailing" secondItem="abj-wG-pMK" secondAttribute="trailing" constant="16" id="ayI-5V-GrL"/>
                                             <constraint firstAttribute="height" constant="50" id="kAX-Ud-CuI"/>

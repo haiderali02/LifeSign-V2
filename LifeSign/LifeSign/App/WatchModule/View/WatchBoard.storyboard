@@ -23,8 +23,8 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vr-H1-FCS" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOb-yf-21f">
-                                                <rect key="frame" x="16" y="13" width="63" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOb-yf-21f">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Back" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -36,9 +36,12 @@
                                         </subviews>
                                         <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
+                                            <constraint firstItem="IOb-yf-21f" firstAttribute="top" secondItem="8Vr-H1-FCS" secondAttribute="top" id="3SJ-f3-FoO"/>
                                             <constraint firstItem="IOb-yf-21f" firstAttribute="leading" secondItem="8Vr-H1-FCS" secondAttribute="leading" constant="16" id="Eob-cV-fHD"/>
                                             <constraint firstAttribute="height" constant="50" id="FGw-Sk-JWh"/>
+                                            <constraint firstAttribute="trailing" secondItem="IOb-yf-21f" secondAttribute="trailing" constant="16" id="hCA-OW-ocB"/>
                                             <constraint firstItem="IOb-yf-21f" firstAttribute="centerY" secondItem="8Vr-H1-FCS" secondAttribute="centerY" id="jYf-Fj-oSS"/>
+                                            <constraint firstAttribute="bottom" secondItem="IOb-yf-21f" secondAttribute="bottom" id="phf-31-hvu"/>
                                         </constraints>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSQ-Pb-xat" userLabel="Body">
@@ -191,8 +194,8 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbl-yQ-C8Z" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66z-Uv-auh">
-                                                <rect key="frame" x="16" y="13" width="63" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66z-Uv-auh">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Back" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -211,6 +214,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4x6-Hi-FL9"/>
                                             <constraint firstItem="66z-Uv-auh" firstAttribute="leading" secondItem="dbl-yQ-C8Z" secondAttribute="leading" constant="16" id="J1x-bV-kuE"/>
+                                            <constraint firstAttribute="trailing" secondItem="66z-Uv-auh" secondAttribute="trailing" constant="16" id="ZKT-Xv-7KY"/>
+                                            <constraint firstAttribute="bottom" secondItem="66z-Uv-auh" secondAttribute="bottom" id="ZTo-Lp-gAQ"/>
+                                            <constraint firstItem="66z-Uv-auh" firstAttribute="top" secondItem="dbl-yQ-C8Z" secondAttribute="top" id="aKh-ka-Z1c"/>
                                             <constraint firstItem="66z-Uv-auh" firstAttribute="centerY" secondItem="dbl-yQ-C8Z" secondAttribute="centerY" id="aPX-I2-6ei"/>
                                         </constraints>
                                     </view>

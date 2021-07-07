@@ -25,8 +25,8 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSr-4T-1Xs" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-zR-Y4X">
-                                                <rect key="frame" x="16" y="13" width="63" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-zR-Y4X">
+                                                <rect key="frame" x="16" y="0.0" width="353" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Back" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -51,9 +51,12 @@
                                         <constraints>
                                             <constraint firstItem="78a-dX-Fba" firstAttribute="centerY" secondItem="DSr-4T-1Xs" secondAttribute="centerY" id="2cU-LI-qqQ"/>
                                             <constraint firstAttribute="height" constant="50" id="55k-um-jZS"/>
+                                            <constraint firstItem="78a-dX-Fba" firstAttribute="leading" secondItem="gFt-zR-Y4X" secondAttribute="trailing" id="J2z-DG-ptt"/>
                                             <constraint firstItem="gFt-zR-Y4X" firstAttribute="centerY" secondItem="DSr-4T-1Xs" secondAttribute="centerY" id="J4C-jS-oIb"/>
+                                            <constraint firstAttribute="bottom" secondItem="gFt-zR-Y4X" secondAttribute="bottom" id="Pir-u9-mra"/>
                                             <constraint firstAttribute="trailing" secondItem="78a-dX-Fba" secondAttribute="trailing" constant="20" id="d7C-kk-PSa"/>
                                             <constraint firstItem="gFt-zR-Y4X" firstAttribute="leading" secondItem="DSr-4T-1Xs" secondAttribute="leading" constant="16" id="goo-l6-2gc"/>
+                                            <constraint firstItem="gFt-zR-Y4X" firstAttribute="top" secondItem="DSr-4T-1Xs" secondAttribute="top" id="zgs-TA-oIJ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-Xx-uNB" userLabel="Body">
@@ -377,8 +380,12 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-u9-5VF">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="85"/>
+                                                                                        <rect key="frame" x="9" y="-5" width="80" height="80"/>
                                                                                         <color key="backgroundColor" name="appGreenColor"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="80" id="1le-gp-KX6"/>
+                                                                                            <constraint firstAttribute="height" constant="80" id="qka-7w-ZlM"/>
+                                                                                        </constraints>
                                                                                         <state key="normal" image="ic_heart-icon"/>
                                                                                         <connections>
                                                                                             <action selector="didTapHealthBtn:" destination="KJu-9m-5L8" eventType="touchUpInside" id="dHz-No-1Yi"/>
@@ -387,14 +394,12 @@
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" name="appBackgroundColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstItem="0Es-u9-5VF" firstAttribute="leading" secondItem="zQg-zz-EPc" secondAttribute="leading" id="FXs-Lh-Woh"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="0Es-u9-5VF" secondAttribute="trailing" id="Gx9-yL-yAi"/>
+                                                                                    <constraint firstItem="0Es-u9-5VF" firstAttribute="centerY" secondItem="zQg-zz-EPc" secondAttribute="centerY" constant="-20" id="5kg-N5-1CD"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="Ttz-Hk-Q6V" secondAttribute="trailing" constant="7" id="Kkg-fD-ZMe"/>
-                                                                                    <constraint firstItem="0Es-u9-5VF" firstAttribute="top" secondItem="zQg-zz-EPc" secondAttribute="top" id="TcX-Bl-eRF"/>
+                                                                                    <constraint firstItem="0Es-u9-5VF" firstAttribute="centerX" secondItem="zQg-zz-EPc" secondAttribute="centerX" id="Txx-NH-vYC"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="Ttz-Hk-Q6V" secondAttribute="bottom" constant="8" id="YRQ-I4-QqM"/>
                                                                                     <constraint firstItem="Ttz-Hk-Q6V" firstAttribute="leading" secondItem="zQg-zz-EPc" secondAttribute="leading" constant="7" id="aM6-oZ-d78"/>
                                                                                     <constraint firstAttribute="height" constant="110" id="cKc-8c-WQt"/>
-                                                                                    <constraint firstItem="Ttz-Hk-Q6V" firstAttribute="top" secondItem="0Es-u9-5VF" secondAttribute="bottom" id="k8O-Cf-61c"/>
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POf-P5-WoC">
@@ -407,8 +412,12 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ks3-1I-kom">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="86"/>
+                                                                                        <rect key="frame" x="8.5" y="-5" width="80" height="80"/>
                                                                                         <color key="backgroundColor" name="appYellowColor"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="80" id="CNV-6d-fOH"/>
+                                                                                            <constraint firstAttribute="height" constant="80" id="zZA-ok-hqG"/>
+                                                                                        </constraints>
                                                                                         <state key="normal" image="ic_sleep_icon"/>
                                                                                         <connections>
                                                                                             <action selector="didTapHealthBtn:" destination="KJu-9m-5L8" eventType="touchUpInside" id="Bd3-md-5CJ"/>
@@ -417,13 +426,11 @@
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" name="appBackgroundColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstItem="Ks3-1I-kom" firstAttribute="leading" secondItem="POf-P5-WoC" secondAttribute="leading" id="NT2-fZ-J52"/>
                                                                                     <constraint firstAttribute="height" constant="110" id="SCt-ER-Tae"/>
-                                                                                    <constraint firstItem="1Ok-Ql-I3n" firstAttribute="top" secondItem="Ks3-1I-kom" secondAttribute="bottom" id="Y5f-WH-1Y7"/>
-                                                                                    <constraint firstItem="Ks3-1I-kom" firstAttribute="top" secondItem="POf-P5-WoC" secondAttribute="top" id="Yt5-Sm-rnP"/>
+                                                                                    <constraint firstItem="Ks3-1I-kom" firstAttribute="centerY" secondItem="POf-P5-WoC" secondAttribute="centerY" constant="-20" id="WNA-kK-1fH"/>
                                                                                     <constraint firstItem="1Ok-Ql-I3n" firstAttribute="leading" secondItem="POf-P5-WoC" secondAttribute="leading" constant="7" id="b2p-8F-vKw"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="1Ok-Ql-I3n" secondAttribute="bottom" constant="7" id="c9g-jP-rTJ"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="Ks3-1I-kom" secondAttribute="trailing" id="uck-5N-nH2"/>
+                                                                                    <constraint firstItem="Ks3-1I-kom" firstAttribute="centerX" secondItem="POf-P5-WoC" secondAttribute="centerX" id="q0v-t1-dQV"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="1Ok-Ql-I3n" secondAttribute="trailing" constant="7" id="v6H-BT-4V5"/>
                                                                                 </constraints>
                                                                             </view>
@@ -437,8 +444,12 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke0-IJ-o5s">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="86"/>
+                                                                                        <rect key="frame" x="9" y="-5" width="80" height="80"/>
                                                                                         <color key="backgroundColor" name="appYellowColor"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="80" id="A8V-bU-ZlU"/>
+                                                                                            <constraint firstAttribute="width" constant="80" id="xXV-8N-FcK"/>
+                                                                                        </constraints>
                                                                                         <state key="normal" image="ic_steps_icon"/>
                                                                                         <connections>
                                                                                             <action selector="didTapHealthBtn:" destination="KJu-9m-5L8" eventType="touchUpInside" id="KJQ-Z9-ub3"/>
@@ -447,11 +458,9 @@
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" name="appBackgroundColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstItem="bmB-Eb-1pm" firstAttribute="top" secondItem="ke0-IJ-o5s" secondAttribute="bottom" id="0cQ-WV-Lec"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="ke0-IJ-o5s" secondAttribute="trailing" id="2Ne-fa-6SH"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="bmB-Eb-1pm" secondAttribute="bottom" constant="7" id="499-sN-SL0"/>
-                                                                                    <constraint firstItem="ke0-IJ-o5s" firstAttribute="leading" secondItem="euH-4a-rFI" secondAttribute="leading" id="A5u-0S-F2W"/>
-                                                                                    <constraint firstItem="ke0-IJ-o5s" firstAttribute="top" secondItem="euH-4a-rFI" secondAttribute="top" id="DwP-zL-X7E"/>
+                                                                                    <constraint firstItem="ke0-IJ-o5s" firstAttribute="centerX" secondItem="euH-4a-rFI" secondAttribute="centerX" id="9eX-ix-MUa"/>
+                                                                                    <constraint firstItem="ke0-IJ-o5s" firstAttribute="centerY" secondItem="euH-4a-rFI" secondAttribute="centerY" constant="-20" id="JJL-Fw-i72"/>
                                                                                     <constraint firstAttribute="height" constant="110" id="Jbd-nJ-wQs"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="bmB-Eb-1pm" secondAttribute="trailing" constant="7" id="Pom-ot-VUU"/>
                                                                                     <constraint firstItem="bmB-Eb-1pm" firstAttribute="leading" secondItem="euH-4a-rFI" secondAttribute="leading" constant="7" id="jPz-pD-G5x"/>
@@ -467,8 +476,12 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-cz-RCQ">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="86"/>
+                                                                                        <rect key="frame" x="8.5" y="-5" width="80" height="80"/>
                                                                                         <color key="backgroundColor" name="appYellowColor"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="80" id="bmP-nS-15v"/>
+                                                                                            <constraint firstAttribute="height" constant="80" id="yr0-mt-5RN"/>
+                                                                                        </constraints>
                                                                                         <state key="normal" image="ic_calorie-icon"/>
                                                                                         <connections>
                                                                                             <action selector="didTapHealthBtn:" destination="KJu-9m-5L8" eventType="touchUpInside" id="yiL-b9-fkJ"/>
@@ -477,14 +490,12 @@
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" name="appBackgroundColor"/>
                                                                                 <constraints>
+                                                                                    <constraint firstItem="Vce-cz-RCQ" firstAttribute="centerY" secondItem="dkB-dB-nHq" secondAttribute="centerY" constant="-20" id="IlW-5v-e4j"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="xEw-4L-2sL" secondAttribute="bottom" constant="7" id="Jtt-gf-x7e"/>
                                                                                     <constraint firstAttribute="height" constant="110" id="MR9-eG-7H2"/>
                                                                                     <constraint firstItem="xEw-4L-2sL" firstAttribute="leading" secondItem="dkB-dB-nHq" secondAttribute="leading" constant="7" id="PVj-f5-hSP"/>
-                                                                                    <constraint firstItem="Vce-cz-RCQ" firstAttribute="top" secondItem="dkB-dB-nHq" secondAttribute="top" id="g70-lr-2BC"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="Vce-cz-RCQ" secondAttribute="trailing" id="lpv-LR-KMM"/>
+                                                                                    <constraint firstItem="Vce-cz-RCQ" firstAttribute="centerX" secondItem="dkB-dB-nHq" secondAttribute="centerX" id="nG1-fQ-EIR"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="xEw-4L-2sL" secondAttribute="trailing" constant="7" id="oJX-dT-wfH"/>
-                                                                                    <constraint firstItem="Vce-cz-RCQ" firstAttribute="leading" secondItem="dkB-dB-nHq" secondAttribute="leading" id="sCl-xz-8w7"/>
-                                                                                    <constraint firstItem="xEw-4L-2sL" firstAttribute="top" secondItem="Vce-cz-RCQ" secondAttribute="bottom" id="tQy-AZ-jyS"/>
                                                                                 </constraints>
                                                                             </view>
                                                                         </subviews>
