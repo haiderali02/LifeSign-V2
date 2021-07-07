@@ -24,8 +24,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-Pr-prv" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9O-Nw-AOc">
-                                                <rect key="frame" x="16" y="13" width="72" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9O-Nw-AOc">
+                                                <rect key="frame" x="16" y="0.0" width="333" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Profile" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -36,6 +36,10 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1K7-le-ycg">
                                                 <rect key="frame" x="349" y="13" width="49" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49" id="hO9-bM-NcF"/>
+                                                    <constraint firstAttribute="height" constant="24" id="ucf-wC-Nji"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="tintColor" name="appGreenColor"/>
                                                 <inset key="contentEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -57,11 +61,14 @@
                                         </subviews>
                                         <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
+                                            <constraint firstItem="j9O-Nw-AOc" firstAttribute="top" secondItem="8xb-Pr-prv" secondAttribute="top" id="4Dv-8G-JDV"/>
                                             <constraint firstItem="1K7-le-ycg" firstAttribute="centerY" secondItem="8xb-Pr-prv" secondAttribute="centerY" id="4iO-H0-YFC"/>
                                             <constraint firstAttribute="trailing" secondItem="ccK-Ll-OK4" secondAttribute="trailing" constant="16" id="HOX-uf-oxg"/>
                                             <constraint firstItem="ccK-Ll-OK4" firstAttribute="leading" secondItem="1K7-le-ycg" secondAttribute="trailing" id="McS-Nm-pmD"/>
                                             <constraint firstItem="j9O-Nw-AOc" firstAttribute="centerY" secondItem="8xb-Pr-prv" secondAttribute="centerY" id="PIC-eg-h0d"/>
+                                            <constraint firstItem="1K7-le-ycg" firstAttribute="leading" secondItem="j9O-Nw-AOc" secondAttribute="trailing" id="jcv-Hg-JPh"/>
                                             <constraint firstItem="j9O-Nw-AOc" firstAttribute="leading" secondItem="8xb-Pr-prv" secondAttribute="leading" constant="16" id="kI9-dH-Z7Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="j9O-Nw-AOc" secondAttribute="bottom" id="lCl-rj-rs3"/>
                                             <constraint firstAttribute="height" constant="50" id="rxD-hE-7v5"/>
                                             <constraint firstItem="ccK-Ll-OK4" firstAttribute="centerY" secondItem="8xb-Pr-prv" secondAttribute="centerY" id="vBF-3E-0kV"/>
                                         </constraints>
@@ -722,8 +729,8 @@ Tell your loved ones that you are OK. </string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omm-g5-oO0" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8j-FL-W8B">
-                                                <rect key="frame" x="16" y="13" width="107" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8j-FL-W8B">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Edit Profile" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -732,32 +739,15 @@ Tell your loved ones that you are OK. </string>
                                                     <action selector="didTapBackButton:" destination="hFs-as-B3i" eventType="touchUpInside" id="QXa-lN-wFp"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb8-Mq-bbP">
-                                                <rect key="frame" x="279" y="15" width="95" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <inset key="contentEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="English" image="ic_eng_flag">
-                                                    <color key="titleColor" name="appYellowColor"/>
-                                                </state>
-                                            </button>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_down" translatesAutoresizingMaskIntoConstraints="NO" id="Oyy-vr-1k2">
-                                                <rect key="frame" x="374" y="13" width="24" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="AIN-qA-uSW"/>
-                                                    <constraint firstAttribute="width" constant="24" id="Oo5-JE-7Sj"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Oyy-vr-1k2" secondAttribute="trailing" constant="16" id="CKD-os-lnE"/>
+                                            <constraint firstAttribute="trailing" secondItem="w8j-FL-W8B" secondAttribute="trailing" constant="16" id="0gN-Tw-432"/>
+                                            <constraint firstAttribute="bottom" secondItem="w8j-FL-W8B" secondAttribute="bottom" id="0my-LS-c0S"/>
                                             <constraint firstItem="w8j-FL-W8B" firstAttribute="centerY" secondItem="omm-g5-oO0" secondAttribute="centerY" id="GwE-fz-apj"/>
                                             <constraint firstItem="w8j-FL-W8B" firstAttribute="leading" secondItem="omm-g5-oO0" secondAttribute="leading" constant="16" id="KgA-uG-gSZ"/>
-                                            <constraint firstItem="Oyy-vr-1k2" firstAttribute="leading" secondItem="pb8-Mq-bbP" secondAttribute="trailing" id="RXc-wz-HpH"/>
                                             <constraint firstAttribute="height" constant="50" id="Slm-3u-fpD"/>
-                                            <constraint firstItem="pb8-Mq-bbP" firstAttribute="centerY" secondItem="omm-g5-oO0" secondAttribute="centerY" id="lDy-fd-gKO"/>
-                                            <constraint firstItem="Oyy-vr-1k2" firstAttribute="centerY" secondItem="omm-g5-oO0" secondAttribute="centerY" id="wBG-Zr-H2e"/>
+                                            <constraint firstItem="w8j-FL-W8B" firstAttribute="top" secondItem="omm-g5-oO0" secondAttribute="top" id="Tvu-IE-Hs9"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5d8-62-ARC" userLabel="Body">
@@ -1240,8 +1230,11 @@ Tell your loved ones that you are OK. </string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTl-Nd-4gr" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi4-lD-4aR">
-                                                <rect key="frame" x="16" y="13" width="55" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi4-lD-4aR">
+                                                <rect key="frame" x="16" y="0.0" width="250" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="Cx1-3a-WKe"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Sett" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -1286,9 +1279,11 @@ Tell your loved ones that you are OK. </string>
                                         <constraints>
                                             <constraint firstItem="0bz-13-nnt" firstAttribute="centerY" secondItem="Xi4-lD-4aR" secondAttribute="centerY" id="8t8-yE-0mo"/>
                                             <constraint firstAttribute="trailing" secondItem="DJT-SJ-7B6" secondAttribute="trailing" constant="16" id="Bh1-qG-5o3"/>
+                                            <constraint firstItem="Xi4-lD-4aR" firstAttribute="top" secondItem="HTl-Nd-4gr" secondAttribute="top" id="CMP-bX-UhN"/>
                                             <constraint firstItem="Xi4-lD-4aR" firstAttribute="centerY" secondItem="HTl-Nd-4gr" secondAttribute="centerY" id="E7k-zs-luS"/>
                                             <constraint firstItem="DJT-SJ-7B6" firstAttribute="leading" secondItem="0bz-13-nnt" secondAttribute="trailing" id="HTd-Tt-ieG"/>
                                             <constraint firstAttribute="height" constant="50" id="JHY-Bk-BV3"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xi4-lD-4aR" secondAttribute="bottom" id="KT6-4j-xJ8"/>
                                             <constraint firstItem="Xi4-lD-4aR" firstAttribute="leading" secondItem="HTl-Nd-4gr" secondAttribute="leading" constant="16" id="Lnz-Ge-ndj"/>
                                             <constraint firstItem="0bz-13-nnt" firstAttribute="leading" secondItem="ieM-GS-UlB" secondAttribute="trailing" id="MJG-1X-H1y"/>
                                             <constraint firstItem="ieM-GS-UlB" firstAttribute="leading" secondItem="PAa-hz-mnW" secondAttribute="trailing" constant="5" id="NSI-Qi-Ibv"/>
@@ -1954,8 +1949,8 @@ Tell your loved ones that you are OK. </string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7n9-0I-aJZ" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGP-GP-OBQ">
-                                                <rect key="frame" x="16" y="13" width="55" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGP-GP-OBQ">
+                                                <rect key="frame" x="16" y="0.0" width="346" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Sett" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -1978,9 +1973,12 @@ Tell your loved ones that you are OK. </string>
                                         <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
                                             <constraint firstItem="MGP-GP-OBQ" firstAttribute="centerY" secondItem="7n9-0I-aJZ" secondAttribute="centerY" id="1kE-Qz-7qr"/>
+                                            <constraint firstAttribute="bottom" secondItem="MGP-GP-OBQ" secondAttribute="bottom" id="6pW-bD-Udl"/>
                                             <constraint firstAttribute="height" constant="50" id="Jk7-eq-EeT"/>
                                             <constraint firstAttribute="trailing" secondItem="Tg7-i0-bUZ" secondAttribute="trailing" constant="16" id="MJD-OO-wHB"/>
+                                            <constraint firstItem="L7u-vH-fOR" firstAttribute="leading" secondItem="MGP-GP-OBQ" secondAttribute="trailing" id="Nvv-Z8-NPx"/>
                                             <constraint firstItem="Tg7-i0-bUZ" firstAttribute="leading" secondItem="L7u-vH-fOR" secondAttribute="trailing" constant="16" id="R8l-Ne-5vc"/>
+                                            <constraint firstItem="MGP-GP-OBQ" firstAttribute="top" secondItem="7n9-0I-aJZ" secondAttribute="top" id="eNb-yp-aKs"/>
                                             <constraint firstItem="L7u-vH-fOR" firstAttribute="centerY" secondItem="MGP-GP-OBQ" secondAttribute="centerY" id="iJe-K9-PSI"/>
                                             <constraint firstItem="MGP-GP-OBQ" firstAttribute="leading" secondItem="7n9-0I-aJZ" secondAttribute="leading" constant="16" id="l71-Z3-IrO"/>
                                             <constraint firstItem="Tg7-i0-bUZ" firstAttribute="centerY" secondItem="7n9-0I-aJZ" secondAttribute="centerY" id="tUg-pR-dlR"/>
@@ -2058,8 +2056,8 @@ Tell your loved ones that you are OK. </string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FH6-yP-10d" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeJ-ac-0u9">
-                                                <rect key="frame" x="16" y="13" width="161" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeJ-ac-0u9">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Add SOS Number" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -2068,31 +2066,14 @@ Tell your loved ones that you are OK. </string>
                                                     <action selector="didTapBack:" destination="tEk-t5-wDq" eventType="touchUpInside" id="nQE-N8-piy"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69j-hx-G0A">
-                                                <rect key="frame" x="279" y="15" width="95" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <inset key="contentEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="English" image="ic_eng_flag">
-                                                    <color key="titleColor" name="appYellowColor"/>
-                                                </state>
-                                            </button>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_down" translatesAutoresizingMaskIntoConstraints="NO" id="vAy-MJ-wLB">
-                                                <rect key="frame" x="374" y="13" width="24" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="OzK-MQ-hDZ"/>
-                                                    <constraint firstAttribute="height" constant="24" id="ZIb-Qa-Vp4"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="appBoxesColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="vAy-MJ-wLB" secondAttribute="trailing" constant="16" id="I9i-q9-Zvx"/>
+                                            <constraint firstAttribute="bottom" secondItem="SeJ-ac-0u9" secondAttribute="bottom" id="4Ac-Fu-GUG"/>
+                                            <constraint firstAttribute="trailing" secondItem="SeJ-ac-0u9" secondAttribute="trailing" constant="16" id="Jwa-ul-R9F"/>
                                             <constraint firstItem="SeJ-ac-0u9" firstAttribute="leading" secondItem="FH6-yP-10d" secondAttribute="leading" constant="16" id="O90-Gs-uxG"/>
-                                            <constraint firstItem="vAy-MJ-wLB" firstAttribute="centerY" secondItem="FH6-yP-10d" secondAttribute="centerY" id="WkG-ho-Xy8"/>
+                                            <constraint firstItem="SeJ-ac-0u9" firstAttribute="top" secondItem="FH6-yP-10d" secondAttribute="top" id="XWr-dH-Ytm"/>
                                             <constraint firstItem="SeJ-ac-0u9" firstAttribute="centerY" secondItem="FH6-yP-10d" secondAttribute="centerY" id="Yhe-ra-2dy"/>
-                                            <constraint firstItem="vAy-MJ-wLB" firstAttribute="leading" secondItem="69j-hx-G0A" secondAttribute="trailing" id="jIy-vm-HcZ"/>
-                                            <constraint firstItem="69j-hx-G0A" firstAttribute="centerY" secondItem="FH6-yP-10d" secondAttribute="centerY" id="mjB-WD-DfF"/>
                                             <constraint firstAttribute="height" constant="50" id="nYy-9x-faA"/>
                                         </constraints>
                                     </view>
@@ -2407,8 +2388,8 @@ Tell your loved ones that you are OK. </string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7W-by-Ib2" userLabel="Header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vZ-BM-rag">
-                                                <rect key="frame" x="16" y="13" width="63" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vZ-BM-rag">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Back" image="ic_back">
                                                     <color key="titleColor" name="appYellowColor"/>
@@ -2422,7 +2403,10 @@ Tell your loved ones that you are OK. </string>
                                         <constraints>
                                             <constraint firstItem="6vZ-BM-rag" firstAttribute="leading" secondItem="S7W-by-Ib2" secondAttribute="leading" constant="16" id="NxL-X4-WMH"/>
                                             <constraint firstItem="6vZ-BM-rag" firstAttribute="centerY" secondItem="S7W-by-Ib2" secondAttribute="centerY" id="fJz-Xb-sZA"/>
+                                            <constraint firstAttribute="bottom" secondItem="6vZ-BM-rag" secondAttribute="bottom" id="hN1-Hh-A2e"/>
+                                            <constraint firstAttribute="trailing" secondItem="6vZ-BM-rag" secondAttribute="trailing" constant="16" id="lo2-ak-MKV"/>
                                             <constraint firstAttribute="height" constant="50" id="tOQ-Zz-tTh"/>
+                                            <constraint firstItem="6vZ-BM-rag" firstAttribute="top" secondItem="S7W-by-Ib2" secondAttribute="top" id="yt7-EB-nUt"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftN-hk-qya" userLabel="Body">
