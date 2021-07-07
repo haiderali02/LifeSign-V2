@@ -164,6 +164,9 @@ class GameVC: LifeSignBaseVC {
     
     fileprivate func playMyTurn(_ progressGame: UserGameProgress, _ userFriend: Items) {
         SocketHelper.shared.sendGameStartEvent(gameID: progressGame.game_id, clickByUser_id: UserManager.shared.user_id, startUserId: progressGame.game_start_by_user_id, friendID: userFriend.friend_id, gameStartTime: progressGame.game_start_time, fcmTokken: userFriend.fcm_token, message: userFriend.message)
+        
+       // Helper.sendNotification(toUserFcmTokken: userFriend.fcm_token, text: userFriend.message, title: "HELLO")
+        
     }
     
     func handlePlayTurn(_ userFriend: Items, acceptBtn: Bool) {

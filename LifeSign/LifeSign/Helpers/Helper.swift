@@ -99,23 +99,9 @@ class Helper: NSObject {
     
     
     
-    static func sendNotification(toUserId:Int, text:String, title: String) {
-        
+    static func sendNotification(toUserFcmTokken:String, text:String, title: String) {
         
         let url = NSURL(string: "https://fcm.googleapis.com/fcm/send")
-        let gameImg = #imageLiteral(resourceName: "AddGame")
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        var imgFilePath = ""
-        // Save image.
-        if let filePath = paths.first?.appendingPathComponent("gameICon.png") {
-            // Save image.
-            do {
-                try gameImg.pngData()?.write(to: filePath, options: .atomic)
-                imgFilePath = filePath.absoluteString
-            } catch {
-                // Handle the error
-            }
-        }
         
         let postParams: [String : AnyObject] = ["apns": [
             "payload": [
@@ -126,12 +112,12 @@ class Helper: NSObject {
             "fcm_options": [
                 "image": "http://uztrip.twaintec.com/images/users/Khawar-5ecf6c05f1c82.jpg"
             ]
-        ] as AnyObject, "to":"FCM _ TOKKEN _ HERE" as AnyObject,"data": ["type":"Game","name":"","user_id":""] as AnyObject, "notification": ["body": "USER NAME \(text)", "title": "\(title)" ,"sound" : "default"] as AnyObject]
+        ] as AnyObject, "to":"\(toUserFcmTokken)" as AnyObject,"data": ["type":"Game","name":"","user_id":""] as AnyObject, "notification": ["body": "\(text)", "title": "\(title)" ,"sound" : "default"] as AnyObject]
         //, "badge" : totalBadgeCount
         let request = NSMutableURLRequest(url: url! as URL)
         request.httpMethod = "POST"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        request.setValue("key=AAAA66GYH1o:APA91bGOJFfugtsDwq4FKy4stuhUu6F3cJK9fZQZ7THnS_FaphusnZ0najvHzRYIQhfP2ONto6UeEuQIEdxpZrNSF86Kp6plahqWzkalyEHyuBzbEvUqg9rpRs3bsL3X4UUCiuW_R_xg", forHTTPHeaderField: "Authorization")
+        request.setValue("key=AAAAqN2ctZI:APA91bGY-II1wfn1bDe89GUFFYlqT7BrrwaOWEt8roOPnx_VE3mQtN3-_e1ZLuLfjRSLJCJICIq7oDPfMttPvV7Oh0C-qWWjIfRwO2ClEBnTKvwK4aXyaB1Ukqe7ogJXmxvfptDzU_hc", forHTTPHeaderField: "Authorization")
         
         do{
             request.httpBody = try JSONSerialization.data(withJSONObject: postParams, options: JSONSerialization.WritingOptions())
