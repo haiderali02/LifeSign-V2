@@ -52,15 +52,9 @@ struct Items : Mappable {
     var game_start_status: String = ""
     var game_winner: Int = 0
     var game_initiator: Int = 0
+    
     var points: Int = 0
     var position: Int = 0
-    
-    // HEALTH
-    
-    var health_friend_status: String = ""
-    var health_friend_request: String = ""
-    var health_sharing: FriendsHealthSharing?
-    var health_request: String = ""
     
 	init?(map: Map) {
 
@@ -116,39 +110,7 @@ struct Items : Mappable {
         points <- map["points"]
         position <- map["position"]
         
-        health_friend_status <- map["health_friend_status"]
-        health_friend_request <- map["health_friend_request"]
-        health_sharing <- map["shares"]
-        health_request <- map["health_request"]
 	}
-}
-
-
-class FriendsHealthSharing: Mappable {
-    
-    var step: Bool = false
-    var calories: Bool = false
-    var heart: Bool = false
-    var sleep: Bool = false
-    
-    
-    init() {
-        
-    }
-    required init?(map: Map) {
-        self.mapping(map: map)
-    }
-    convenience init(dic:[String:Any]) {
-        let map = Map.init(mappingType: .fromJSON, JSON: dic)
-        self.init(map:map)!
-    }
-    
-    func mapping(map: Map) {
-        step <- map["step"]
-        calories <- map["calories"]
-        heart <- map["heart"]
-        sleep <- map["sleep"]
-    }
 }
 
 

@@ -84,28 +84,13 @@ class HealthVC: LifeSignBaseVC {
         friendsHealthBtn.titleLabel?.font = Constants.headerTitleFont
         friendRequestBtn.titleLabel?.font = Constants.headerTitleFont
         
+        //updateCounters()
     }
     
     func observers(){
         NotificationCenter.default.addObserver(self, selector: #selector(setText), name: .languageCanged, object: nil)
     }
     
-    func showUserFriends() {
-        if let controller = R.storyboard.friends.friendsVC() {
-            controller.modalPresentationStyle = .overCurrentContext
-            controller.mode = .addNew
-            controller.shouldNavigateToShope = { (index, value) in
-                self.dismiss(animated: true) {
-                    NotificationCenter.default.post(name: .redirectToShop, object: nil)
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }
-            let navController = UINavigationController(rootViewController: controller)
-            navController.modalPresentationStyle = .overFullScreen
-            
-            self.present(navController, animated: true, completion: nil)
-        }
-    }
     
     //MARK:- ACTIONS -
     
@@ -115,7 +100,7 @@ class HealthVC: LifeSignBaseVC {
     
     @IBAction func didTapAddFriendBtn(_ sender: UIButton) {
         sender.showAnimation {
-            self.showUserFriends()
+            
         }
     }
     

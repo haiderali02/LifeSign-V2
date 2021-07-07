@@ -69,6 +69,19 @@ class MyPurchasesVC: LifeSignBaseVC {
     }
     
     @objc func setText() {
+        
+        availableDailySignContactLabel.text = "" + AppStrings.getPurchasesDSContactString()
+        availableExtraClicksLabel.text = "" + AppStrings.getPurchasesClicksString()
+        extraPockGamesLabel.text = "" + AppStrings.getPurchasesGamesString()
+        removeAdsLabel.text = AppStrings.getPurchasesRemovedAdsString()
+        availabelMessageContactLabel.text = "" + AppStrings.getMessageContactPurchased()
+        availableSMS.text = "" + AppStrings.getPurchasesSMSString()
+        
+        for buttons in collection {
+            buttons.setTitle(AppStrings.getAddFriendString(), for: .normal)
+        }
+        
+        
         guard let resources = UserManager.shared.userResources else {return}
         availableDailySignContactLabel.text = "\(resources.daily_sign_contact) " + AppStrings.getPurchasesDSContactString()
         availableExtraClicksLabel.text = "\(resources.auto_clicked) " + AppStrings.getPurchasesClicksString()

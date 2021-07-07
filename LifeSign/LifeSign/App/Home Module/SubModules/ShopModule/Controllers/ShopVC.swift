@@ -430,7 +430,12 @@ extension ShopVC: SKProductsRequestDelegate, SKPaymentTransactionObserver {
                 
                 for (index, _) in self.skProductsDS.enumerated() {
                     self.skProductsDS = self.skProductsDS.sorted { p1, p2 in
-                        return p1.productIdentifier == Constants.DailySignShopItems[index]
+                        if index < Constants.DailySignShopItems.count {
+                            return p1.productIdentifier == Constants.DailySignShopItems[index]
+                        } else {
+                            return false
+                        }
+                        
                     }
                 }
                 
@@ -446,7 +451,12 @@ extension ShopVC: SKProductsRequestDelegate, SKPaymentTransactionObserver {
                 
                 for (index, _) in self.skProductsGame.enumerated() {
                     self.skProductsGame = self.skProductsGame.sorted { p1, p2 in
-                        return p1.productIdentifier == Constants.PokeGameShopItems[index]
+                        if index < Constants.PokeGameShopItems.count {
+                            return p1.productIdentifier == Constants.PokeGameShopItems[index]
+                        } else {
+                            return false
+                        }
+                        
                     }
                 }
                 
@@ -463,7 +473,13 @@ extension ShopVC: SKProductsRequestDelegate, SKPaymentTransactionObserver {
                 
                 for (index, _) in self.skProductsServices.enumerated() {
                     self.skProductsServices = self.skProductsServices.sorted { p1, p2 in
-                        return p1.productIdentifier == Constants.ServicesShopItems[index]
+                        
+                        if index < Constants.ServicesShopItems.count {
+                            return p1.productIdentifier == Constants.ServicesShopItems[index]
+                        } else {
+                            return false
+                        }
+                        
                     }
                 }
                 

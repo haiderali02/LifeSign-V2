@@ -135,7 +135,7 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
         handleSOSStatus()
         handleOkSignStatus()
         handleDailySignRequest()
-        handleHealthFriendStatus()
+        
     }
     
     func handleSOSStatus() {
@@ -210,27 +210,6 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
             return
         }
     }
-    
-    func handleHealthFriendStatus() {
-        switch userFreind.health_friend_request {
-        case .accepted:
-            heartButton.setTitle(AppStrings.getNOTAddedString(), for: .normal)
-        case .free:
-            self.heartButton.isUserInteractionEnabled = true
-            heartButton.setTitle(AppStrings.getNOTAddedString(), for: .normal)
-        case .pending:
-            self.heartButton.isUserInteractionEnabled = false
-            heartButton.setTitle(AppStrings.getWaitingString(), for: .normal)
-            self.heartButton.setTitleColor(R.color.appPlaceHolderColor(), for: .normal)
-        case .waiting:
-            self.heartButton.isUserInteractionEnabled = false
-            heartButton.setTitle(AppStrings.getFriendPendigString(), for: .normal)
-            self.heartButton.setTitleColor(R.color.appPlaceHolderColor(), for: .normal)
-        default:
-            return
-        }
-    }
-    
     
     func showLifeSignSenderAlert(withUserName: String, time: String) {
         
@@ -357,11 +336,7 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
         }
     }
     @IBAction func didTapAddInHealth(_ sender: UIButton) {
-        guard let healthShareVC = R.storyboard.friends.healthShareVC() else {
-            return
-        }
-        healthShareVC.delegates = self
-        self.present(healthShareVC, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func didTapBlockFriend(_ sender: UIButton) {
         self.showSpinner(onView: self.view)
@@ -396,32 +371,5 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
         // print("Picker Time: \(picker.selectedDateString)")
-    }
-}
-
-extension FriendDetailVC: HealthShareDelegate {
-    
-    func userPermisions(health: Bool, sleep: Bool, steps: Bool, calories: Bool) {
-        
-        let params = [
-            "friend_id": "\(self.userFreind.user_id)",
-            "step": steps ? "1" : "0",
-            "calories": calories ? "1" : "0",
-            "heart": health ? "1": "0",
-            "sleep": sleep ? "1": "0"
-        ]
-        
-        self.showSpinner(onView: self.view)
-        
-        FriendManager.sendHealthFriendRequest(params: params) { status, errors in
-            self.removeSpinner()
-            if errors == nil {
-                self.handleHealthFriendStatus()
-                self.heartButton.isEnabled = false
-                self.heartButton.setTitle(AppStrings.getWaitingString(), for: .normal)
-            } else {
-                ErrorHandler.handleError(errors: errors ?? [""], inController: self)
-            }
-        }
     }
 }

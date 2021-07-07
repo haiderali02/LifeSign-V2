@@ -123,6 +123,9 @@ extension LanguagesVC: CollectionViewMethods {
                 cell?.flagImageView.image = R.image.ic_danish()
             case "ar":
                 cell?.flagImageView.image = R.image.ic_arabic()
+                if let url = URL(string: langData.image_circle ) {
+                    cell?.flagImageView.kf.setImage(with: url)
+                }
             case "ur":
                 cell?.flagImageView.image = R.image.ic_pakistan()
             default:

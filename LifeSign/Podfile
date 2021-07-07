@@ -1,4 +1,4 @@
-#cdsource 'https://github.com/CocoaPods/Specs.git'
+cdsource 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '10.0'
 
@@ -19,12 +19,13 @@ target 'LifeSign' do
   pod 'AdvancedPageControl'
   pod 'SkeletonView'
   pod 'Socket.IO-Client-Swift', '~> 15.2.0'
- 
+  #pod 'Starscream', '~> 4.0.0'
   pod "CBPinEntryView"
   pod 'CountryPickerView'
   pod 'SwipeCellKit'
   pod 'TimeZonePicker'
-  
+  #pod "GetSocial/Core"
+  #pod "GetSocial/UI" # add this pod only if you plan to use GetSocial UI
   pod 'YPImagePicker'
   pod 'Lightbox'
   pod 'LanguageManager-iOS'
@@ -43,6 +44,7 @@ target 'LifeSign' do
   pod 'Cache'
   pod 'DateTimePicker'
   pod 'MessageKit'
+  pod 'Lightbox'
   pod 'FitpoloSDK-iOS'
   
   target 'LifeSignTests' do
