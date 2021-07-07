@@ -180,6 +180,7 @@ class InboxVC: LifeSignBaseVC {
     
     @objc func setText() {
         self.backBtn.setTitle(AppStrings.getMessaesString(), for: .normal)
+        self.searchBar.searchTextField.placeholder  = AppStrings.getSearchString()
     }
     @objc func refresh(_ sender: AnyObject) {
         self.currentPage = 1

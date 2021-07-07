@@ -45,7 +45,7 @@ extension LifeSignVC {
                 
                 self.homeTableView.reloadData()
             } else {
-                ErrorHandler.handleError(errors: errors ?? [""], inController: self)
+                // ErrorHandler.handleError(errors: errors ?? [""], inController: self)
             }
         }
     }
@@ -433,7 +433,7 @@ extension LifeSignVC {
                 
                 self.homeTableView.reloadData()
             } else {
-                ErrorHandler.handleError(errors: errors ?? [""], inController: self)
+                // ErrorHandler.handleError(errors: errors ?? [""], inController: self)
             }
         }
     }

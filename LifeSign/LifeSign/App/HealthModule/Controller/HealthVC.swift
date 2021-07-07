@@ -67,6 +67,7 @@ class HealthVC: LifeSignBaseVC {
     }
     
     //MARK:- METHODS -
+    
     @objc func setText(){
         
     }

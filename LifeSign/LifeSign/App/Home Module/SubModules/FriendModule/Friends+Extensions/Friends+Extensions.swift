@@ -226,7 +226,9 @@ extension FriendsVC: MFMessageComposeViewControllerDelegate {
                         self.openChatWith(friend: userFriend)
                     }
                     controller.navigateToShop = { (friend) in
-                        self.shouldNavigateToShope?(0, nil)
+                        // self.shouldNavigateToShope?(0, nil)
+                        NotificationCenter.default.post(name: .redirectToShop, object: nil)
+                        self.navigationController?.popViewController(animated: true)
                     }
                     self.present(controller, animated: true, completion: nil)
                 }
