@@ -95,25 +95,32 @@ struct PushManager {
         case .generalFriendType:
             switch subType {
             case .generalFriendRequest, .generalFriendAccept:
-                NotificationCenter.default.post(name: .redirectToFriends, object: nil)
-
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    NotificationCenter.default.post(name: .redirectToFriends, object: nil)
+                }
             default:
                 return
             }
         case .shopType:
             switch subType {
             case .shopSMS:
-                NotificationCenter.default.post(name: .redirectToShop, object: nil)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    NotificationCenter.default.post(name: .redirectToShop, object: nil)
+                }
+                
             default:
                 return
             }
         case .sosType:
             switch subType {
             case .sosRequest, .sosAccept:
-                NotificationCenter.default.post(name: .openSOSFriends, object: nil)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    NotificationCenter.default.post(name: .openSOSFriends, object: nil)
+                }
             case .sosAlert:
-                NotificationCenter.default.post(name: .openSOSListing, object: nil)
-
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    NotificationCenter.default.post(name: .openSOSListing, object: nil)
+                }
             default:
                 return
             }

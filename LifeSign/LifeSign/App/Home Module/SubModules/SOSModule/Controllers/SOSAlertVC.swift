@@ -33,7 +33,8 @@ class SOSAlertVC: LifeSignBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.setValue(true, forKey: .sosScreenAppeared)
-        Sound.play(file: .sosReceived)
+        Sound.play(file: .sosReceived, numberOfLoops: -1)
+        
         print("***** AGAIN ******")
         setUI()
         setText()
