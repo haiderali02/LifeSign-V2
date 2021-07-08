@@ -32,11 +32,11 @@ struct Constants {
     
     
     static func getTermsUrl(withCountry: String) -> String {
-        return "https://lifesigntheapp.com/wp-admin/admin-ajax.php?action=term_and_conditions&lang=\(withCountry)"
+        return "https://lifesigntheapp.com/wp-admin/admin-ajax.php?action=term_and_conditions&lang=\(withCountry == "en" ? "en" : "da")"
     }
     
     static func getFAQURL(withCountry: String) -> String {
-        return "https://lifesigntheapp.com/wp-admin/admin-ajax.php?action=faqs&lang=\(withCountry)"
+        return "https://lifesigntheapp.com/wp-admin/admin-ajax.php?action=faqs&lang=\(withCountry == "en" ? "en" : "da")"
     }
     
     
