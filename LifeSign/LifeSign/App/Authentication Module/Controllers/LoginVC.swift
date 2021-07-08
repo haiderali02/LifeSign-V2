@@ -164,15 +164,16 @@ class LoginVC: LifeSignBaseVC {
                 
                 AuthManager.forgotPassword(email: userEmail) { (email, errors) in
                     if errors == nil {
+                        self.btnLogin.hideLoading()
                         guard let vc = R.storyboard.authentication.forgotPasswordVC() else {
                             return
                         }
                         vc.userEmail = email ?? ""
                         
                         self.push(controller: vc, animated: true)
-                        self.btnLogin.hideLoading()
+                       
                     } else {
-                        self.btnLogin.hideLoading()
+                        
                         ErrorHandler.handleError(errors: errors ?? [""], inController: self)
                     }
                 }
@@ -209,7 +210,7 @@ class LoginVC: LifeSignBaseVC {
                 "email": emailTextField.text!,
                 "password": passwordTextField.text!,
                 "device": "ios",
-                "language" : LangObjectModel.shared.symbol ?? "en",
+                "language" : LangObjectModel.shared.symbol,
                 "fcm_token": Constants.APPDELEGATE.fcm_Tokken
             ]
             self.btnLogin.showLoading()
@@ -218,6 +219,7 @@ class LoginVC: LifeSignBaseVC {
                 SocketHelper.shared.establishConnection()
                 SocketHelper.shared.updateUserOnlineStatus()
                 if errors == nil {
+                    self.btnLogin.hideLoading()
                     if userActive {
                         UserManager.shared.saveUser(user: userData!)
                         self.btnLogin.hideLoading()

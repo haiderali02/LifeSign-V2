@@ -365,8 +365,8 @@ extension LifeSignVC: DailySignCellProtoCol {
         cell?.viewDailySignRequest.tag = forIndexPath.row
         cell?.totalFriendsBtn.tag = forIndexPath.row
         cell?.delegate = self
-        cell?.timer?.invalidate()
-        cell?.timer = nil
+        
+       
         cell?.seeAllBtn.addTarget(self, action: #selector(didTapSeeAllDailSign(_:)), for: .touchUpInside)
         cell?.addNewDailySignFriendBtn.addTarget(self, action: #selector(didTapAddNewDailySign(_:)), for: .touchUpInside)
         cell?.viewDailySignRequest.addTarget(self, action: #selector(didTapViewRequestDailySign(_:)), for: .touchUpInside)

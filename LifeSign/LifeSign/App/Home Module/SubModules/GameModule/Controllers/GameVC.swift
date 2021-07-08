@@ -288,6 +288,12 @@ class GameVC: LifeSignBaseVC {
         // Accept Request
         sender.showAnimation {
             sender.showLoading()
+            
+            if !(sender.tag <= self.userGameFriends.count) {
+                sender.hideLoading()
+                return
+            }
+            
             let gameFriend = self.userGameFriends[sender.tag]
             
             if gameFriend.game_request == .waiting {

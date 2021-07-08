@@ -64,11 +64,11 @@ class DailySignHomeCell: UITableViewCell {
         addLongTapGesture()
         setText()
         NotificationCenter.default.addObserver(self, selector: #selector(self.setText), name: .languageCanged, object: nil)
-        /* timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
             UIView.performWithoutAnimation {
                 self.dailySignCollectionView.reloadData()
             }
-        } */
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(self.setText), name: .reloadNotificationView, object: nil)
     }
 
@@ -158,14 +158,6 @@ extension DailySignHomeCell: CollectionViewMethods {
         
         let userData = self.userDailySignFriends[indexPath.row]
         cell?.configureCell(withName: userData.full_name, userImage: userData.profile_image, userFriend: userData)
-        
-        timer?.invalidate()
-        timer = nil
-        
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
-            let userData = self.userDailySignFriends[indexPath.row]
-            cell?.configureCell(withName: userData.full_name, userImage: userData.profile_image, userFriend: userData)
-        }
         
         cell?.buttonContainerView.isHidden = true
         cell?.adjustImageHeigt(heigth: 40, width: 40)
