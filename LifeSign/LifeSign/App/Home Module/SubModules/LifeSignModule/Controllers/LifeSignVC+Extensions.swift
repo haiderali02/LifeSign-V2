@@ -91,6 +91,13 @@ extension LifeSignVC {
     
     @objc func longPress(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .began {
+            
+            guard let userSOSFriends = UserManager.shared.userFriends?.sos_friends else {return}
+            if !(userSOSFriends > 0) {
+                self.checkIfSOSFriendExist()
+                return
+            }
+            
             SOSManager.sendSOS { (status, displayPopup, message, errors) in
                 if errors == nil {
                     if displayPopup != nil {
@@ -102,7 +109,8 @@ extension LifeSignVC {
                     self.startTimerAndResetButton()
                     self.homeTableView.reloadData()
                 } else {
-                    ErrorHandler.handleError(errors: errors ?? [""], inController: self)
+                    guard let err = errors else {return}
+                    ErrorHandler.handleError(errors: err, inController: self)
                 }
             }
         }
@@ -141,17 +149,24 @@ extension LifeSignVC {
         sender.showAnimation {
             guard let userSOSFriends = UserManager.shared.userFriends?.sos_friends else {return}
             if !(userSOSFriends > 0) {
-                let alertController = UIAlertController(title: AppStrings.getAlertString(), message: AppStrings.getNoFriendInSOS(), preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: AppStrings.getCancelString(), style: .cancel, handler: { (_ ) in
-                    // Simply Dismiss
-                }))
-                alertController.addAction(UIAlertAction(title: AppStrings.getGotoFriends(), style: .default, handler: { (_ ) in
-                    NotificationCenter.default.post(name: .redirectToFriends, object: nil)
-                }))
-                self.present(alertController, animated: true, completion: nil)
+                self.checkIfSOSFriendExist()
+                return
             }
         }
     }
+    
+    
+    func checkIfSOSFriendExist() {
+        let alertController = UIAlertController(title: AppStrings.getAlertString(), message: AppStrings.getNoFriendInSOS(), preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: AppStrings.getCancelString(), style: .cancel, handler: { (_ ) in
+            // Simply Dismiss
+        }))
+        alertController.addAction(UIAlertAction(title: AppStrings.getGotoFriends(), style: .default, handler: { (_ ) in
+            NotificationCenter.default.post(name: .redirectToFriends, object: nil)
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @objc func didTapAddNewButton(_ sender: UIButton) {
         sender.showAnimation {
             self.showUserFriends()

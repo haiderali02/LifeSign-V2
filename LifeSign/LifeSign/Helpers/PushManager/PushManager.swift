@@ -70,10 +70,10 @@ struct PushManager {
         (payload["aps"] as? NSDictionary)
             .flatMap { $0["badge"] as? Int }
             .map { UIApplication.shared.applicationIconBadgeNumber = $0 }
-        
+         
         if appWasActive {
             fetchUser()
-            return
+            // return
         }
         
         (payload["notification_id"] as? String).map(markNotificationAsSeen)

@@ -245,7 +245,7 @@ extension SignupDetailVC {
             "zip_code"      : self.zipCodeTextField.text ?? "",
             "provider"      : "app",
             "device"        : "ios",
-            "language"      : LangObjectModel.shared.symbol ?? "en",
+            "language"      : LangObjectModel.shared.symbol,
             "fcm_token"     : Constants.APPDELEGATE.fcm_Tokken,
             "user_consent"  : self.userConsents // 0, 1 -> Boolean
         ]
@@ -286,7 +286,7 @@ extension SignupDetailVC {
             "zip_code"      : self.zipCodeTextField.text ?? "",
             "provider"      : "apple",
             "device"        : "ios",
-            "language"      : LangObjectModel.shared.symbol ?? "en",
+            "language"      : LangObjectModel.shared.symbol,
             "fcm_token"     : Constants.APPDELEGATE.fcm_Tokken,
             "user_consent"  : self.userConsents, // 0, 1 -> Boolean
             "provider_id"  : self.accessTokken
@@ -318,7 +318,7 @@ extension SignupDetailVC {
             "zip_code"      : self.zipCodeTextField.text ?? "",
             "provider"      : "facebook",
             "device"        : "ios",
-            "language"      : LangObjectModel.shared.symbol ?? "en",
+            "language"      : LangObjectModel.shared.symbol,
             "fcm_token"     : Constants.APPDELEGATE.fcm_Tokken,
             "user_consent"  : self.userConsents, // 0, 1 -> Boolean
             "provider_id"  : self.accessTokken

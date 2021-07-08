@@ -170,7 +170,7 @@ class GameVC: LifeSignBaseVC {
     }
     
     func handlePlayTurn(_ userFriend: Items, acceptBtn: Bool) {
-        
+         
         guard let progressGame = userFriend.progress_games else {return}
         print("I Am Calling")
         
