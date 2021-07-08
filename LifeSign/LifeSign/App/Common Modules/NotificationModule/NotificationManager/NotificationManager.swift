@@ -27,7 +27,7 @@ class NotificationManager {
     
     static var authHeaders: HTTPHeaders {
         HTTPHeaders(["Authorization": "Bearer" + " " + UserManager.shared.access_token,
-                     "X-localization": LangObjectModel.shared.symbol ?? "en",
+                     "X-localization": LangObjectModel.shared.symbol,
                      "Tag": UIDevice.current.identifierForVendor?.uuidString ?? "",
                      "Cache-Control": "no-cache"])
     }

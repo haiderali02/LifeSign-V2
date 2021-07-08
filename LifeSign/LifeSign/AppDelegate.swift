@@ -177,7 +177,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     // This method will be called when app received push notifications in foreground
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("=== Push Received === *** ")
+        print("=== *** Push Received === *** ")
         PushManager.handlePush(notification.request.content.userInfo,
                                appWasActive: UIApplication.shared.applicationState == .active)
     }

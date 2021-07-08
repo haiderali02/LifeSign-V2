@@ -38,7 +38,10 @@ enum PushTypes: String {
 
 struct PushManager {
     
+    static let router = RootRouter()
+    
     static private func markNotificationAsSeen(notificationId: String) {
+        
        /* ConnectionManager.markNotificationAsSeen(notificationId, completion: { response in
             switch response.result {
             case .success(let user):
@@ -73,7 +76,7 @@ struct PushManager {
          
         if appWasActive {
             fetchUser()
-            // return
+            return
         }
         
         (payload["notification_id"] as? String).map(markNotificationAsSeen)
@@ -119,17 +122,17 @@ struct PushManager {
             case .okAgreementReminder:
                 if let controller = R.storyboard.lifeSign.okSignVC() {
                     controller.mode = .tellFriend
-                   //  self.push(controller: controller, animated: true)
+                    router.open(viewController: controller)
                 }
             case .okAgreementRequest:
                 if let controller = R.storyboard.lifeSign.okSignVC() {
                     controller.mode = .tellFriend
-                   // self.push(controller: controller, animated: true)
+                    router.open(viewController: controller)
                 }
             case .okAgreementI_am_ok:
                 if let controller = R.storyboard.lifeSign.okSignVC() {
                     controller.mode = .checkFriend
-                    // self.push(controller: controller, animated: true)
+                    router.open(viewController: controller)
                 }
             default:
                 return
@@ -138,19 +141,19 @@ struct PushManager {
             switch subType {
             case .dailySignAccept, .dailySignSwap:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
-                    // self.push(controller: controller, animated: true)
+                    router.open(viewController: controller)
                 }
             case .dailySignRequest:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
-                   // self.push(controller: controller, animated: true)
+                    router.open(viewController: controller)
                 }
             case .dailySignI_am_safe:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
-                   // self.push(controller: controller, animated: true)
+                    router.open(viewController: controller)
                 }
             case .dailySignUpdateTime:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
-                   // self.push(controller: controller, animated: true)
+                    router.open(viewController: controller)
                 }
             default:
                 return

@@ -23,7 +23,7 @@ class RootRouter {
             window.rootViewController = controller
         }
     }
-
+    
     func loadMainAppStructure() {
         // Customize your app structure here
         if UserManager.shared.isLoggedIn() {
@@ -33,6 +33,22 @@ class RootRouter {
             let walkThroughController = R.storyboard.walkThrough.walkThroughNavigationController() ?? UIViewController()
             setRootViewController(controller: walkThroughController, animatedWithOptions: nil)
         }
-        
+    }
+    
+    
+    func open(viewController: UIViewController) {
+        if UserManager.shared.isLoggedIn() {
+            let homeVC = R.storyboard.home.homeBaseNavigationVC() ?? HomeBaseNavigationVC()
+            setRootViewController(controller: homeVC, animatedWithOptions: nil)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                guard let window = UIApplication.shared.windows.first else {
+                    fatalError("No window in app")
+                }
+                if let navCntrl = window.rootViewController as? UINavigationController {
+                    navCntrl.pushViewController(viewController, animated: true)
+                }
+            }
+        }
     }
 }
