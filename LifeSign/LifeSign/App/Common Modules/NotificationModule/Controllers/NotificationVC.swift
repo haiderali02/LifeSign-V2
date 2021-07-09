@@ -153,6 +153,11 @@ extension NotificationVC: ListViewMethods, SwipeTableViewCellDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if isBeingFetched {
+            return
+        }
+        
         var obj = self.notificationList[indexPath.row]
         
         
@@ -270,18 +275,22 @@ extension NotificationVC: ListViewMethods, SwipeTableViewCellDelegate {
             switch notification.sub_type {
             case .dailySignAccept, .dailySignSwap:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .allFriends
                     self.push(controller: controller, animated: true)
                 }
             case .dailySignRequest:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .friendRequest
                     self.push(controller: controller, animated: true)
                 }
             case .dailySignI_am_safe:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .allFriends
                     self.push(controller: controller, animated: true)
                 }
             case .dailySignUpdateTime:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .allFriends
                     self.push(controller: controller, animated: true)
                 }
             default:
