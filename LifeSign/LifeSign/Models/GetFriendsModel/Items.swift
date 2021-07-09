@@ -42,7 +42,7 @@ struct Items : Mappable {
     var agreement_dual: String = ""
     var remind_time: String = ""
     var read_reminder: Int = 0
-    
+    var agreement_status: String = ""
     
     // GAME
     var game_friend_status: String = ""
@@ -99,6 +99,7 @@ struct Items : Mappable {
         sign_request <- map["sign_request"]
         next_ping_datetime <- map["next_ping_datetime"]
         
+        agreement_status <- map["agreement_status"]
         game_friend_status <- map["game_friend_status"]
         game_request <- map["game_request"]
         remaining_time <- map["remaining_time"]

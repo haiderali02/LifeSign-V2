@@ -148,18 +148,22 @@ struct PushManager {
             switch subType {
             case .dailySignAccept, .dailySignSwap:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .allFriends
                     router.open(viewController: controller)
                 }
             case .dailySignRequest:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .friendRequest
                     router.open(viewController: controller)
                 }
             case .dailySignI_am_safe:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .allFriends
                     router.open(viewController: controller)
                 }
             case .dailySignUpdateTime:
                 if let controller = R.storyboard.lifeSign.dailySignVC() {
+                    controller.mode = .allFriends
                     router.open(viewController: controller)
                 }
             default:

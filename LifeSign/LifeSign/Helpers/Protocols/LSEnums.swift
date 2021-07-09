@@ -22,6 +22,9 @@ extension String {
     static let free = "free"
     static let start = "start"
     
+    static let added = "added"
+   
+    
     static let sosSent = "sos_sent_sound.mp3"
     static let okSignReceived = "iamOk_notification.mp3"
     static let sosReceived = "sos_alert_sound.mp3"

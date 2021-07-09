@@ -354,6 +354,13 @@ extension LifeSignVC : HealthCellDelegates{
 ///
 
 extension LifeSignVC: DailySignCellProtoCol {
+    func didHitNetworkAPI() {
+        self.showSpinner(onView: self.view)
+    }
+    
+    func didReceiveResponse() {
+        self.removeSpinner()
+    }
     
     func configureDailySign(tableView: UITableView, forIndexPath: IndexPath) -> UITableViewCell {
         

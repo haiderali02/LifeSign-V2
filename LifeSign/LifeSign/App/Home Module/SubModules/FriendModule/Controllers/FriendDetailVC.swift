@@ -188,12 +188,30 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
         switch userFreind.agreement_friend_status {
         case .accepted:
             if userFreind.agreement_dual == .single {
-                self.okSignButton.isUserInteractionEnabled = true
-                okSignButton.setTitle(AppStrings.getNOTAddedString(), for: .normal)
+                
+                if userFreind.agreement_status == .notAdded {
+                    self.okSignButton.isUserInteractionEnabled = true
+                    okSignButton.setTitle(AppStrings.getNOTAddedString(), for: .normal)
+                    
+                } else if userFreind.agreement_status == .added {
+                    self.okSignButton.isUserInteractionEnabled = false
+                    okSignButton.setTitle(AppStrings.getAddedString(), for: .normal)
+                    self.okSignButton.setTitleColor(R.color.appGreenColor(), for: .normal)
+                }
+//                self.okSignButton.isUserInteractionEnabled = true
+//                okSignButton.setTitle(AppStrings.getNOTAddedString(), for: .normal)
+                   
             } else {
-                self.okSignButton.isUserInteractionEnabled = false
-                self.okSignButton.setTitle(AppStrings.getAddedString(), for: .normal)
-                self.okSignButton.setTitleColor(R.color.appGreenColor(), for: .normal)
+                if userFreind.agreement_status == .waiting {
+                    self.okSignButton.isUserInteractionEnabled = false
+                    okSignButton.setTitle(AppStrings.getFriendPendigString(), for: .normal)
+                    self.okSignButton.setTitleColor(R.color.appPlaceHolderColor(), for: .normal)
+                    
+                } else {
+                    self.okSignButton.isUserInteractionEnabled = false
+                    self.okSignButton.setTitle(AppStrings.getAddedString(), for: .normal)
+                    self.okSignButton.setTitleColor(R.color.appGreenColor(), for: .normal)
+                }
             }
         case "":
             self.okSignButton.isUserInteractionEnabled = true

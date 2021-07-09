@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class DailySignHomeCell: UITableViewCell {
 
     // MARK:- OUTLETS -
@@ -44,6 +45,7 @@ class DailySignHomeCell: UITableViewCell {
             viewDailySignRequest.titleLabel?.font = Constants.backButtonFont
         }
     }
+    
     
     lazy var componentsFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -122,10 +124,10 @@ class DailySignHomeCell: UITableViewCell {
     }
     
     @objc func didTapSendDailySign(_ sender: UIButton) {
-        self.timer?.invalidate()
-        self.timer = nil
+        self.delegate?.didHitNetworkAPI()
         let userData = self.userDailySignFriends[sender.tag]
         LifeSignManager.sendIamSafe(dailySignID: "\(userData.daily_sign_id)") { status, errors in
+            self.delegate?.didReceiveResponse()
             if errors == nil {
                 NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
             } else {

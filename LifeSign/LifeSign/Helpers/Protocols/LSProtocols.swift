@@ -19,4 +19,6 @@ protocol SOSHomeCellProtoCol: AnyObject {
 
 protocol DailySignCellProtoCol: AnyObject {
     func displayUserDailySignInfo(userFriend: Items?)
+    func didHitNetworkAPI()
+    func didReceiveResponse()
 }

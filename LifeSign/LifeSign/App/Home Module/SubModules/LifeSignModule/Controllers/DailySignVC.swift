@@ -99,10 +99,6 @@ class DailySignVC: LifeSignBaseVC, UIGestureRecognizerDelegate {
         }
         getUserDailySignFriends(searchString: nil)
         
-        /* timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
-            self.dailySignCollectionView.reloadItems(at: self.selectedIndex)
-        } */
-        
         switch mode {
         case .allFriends:
             print("Open All friends")
@@ -147,8 +143,7 @@ class DailySignVC: LifeSignBaseVC, UIGestureRecognizerDelegate {
         }
 
         let p = gestureRecognizer.location(in: dailySignCollectionView)
-        self.timer?.invalidate()
-        self.timer = nil
+        
         if let indexPath = dailySignCollectionView?.indexPathForItem(at: p) {
             print("Long press at item: \(indexPath.row)")
             if self.dailySignSegmentBar.selectedSegmentIndex == 0 {
@@ -275,15 +270,18 @@ class DailySignVC: LifeSignBaseVC, UIGestureRecognizerDelegate {
     // MARK:- ACTIONS -
     
     @IBAction func didChangeTabs(_ sender: UISegmentedControl) {
-        self.timer?.invalidate()
-        self.timer = nil
+       
         if sender.selectedSegmentIndex == 0 {
             self.dailySignFriends.removeAll()
             self.selectedIndex.removeAll()
             self.dailySignCollectionView.reloadData()
             getUserDailySignFriends(searchString: nil)
-            
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
+                self.dailySignCollectionView.reloadData()
+            }
         } else {
+            self.timer?.invalidate()
+            self.timer = nil
             self.friendsRequests.removeAll()
             self.selectedIndex.removeAll()
             self.dailySignCollectionView.reloadData()
@@ -375,16 +373,7 @@ extension DailySignVC: CollectionViewMethods {
         cell?.hideAnimation()
         if self.dailySignSegmentBar.selectedSegmentIndex == 0 {
             cell?.configureCell(withName: userData.full_name, userImage: userData.profile_image, userFriend: userData)
-            
-            self.timer?.invalidate()
-            self.timer = nil
-            
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
-                let userDataForTimer = self.dailySignSegmentBar.selectedSegmentIndex == 0 ? self.dailySignFriends[indexPath.row] : self.friendsRequests[indexPath.row]
-                cell?.configureCell(withName: userDataForTimer.full_name, userImage: userDataForTimer.profile_image, userFriend: userDataForTimer)
-            }
-            
-            
+      
         } else {
             cell?.configureCell(withName: userData.first_name + " " + userData.last_name, userImage: userData.profile_image, userFriend: userData)
         }
