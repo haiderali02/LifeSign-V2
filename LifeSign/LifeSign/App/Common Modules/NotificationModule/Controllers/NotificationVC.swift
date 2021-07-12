@@ -263,7 +263,7 @@ extension NotificationVC: ListViewMethods, SwipeTableViewCellDelegate {
                     controller.mode = .tellFriend
                     self.push(controller: controller, animated: true)
                 }
-            case .okAgreementI_am_ok:
+            case .okAgreementI_am_ok, .okAgreementAccept:
                 if let controller = R.storyboard.lifeSign.okSignVC() {
                     controller.mode = .checkFriend
                     self.push(controller: controller, animated: true)

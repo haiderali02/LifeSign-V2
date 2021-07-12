@@ -17,6 +17,7 @@ extension String {
     static let okAgreementReminder = "agreement_reminder"
     static let okAgreementI_am_ok = "agreement_i_am_ok"
     static let okAgreementRequest = "agreement_request"
+    static let okAgreementAccept = "agreement_accept"
     
     static let sosType = "sos"
     static let sosRequest = "sos_request"

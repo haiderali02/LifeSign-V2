@@ -118,12 +118,27 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGx-eM-e2Q">
+                                        <rect key="frame" x="137" y="2" width="16" height="16"/>
+                                        <color key="backgroundColor" name="appRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="0tP-Nh-qoA"/>
+                                            <constraint firstAttribute="width" constant="16" id="hw6-3I-u5y"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="hGx-eM-e2Q" firstAttribute="trailing" secondItem="GHv-cV-0u8" secondAttribute="trailing" constant="-5" id="2i8-97-z36"/>
                                     <constraint firstItem="ArQ-jE-eAu" firstAttribute="top" secondItem="cFw-Ft-ICm" secondAttribute="top" id="6l7-qf-ZBk"/>
                                     <constraint firstAttribute="height" constant="40" id="ONz-Ww-6WD"/>
                                     <constraint firstAttribute="bottom" secondItem="ArQ-jE-eAu" secondAttribute="bottom" id="a8x-rm-auh"/>
+                                    <constraint firstItem="hGx-eM-e2Q" firstAttribute="centerY" secondItem="GHv-cV-0u8" secondAttribute="centerY" constant="-10" id="hKc-UQ-zS9"/>
                                     <constraint firstItem="ArQ-jE-eAu" firstAttribute="leading" secondItem="cFw-Ft-ICm" secondAttribute="leading" id="t7A-oq-Txk"/>
                                     <constraint firstAttribute="trailing" secondItem="ArQ-jE-eAu" secondAttribute="trailing" id="uLr-R0-tEv"/>
                                 </constraints>
@@ -180,6 +195,7 @@
                 <outlet property="imgeViewHeigt" destination="wqP-yu-gAB" id="8LC-ed-x13"/>
                 <outlet property="leadingButton" destination="yle-7m-4eg" id="4aj-dN-gDJ"/>
                 <outlet property="mainButton" destination="7JM-pa-LRr" id="Elo-Lo-GAI"/>
+                <outlet property="redDot" destination="hGx-eM-e2Q" id="6kH-qx-Uge"/>
                 <outlet property="stackView" destination="ArQ-jE-eAu" id="pnx-z4-1jF"/>
                 <outlet property="timeZoneTopConstraints" destination="9dJ-pF-VVl" id="It1-2K-N5X"/>
                 <outlet property="trailingButton" destination="GHv-cV-0u8" id="cL9-2u-9Aq"/>
@@ -215,6 +231,9 @@
         </namedColor>
         <namedColor name="appLightFontColor">
             <color red="0.054999999701976776" green="0.054999999701976776" blue="0.054999999701976776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appRedColor">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appYellowColor">
             <color red="1" green="0.14900000393390656" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

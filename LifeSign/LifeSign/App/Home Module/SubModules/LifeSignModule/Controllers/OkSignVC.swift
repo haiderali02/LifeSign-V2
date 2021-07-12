@@ -479,7 +479,7 @@ extension OkSignVC: CollectionViewMethods {
             self.removeSpinner()
             NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
             if errors == nil {
-                AlertController.showAlert(witTitle: AppStrings.getSuccessString(), withMessage: "\(userData.first_name) \(AppStrings.getNotifiedString())", style: .success, controller: self)
+                // AlertController.showAlert(witTitle: AppStrings.getSuccessString(), withMessage: "\(userData.first_name) \(AppStrings.getNotifiedString())", style: .success, controller: self)
                 self.refresh(UIButton())
             } else {
                 ErrorHandler.handleError(errors: errors ?? [""], inController: self)

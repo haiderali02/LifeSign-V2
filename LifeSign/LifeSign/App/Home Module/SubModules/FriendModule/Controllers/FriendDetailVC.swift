@@ -198,8 +198,6 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
                     okSignButton.setTitle(AppStrings.getAddedString(), for: .normal)
                     self.okSignButton.setTitleColor(R.color.appGreenColor(), for: .normal)
                 }
-//                self.okSignButton.isUserInteractionEnabled = true
-//                okSignButton.setTitle(AppStrings.getNOTAddedString(), for: .normal)
                    
             } else {
                 if userFreind.agreement_status == .waiting {

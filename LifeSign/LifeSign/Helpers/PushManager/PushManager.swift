@@ -136,7 +136,7 @@ struct PushManager {
                     controller.mode = .tellFriend
                     router.open(viewController: controller)
                 }
-            case .okAgreementI_am_ok:
+            case .okAgreementI_am_ok, .okAgreementAccept:
                 if let controller = R.storyboard.lifeSign.okSignVC() {
                     controller.mode = .checkFriend
                     router.open(viewController: controller)

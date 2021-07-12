@@ -224,11 +224,12 @@ extension OKSignHomeCell: CollectionViewMethods {
                 }
             }
         }
-        
+        cell?.redDot.isHidden = true
         
         // Display GotIt Button
         
         if userData.is_read == 1 && userData.initiator == 1 {
+            cell?.redDot.isHidden = false
             cell?.configureCellForOKSign(withName: userData.first_name + " " + userData.last_name, userImage: userData.profile_image, state: .gotIt)
             
         }

@@ -71,6 +71,7 @@ class LeaderBoardVC: LifeSignBaseVC {
     // MARK:- FUNCTIONS -
     
     func setUI () {
+        positionTitleLabel.isHidden = true
         headerView = UIView(frame: CGRect(x: 0, y: 0, width: leaderBoardTableView.frame.width, height: 80))
         headerView.backgroundColor = R.color.appSeperatorColor()
         headerView.addSubview(sectionHeaderLabel)

@@ -17,6 +17,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - OUTLETS -
     
+    @IBOutlet weak var redDot: UIView!
     @IBOutlet weak var timeZoneTopConstraints: NSLayoutConstraint!
     @IBOutlet weak var cardView: MDCCard!
     @IBOutlet weak var userImageView: UIImageView! {
@@ -459,6 +460,8 @@ class FriendsCollectionViewCell: UICollectionViewCell {
         buttonContainerView.isHidden = false
         leadingButton.isHidden =  true
         
+        redDot.isHidden = true
+        
         switch state {
         case .checkFriend:
             userImageView.backgroundColor = UIColor.appYellowColor
@@ -485,6 +488,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
             userImageView.backgroundColor = UIColor.appYellowColor
             userNameLabel.textColor = R.color.appLightFontColor()
             userTimeZoneLabel.textColor = R.color.appLightFontColor()
+            redDot.isHidden = false
             trailingButton.setTitle(AppStrings.sosGotIT(), for: .normal)
             cardView.backgroundColor = R.color.appRedColor()
             trailingButton.backgroundColor = UIColor.appYellowColor

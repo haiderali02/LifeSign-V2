@@ -61,6 +61,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         return true
     }
 
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        print("App Become ACTIVE")
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("App Become InActive")
+        UIApplication.shared.applicationIconBadgeNumber = 0
+    }
+    
     func setupAppGeneral() {
         
         // Load Current User Data
