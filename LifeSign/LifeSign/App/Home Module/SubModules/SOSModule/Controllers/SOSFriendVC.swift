@@ -125,7 +125,7 @@ class SOSFriendVC: LifeSignBaseVC {
             let userFriend = self.userFriendsData[sender.tag]
             
             if userFriend.sos_request == .waiting {
-                self.updateRequestStatus(status: .rejected, userFriend: userFriend)
+                self.updateRequestStatus(status: .cancel, userFriend: userFriend)
             } else {
                 self.updateRequestStatus(status: .accepted, userFriend: userFriend)
             }
@@ -149,7 +149,7 @@ class SOSFriendVC: LifeSignBaseVC {
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             alertController.addAction(UIAlertAction(title: AppStrings.getCancelRequestString(), style: .destructive, handler: { (_ ) in
                 // Hit Cancel Request API
-                self.updateRequestStatus(status: .rejected, userFriend: userFriend)
+                self.updateRequestStatus(status: .cancel, userFriend: userFriend)
             }))
             alertController.addAction(UIAlertAction(title: AppStrings.getCancelString(), style: .cancel, handler: { (_ ) in
                 // Simply dismiss

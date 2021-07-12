@@ -215,9 +215,18 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
             self.okSignButton.isUserInteractionEnabled = true
             okSignButton.setTitle(AppStrings.getNOTAddedString(), for: .normal)
         case .pending:
-            self.okSignButton.isUserInteractionEnabled = false
-            okSignButton.setTitle(AppStrings.getWaitingString(), for: .normal)
-            self.okSignButton.setTitleColor(R.color.appPlaceHolderColor(), for: .normal)
+            
+            if userFreind.agreement_status == .pending {
+                self.okSignButton.isUserInteractionEnabled = false
+                okSignButton.setTitle(AppStrings.getFriendPendigString(), for: .normal)
+                self.okSignButton.setTitleColor(R.color.appPlaceHolderColor(), for: .normal)
+            } else if userFreind.agreement_status == .waiting {
+                self.okSignButton.isUserInteractionEnabled = false
+                okSignButton.setTitle(AppStrings.getWaitingString(), for: .normal)
+                self.okSignButton.setTitleColor(R.color.appPlaceHolderColor(), for: .normal)
+            }
+            
+            
         case .waiting:
             self.okSignButton.isUserInteractionEnabled = false
             okSignButton.setTitle(AppStrings.getFriendPendigString(), for: .normal)

@@ -181,7 +181,7 @@ class DailySignVC: LifeSignBaseVC, UIGestureRecognizerDelegate {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: AppStrings.getCancelRequestString(), style: .destructive, handler: { (_ ) in
             // Hit Cancel Request API
-            self.updateRequestStatus(status: .rejected, userData: userData)
+            self.updateRequestStatus(status: .cancel, userData: userData)
         }))
         alertController.addAction(UIAlertAction(title: AppStrings.getCancelString(), style: .cancel, handler: { (_ ) in
             // Simply dismiss

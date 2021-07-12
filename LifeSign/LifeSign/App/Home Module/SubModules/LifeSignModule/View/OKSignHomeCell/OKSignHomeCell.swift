@@ -242,7 +242,7 @@ extension OKSignHomeCell: CollectionViewMethods {
             
             
         }
-        cell?.buttonTopSpace.constant = 0
+        cell?.buttonTopSpace.constant = 8
         cell?.adjustImageHeigt(heigth: 40, width: 40)
         return cell ?? FriendsCollectionViewCell()
     }
@@ -250,11 +250,11 @@ extension OKSignHomeCell: CollectionViewMethods {
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
         {
-            return CGSize(width: (Constants.screenWidth / 4) + 20, height: 180)
+            return CGSize(width: (Constants.screenWidth / 4) + 20, height: 170)
         }
         else
         {
-            return CGSize(width: (Constants.screenWidth / 3) + 20, height: 180)
+            return CGSize(width: (Constants.screenWidth / 3) + 20, height: 175)
         }
     }
     

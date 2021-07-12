@@ -157,19 +157,23 @@ class GameVC: LifeSignBaseVC {
     
     @objc func setText() {
         friendsCollectionView.refreshControl = refreshControl
-        timer = nil
+        
         timer?.invalidate()
+        timer = nil
+        
         self.getUserGameFriends()
     }
     
-    fileprivate func playMyTurn(_ progressGame: UserGameProgress, _ userFriend: Items) {
+    fileprivate func playMyTurn(_ progressGame: UserGameProgress, _ userFriend: Items, _ sender: DesignableButton) {
         SocketHelper.shared.sendGameStartEvent(gameID: progressGame.game_id, clickByUser_id: UserManager.shared.user_id, startUserId: progressGame.game_start_by_user_id, friendID: userFriend.friend_id, gameStartTime: progressGame.game_start_time, fcmTokken: userFriend.fcm_token, message: userFriend.message)
         
+        
+        sender.hideLoading()
        // Helper.sendNotification(toUserFcmTokken: userFriend.fcm_token, text: userFriend.message, title: "HELLO")
         
     }
     
-    func handlePlayTurn(_ userFriend: Items, acceptBtn: Bool) {
+    func handlePlayTurn(_ userFriend: Items, acceptBtn: Bool, sender: DesignableButton) {
          
         guard let progressGame = userFriend.progress_games else {return}
         print("I Am Calling")
@@ -181,12 +185,14 @@ class GameVC: LifeSignBaseVC {
             
             if nowTime > nextTime {
                 handleWinOrLossStatus(userFriend, progressGame, nowTime, nextTime)
+                sender.hideLoading()
+                
             } else {
                 if progressGame.click_by_user_id == UserManager.shared.user_id {
                     print("Opponent Turn")
                 } else {
                     // Play My Turn
-                    playMyTurn(progressGame, userFriend)
+                    playMyTurn(progressGame, userFriend, sender)
                 }
             }
         }
@@ -300,7 +306,7 @@ class GameVC: LifeSignBaseVC {
                 ///
                 // MARK:- Cancel GAME FRIEND Request -
                 //
-                GameManager.acceptRejectGameFriendRequest(friendID: gameFriend.friend_id, gameRequestStatus: .rejected) { status, errors in
+                GameManager.acceptRejectGameFriendRequest(friendID: gameFriend.friend_id, gameRequestStatus: .cancel) { status, errors in
                     sender.hideLoading()
                     if errors == nil {
                         self.getUserGameFriends()
@@ -330,8 +336,9 @@ class GameVC: LifeSignBaseVC {
                     //
                     // MARK: - GAME IS IN PROGRESS , HANDLE TURN PLAY -
                     //
-                    self.handlePlayTurn(gameFriend, acceptBtn: true)
-                    sender.hideLoading()
+                    sender.showLoading()
+                    self.handlePlayTurn(gameFriend, acceptBtn: true, sender: sender)
+                    
                 } else if gameFriend.game_start_status == .free {
                     //
                     // MARK:- SEND GAME PLAY FRIEND REQUEST -
@@ -522,7 +529,9 @@ extension GameVC: CollectionViewMethods {
         cell?.mainButton.tag = indexPath.row
         cell?.mainButton.isHidden = true
         cell?.mainButton.addTarget(self, action: #selector(didTapCardView(_:)), for: .touchUpInside)
-    
+        cell?.delegate = self
+        
+        
         if (indexPath.row > userGameFriends.count) || (indexPath.row == userGameFriends.count) {
             cell?.hideAnimation()
             cell?.emptyCell()
@@ -652,3 +661,15 @@ extension GameVC: UADSBannerViewDelegate, UnityAdsDelegate, UnityAdsShowDelegate
     }
 }
 
+extension GameVC: FriendCollectionViewDelegate {
+    
+    func shouldReloadWith(isCurrentUserWon: Bool) {
+        if isCurrentUserWon {
+            self.setText()
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.setText()
+            }
+        }
+    }
+}

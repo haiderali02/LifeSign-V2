@@ -61,6 +61,7 @@ class SOSMultiAlertVC: LifeSignBaseVC {
     func setUI () {
         UserDefaults.standard.setValue(true, forKey: .sosMultiScreenAppeared)
         Sound.play(file: .sosReceived, numberOfLoops: -1)
+        backBtn.isHidden = true
     }
     
     @objc func setText() {

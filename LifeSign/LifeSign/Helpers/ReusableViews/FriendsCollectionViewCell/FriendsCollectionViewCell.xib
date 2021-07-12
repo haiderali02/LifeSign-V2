@@ -55,7 +55,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matew Hadden" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80j-T4-sH4">
-                                <rect key="frame" x="10" y="108" width="148" height="20.333333333333343"/>
+                                <rect key="frame" x="5" y="108" width="158" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="appLightFontColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,8 +71,8 @@
                                     <constraint firstAttribute="width" constant="26" id="WdR-eZ-6T5"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timezone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZh-HZ-aOY">
-                                <rect key="frame" x="10" y="144.33333333333334" width="148" height="20.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timezone timezone timezone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZh-HZ-aOY">
+                                <rect key="frame" x="10" y="136.33333333333334" width="148" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="appLightFontColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFw-Ft-ICm">
-                                <rect key="frame" x="5" y="184.66666666666666" width="158" height="40"/>
+                                <rect key="frame" x="5" y="185" width="158" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ArQ-jE-eAu">
                                         <rect key="frame" x="0.0" y="0.0" width="158" height="40"/>
@@ -94,7 +94,7 @@
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yle-7m-4eg" customClass="DesignableButton" customModule="LifeSign" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="40"/>
                                                 <color key="backgroundColor" name="appGreenColor"/>
-                                                <state key="normal" title="Accept">
+                                                <state key="normal">
                                                     <color key="titleColor" name="appBackgroundColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -107,7 +107,7 @@
                                                 <rect key="frame" x="81.666666666666686" y="0.0" width="76.333333333333314" height="40"/>
                                                 <color key="backgroundColor" name="appYellowColor"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Reject">
+                                                <state key="normal">
                                                     <color key="titleColor" name="appBackgroundColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -146,20 +146,20 @@
                         </subviews>
                         <color key="backgroundColor" name="appBoxesColor"/>
                         <constraints>
-                            <constraint firstItem="cFw-Ft-ICm" firstAttribute="top" secondItem="GZh-HZ-aOY" secondAttribute="bottom" constant="20" id="3gz-36-ugV"/>
+                            <constraint firstItem="cFw-Ft-ICm" firstAttribute="top" secondItem="GZh-HZ-aOY" secondAttribute="bottom" constant="8" id="3gz-36-ugV"/>
                             <constraint firstAttribute="bottom" secondItem="gUp-ef-zZE" secondAttribute="bottom" id="41H-Kv-HIX"/>
                             <constraint firstAttribute="trailing" secondItem="gUp-ef-zZE" secondAttribute="trailing" id="4Uy-0H-PJK"/>
-                            <constraint firstItem="GZh-HZ-aOY" firstAttribute="top" secondItem="80j-T4-sH4" secondAttribute="bottom" constant="16" id="9dJ-pF-VVl"/>
+                            <constraint firstItem="GZh-HZ-aOY" firstAttribute="top" secondItem="80j-T4-sH4" secondAttribute="bottom" constant="8" id="9dJ-pF-VVl"/>
                             <constraint firstItem="80j-T4-sH4" firstAttribute="top" secondItem="uzt-L3-C3O" secondAttribute="bottom" constant="8" id="FTg-ju-3Mn"/>
                             <constraint firstItem="uzt-L3-C3O" firstAttribute="top" secondItem="4xe-1Y-1Hf" secondAttribute="top" constant="20" id="GXN-Og-txT"/>
                             <constraint firstAttribute="trailing" secondItem="BST-tt-JHc" secondAttribute="trailing" constant="4" id="LxL-Qw-w4H"/>
                             <constraint firstItem="BST-tt-JHc" firstAttribute="top" secondItem="4xe-1Y-1Hf" secondAttribute="top" constant="4" id="N7X-eq-jDc"/>
                             <constraint firstItem="7JM-pa-LRr" firstAttribute="leading" secondItem="4xe-1Y-1Hf" secondAttribute="leading" id="SrJ-hE-Fh9"/>
-                            <constraint firstAttribute="trailing" secondItem="80j-T4-sH4" secondAttribute="trailing" constant="10" id="U7P-KC-haa"/>
+                            <constraint firstAttribute="trailing" secondItem="80j-T4-sH4" secondAttribute="trailing" constant="5" id="U7P-KC-haa"/>
                             <constraint firstAttribute="bottom" secondItem="7JM-pa-LRr" secondAttribute="bottom" id="VW0-2q-QO2"/>
                             <constraint firstItem="gUp-ef-zZE" firstAttribute="leading" secondItem="4xe-1Y-1Hf" secondAttribute="leading" id="YhX-fh-vmb"/>
                             <constraint firstItem="7JM-pa-LRr" firstAttribute="top" secondItem="4xe-1Y-1Hf" secondAttribute="top" id="dla-MH-wew"/>
-                            <constraint firstItem="80j-T4-sH4" firstAttribute="leading" secondItem="4xe-1Y-1Hf" secondAttribute="leading" constant="10" id="gN1-5o-1pe"/>
+                            <constraint firstItem="80j-T4-sH4" firstAttribute="leading" secondItem="4xe-1Y-1Hf" secondAttribute="leading" constant="5" id="gN1-5o-1pe"/>
                             <constraint firstAttribute="trailing" secondItem="GZh-HZ-aOY" secondAttribute="trailing" constant="10" id="gmQ-gN-JUh"/>
                             <constraint firstItem="cFw-Ft-ICm" firstAttribute="leading" secondItem="4xe-1Y-1Hf" secondAttribute="leading" constant="5" id="hSC-Sg-rrV"/>
                             <constraint firstItem="uzt-L3-C3O" firstAttribute="centerX" secondItem="7JM-pa-LRr" secondAttribute="centerX" id="iOP-4d-s5u"/>
@@ -208,10 +208,10 @@
     </objects>
     <designables>
         <designable name="GHv-cV-0u8">
-            <size key="intrinsicContentSize" width="44" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="yle-7m-4eg">
-            <size key="intrinsicContentSize" width="49" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
     </designables>
     <resources>

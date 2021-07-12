@@ -12,6 +12,10 @@ import MaterialComponents
 import ImageViewer_swift
 import SkeletonView
 
+protocol FriendCollectionViewDelegate: AnyObject {
+    func shouldReloadWith(isCurrentUserWon: Bool)
+}
+
 
 class FriendsCollectionViewCell: UICollectionViewCell {
     
@@ -77,6 +81,8 @@ class FriendsCollectionViewCell: UICollectionViewCell {
         label.textColor = R.color.appBackgroundColor()
         return label
     }()
+    
+    weak var delegate: FriendCollectionViewDelegate?
     
     var isFromHomeScreen: Bool = false
     var isGameOver: Bool = false
@@ -222,7 +228,10 @@ class FriendsCollectionViewCell: UICollectionViewCell {
                 configurePlayAgain(userFriend, buttonTitle: AppStrings.playAgainString(), labelTitle: AppStrings.youWonString(), cardColor: .appBoxColor)
                 imgBadgeWon.isHidden = false
                 GameManager.endGameAndDecideWinner(game_id: prgressGame.game_id, winner_user_id: prgressGame.click_by_user_id) { status, errors in
-                    NotificationCenter.default.post(name: .reloadGameScreen, object: nil)
+                    
+                    self.delegate?.shouldReloadWith(isCurrentUserWon: true)
+                    
+                    // NotificationCenter.default.post(name: .reloadGameScreen, object: nil)
                 }
                 
             }
@@ -237,7 +246,8 @@ class FriendsCollectionViewCell: UICollectionViewCell {
                 
                 isGameOver = true
                 imgBadgeWon.isHidden = true
-                NotificationCenter.default.post(name: .reloadGameScreen, object: nil)
+                self.delegate?.shouldReloadWith(isCurrentUserWon: false)
+                // NotificationCenter.default.post(name: .reloadGameScreen, object: nil)
                 configurePlayAgain(userFriend, buttonTitle: AppStrings.playAgainString(), labelTitle: AppStrings.youLossString(), cardColor: .appBoxColor)
             }
             
@@ -288,7 +298,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
         trailingButton.isHidden = true
         guard let friend = userFriend else {return}
         userTimeZoneLabel.isHidden = false
-        userTimeZoneLabel.numberOfLines = 1
+        userTimeZoneLabel.numberOfLines = 2
         userTimeZoneLabel.text = friend.remaining_time
         
         switch friend.game_request {
@@ -551,6 +561,8 @@ class FriendsCollectionViewCell: UICollectionViewCell {
             buttonContainerView.isHidden = false
             leadingButton.isHidden = false
             trailingButton.isHidden = false
+            leadingButton.setTitle(AppStrings.getAcceptString(), for: .normal)
+            trailingButton.setTitle(AppStrings.getRejectString(), for: .normal)
             mainButton.isEnabled = false
             cardView.backgroundColor = UIColor.appBoxColor
             trailingButton.setTitle(AppStrings.getRejectString(), for: .normal)
