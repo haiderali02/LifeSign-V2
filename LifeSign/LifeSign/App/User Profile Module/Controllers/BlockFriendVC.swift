@@ -142,7 +142,7 @@ extension BlockFriendVC: ListViewMethods {
             friendCell?.providerImage.image = nil
             
             if userData.provider == .app {
-                friendCell?.providerImage.image = nil
+                friendCell?.providerImage.image = R.image.ic_email_head()
             } else if userData.provider == .facebook {
                 friendCell?.providerImage.image = R.image.ic_facebook_headd()
             } else if userData.provider == .apple {

@@ -133,6 +133,7 @@ extension LifeSignVC {
             controller.modalPresentationStyle = .overCurrentContext
             let navController = UINavigationController(rootViewController: controller)
             navController.modalPresentationStyle = .overFullScreen
+            controller.mode = .addNew
             self.present(navController, animated: true, completion: nil)
         }
     }

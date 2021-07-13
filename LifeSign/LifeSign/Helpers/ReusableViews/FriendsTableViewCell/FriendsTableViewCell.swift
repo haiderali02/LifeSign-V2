@@ -88,7 +88,9 @@ class FriendsTableViewCell: SwipeTableViewCell {
     }
     
     func showAnimation() {
+        providerImage.isSkeletonable = true
         userImageView.showSkeleton()
+        providerImage.showSkeleton()
         namePrefixLabel.isSkeletonable = true
         namePrefixLabel.showSkeleton()
         titleLabel.showSkeleton()
@@ -96,6 +98,7 @@ class FriendsTableViewCell: SwipeTableViewCell {
         trailingButton.isHidden = true
         rejectButton.isHidden = true
         userImageView.backgroundColor = .darkGray
+        
     }
     func removeAnimation() {
         userImageView.hideSkeleton()
@@ -104,6 +107,7 @@ class FriendsTableViewCell: SwipeTableViewCell {
         trailingButton.hideSkeleton()
         subTitleLabel.hideSkeleton()
         rejectButton.hideSkeleton()
+        providerImage.hideSkeleton()
         trailingButton.isHidden = false
         rejectButton.isHidden = false
     }

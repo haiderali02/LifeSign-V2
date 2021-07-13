@@ -179,7 +179,7 @@ extension SOSListingVC : ListViewMethods {
         cell?.providerImage.image = nil
         cell?.removeAnimation()
         if sosObj.provider == .app {
-            cell?.providerImage.image = nil
+            cell?.providerImage.image = R.image.ic_email_head()
         } else if sosObj.provider == .facebook {
             cell?.providerImage.image = R.image.ic_facebook_headd()
         } else if sosObj.provider == .apple {

@@ -173,7 +173,7 @@ class HomeContainerVC: LifeSignBaseVC {
         friendsLabel.text = AppStrings.getFriendsString()
         
         if UserManager.shared.provider == .app {
-            providerIcon.image = nil
+            providerIcon.image = R.image.ic_email_head()
         } else if UserManager.shared.provider == .facebook {
             providerIcon.image = R.image.ic_facebook_headd()
         } else if UserManager.shared.provider == .apple {

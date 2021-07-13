@@ -1129,10 +1129,10 @@ class AppStrings: NSObject {
         return StringsManager.shared.msg_140_1_contact ?? "Messages over 140 characters for 1 contact"
     }
     static func msg_140_10_contact() -> String {
-        return StringsManager.shared.hundred_extra_sms ?? "Messages over 140 characters for 10 contacts"
+        return StringsManager.shared.msg_140_10_contact ?? "Messages over 140 characters for 10 contacts"
     }
     static func msg_140_unlimitted_contact() -> String {
-        return StringsManager.shared.hundred_extra_sms ?? "Messages over 140 characters for unlimitted contacts"
+        return StringsManager.shared.msg_140_unlimitted_contact ?? "Messages over 140 characters for unlimitted contacts"
     }
 }
 

@@ -66,7 +66,7 @@ class SocketHelper {
         if socket.status != .connected { return }
         var payload: [Any] = []
         
-        payload.append(LangObjectModel.shared.symbol ?? "en")
+        payload.append(LangObjectModel.shared.symbol)
         socket.emitWithAck(subscribeClient, payload).timingOut(after: 10) { (data) in
             // print("====================\nSocket Data:\n\(data)\n====================")
         }
@@ -354,10 +354,7 @@ class SocketHelper {
                         }
                     }
                 }
-                
-                
                 completion(userGameFrnd)
-                
             }
             
         }
@@ -381,4 +378,14 @@ class SocketHelper {
         print("===--- Socket Disconnected ---===")
     }
     
+    func isConnected() -> Int {
+        switch socket.status {
+        case .connected:
+            return 1
+        case .connecting:
+            return 2
+        default:
+            return 0
+        }
+    }
 }

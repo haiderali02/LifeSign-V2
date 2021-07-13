@@ -173,8 +173,8 @@ class FriendsVC: LifeSignBaseVC {
             friendsStackViewHeight.constant = 0
             friendsTypeStackView.isHidden = true
         case .addNew:
-            friendsStackViewHeight.constant = 50
-            friendsTypeStackView.isHidden = false
+            friendsStackViewHeight.constant = 0
+            friendsTypeStackView.isHidden = true
         case .game:
             friendsStackViewHeight.constant = 0
             friendsTypeStackView.isHidden = true
@@ -409,7 +409,7 @@ extension FriendsVC: ListViewMethods, SwipeTableViewCellDelegate {
                 friendCell?.userImageView.image = nil
                 
                 if myFrnd.provider == .app {
-                    friendCell?.providerImage.image = nil
+                    friendCell?.providerImage.image = R.image.ic_email_head()
                 } else if myFrnd.provider == .facebook {
                     friendCell?.providerImage.image = R.image.ic_facebook_headd()
                 } else if myFrnd.provider == .apple {
@@ -446,7 +446,7 @@ extension FriendsVC: ListViewMethods, SwipeTableViewCellDelegate {
                 friendCell?.userImageView.image = nil
                 
                 if person.provider == .app {
-                    friendCell?.providerImage.image = nil
+                    friendCell?.providerImage.image = R.image.ic_email_head()
                 } else if person.provider == .facebook {
                     friendCell?.providerImage.image = R.image.ic_facebook_headd()
                 } else if person.provider == .apple {

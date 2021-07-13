@@ -56,6 +56,14 @@ class LeaderBoardVC: LifeSignBaseVC {
     }
     
     var headerView: UIView = UIView()
+    var namePrefixLabel: UILabel = {
+        let label = UILabel()
+        label.font = Constants.autHeadingFont
+        label.textAlignment = .center
+        label.textColor = R.color.appBackgroundColor()
+        return label
+    }()
+    
     
     // MARK:- VIEW LIFECYCLE -
     
@@ -79,7 +87,34 @@ class LeaderBoardVC: LifeSignBaseVC {
             make.edges.equalToSuperview()
         }
         
-        userImageView.image = Constants.getCurrentUserImage()
+        userImageView.addSubview(namePrefixLabel)
+        namePrefixLabel.snp.makeConstraints { (make) in
+            make.edges.equalTo(userImageView)
+        }
+        
+        // userImageView.image = Constants.getCurrentUserImage()
+        if UserManager.shared.profil_Image != "" {
+            userImageView.kf.indicatorType = .activity
+            userImageView.kf.setImage(with: URL(string: UserManager.shared.profil_Image)) { (result) in
+                switch result {
+                case .success(_ ):
+                    // print(data)
+                    self.namePrefixLabel.isHidden = true
+                    self.namePrefixLabel.text = UserManager.shared.getUserFullName().getPrefix
+                    self.userImageView.setupImageViewer(options: [.closeIcon(R.image.ic_cross() ?? UIImage()), .theme(.dark)], from: nil)
+                case .failure(_ ):
+                    // print(err.localizedDescription)
+                    self.namePrefixLabel.isHidden = false
+                    self.namePrefixLabel.text = UserManager.shared.getUserFullName().getPrefix
+                }
+            }
+        } else {
+            self.namePrefixLabel.isHidden = false
+            self.userImageView.image = nil
+            self.namePrefixLabel.text = UserManager.shared.getUserFullName().getPrefix
+        }
+        
+        
         userNameLabel.text = UserManager.shared.getUserFullName()
         userPositionLabel.text = "\(myPosition)"
         getLeaderBoardData()

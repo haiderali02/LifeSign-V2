@@ -140,7 +140,7 @@ extension NotificationVC: ListViewMethods, SwipeTableViewCellDelegate {
             cell?.msgStatusView.isHidden = notificationData.status != 0 ? true : false
             
             if notificationData.provider == .app {
-                cell?.providerImage.image = nil
+                cell?.providerImage.image = R.image.ic_email_head()
             } else if notificationData.provider == .facebook {
                 cell?.providerImage.image = R.image.ic_facebook_headd()
             } else if notificationData.provider == .apple {

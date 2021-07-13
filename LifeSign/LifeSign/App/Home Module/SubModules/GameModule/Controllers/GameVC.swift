@@ -566,11 +566,11 @@ extension GameVC: CollectionViewMethods {
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
         {
-            return CGSize(width: Constants.screenWidth / 3, height: 240)
+            return CGSize(width: Constants.screenWidth / 3, height: 250)
         }
         else
         {
-            return CGSize(width: Constants.screenWidth / 2, height: 240)
+            return CGSize(width: Constants.screenWidth / 2, height: 250)
         }
     }
     
