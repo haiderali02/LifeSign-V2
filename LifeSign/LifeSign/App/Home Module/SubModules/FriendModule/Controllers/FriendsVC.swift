@@ -408,6 +408,14 @@ extension FriendsVC: ListViewMethods, SwipeTableViewCellDelegate {
                 let myFrnd = self.userFriendsData[indexPath.row]
                 friendCell?.userImageView.image = nil
                 
+                if myFrnd.provider == .app {
+                    friendCell?.providerImage.image = nil
+                } else if myFrnd.provider == .facebook {
+                    friendCell?.providerImage.image = R.image.ic_facebook_headd()
+                } else if myFrnd.provider == .apple {
+                    friendCell?.providerImage.image = R.image.ic_apple_head()
+                }
+                
                 friendCell?.configureCell(withTitle: myFrnd.first_name + " " + myFrnd.last_name, subTitle: myFrnd.timezone, userImage: myFrnd.profile_image , type: .myFriend, userRequestStatus: myFrnd.request_status)
                 friendCell?.trailingButton.isHidden = mode == .Inbox ? true : false
                 
@@ -436,6 +444,15 @@ extension FriendsVC: ListViewMethods, SwipeTableViewCellDelegate {
                 let person = self.peopleData[indexPath.row]
                 friendCell?.removeAnimation()
                 friendCell?.userImageView.image = nil
+                
+                if person.provider == .app {
+                    friendCell?.providerImage.image = nil
+                } else if person.provider == .facebook {
+                    friendCell?.providerImage.image = R.image.ic_facebook_headd()
+                } else if person.provider == .apple {
+                    friendCell?.providerImage.image = R.image.ic_apple_head()
+                }
+                
                 friendCell?.configureCell(withTitle: person.first_name + " " + person.last_name, subTitle: person.timezone, userImage: person.profile_image , type: .people)
             } else {
                 friendCell?.showAnimation()
@@ -453,6 +470,8 @@ extension FriendsVC: ListViewMethods, SwipeTableViewCellDelegate {
                     if contact.phoneNumbers.count > 0{
                         contactNumber = ((contact.phoneNumbers[0].value ).value(forKey: "digits") as! String)
                     }
+                    friendCell?.providerImage.image = nil
+                    
                     friendCell?.configureCell(withTitle: contactName ?? "Unknown", subTitle: contactNumber, userImage: nil, type: .inviteFriends)
                 } else {
                     friendCell?.showAnimation()
@@ -469,6 +488,7 @@ extension FriendsVC: ListViewMethods, SwipeTableViewCellDelegate {
                     if contact.phoneNumbers.count > 0{
                         contactNumber = ((contact.phoneNumbers[0].value ).value(forKey: "digits") as! String)
                     }
+                    friendCell?.providerImage.image = nil
                     friendCell?.configureCell(withTitle: contactName ?? "Unknown", subTitle: contactNumber, userImage: nil, type: .inviteFriends)
                 } else {
                     friendCell?.showAnimation()

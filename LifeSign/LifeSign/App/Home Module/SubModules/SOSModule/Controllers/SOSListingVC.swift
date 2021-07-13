@@ -175,6 +175,16 @@ extension SOSListingVC : ListViewMethods {
         cell?.trailingButton.tag = indexPath.row
         
         let sosObj = self.sosSentButton.isSelected ? sosSent[indexPath.row] : sosReceived[indexPath.row]
+        cell?.emptyCell()
+        cell?.providerImage.image = nil
+        cell?.removeAnimation()
+        if sosObj.provider == .app {
+            cell?.providerImage.image = nil
+        } else if sosObj.provider == .facebook {
+            cell?.providerImage.image = R.image.ic_facebook_headd()
+        } else if sosObj.provider == .apple {
+            cell?.providerImage.image = R.image.ic_apple_head()
+        }
         
         cell?.configureCell(withTitle: sosObj.first_name + " " + sosObj.last_name, subTitle: sosObj.sos_send_datetime, userImage: sosObj.profile_image, type: .sosListing)
         

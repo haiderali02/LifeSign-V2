@@ -24,6 +24,9 @@ extension String {
     
     static let added = "added"
    
+    static let facebook = "facebook"
+    static let apple = "apple"
+    static let app = "app"
     
     static let sosSent = "sos_sent_sound.mp3"
     static let okSignReceived = "iamOk_notification.mp3"

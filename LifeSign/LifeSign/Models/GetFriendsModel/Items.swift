@@ -21,6 +21,8 @@ struct Items : Mappable {
     var sos_request: String = ""
     var message: String = ""
     
+    var provider: String = ""
+    
     // DailySIgn
     var daily_sign_id: Int = 0
     var daily_sign_friend_request: String = ""
@@ -98,6 +100,8 @@ struct Items : Mappable {
         color_name_hex <- map["color_name_hex"]
         sign_request <- map["sign_request"]
         next_ping_datetime <- map["next_ping_datetime"]
+        
+        provider <- map["provider"]
         
         agreement_status <- map["agreement_status"]
         game_friend_status <- map["game_friend_status"]

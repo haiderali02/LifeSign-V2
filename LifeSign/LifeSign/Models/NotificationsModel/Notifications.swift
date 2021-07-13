@@ -44,7 +44,8 @@ struct Notifications : Mappable {
 	var message : String = ""
 	var profile_image : String = ""
 	var created_at : String = ""
-
+    var provider: String = ""
+    
 	init?(map: Map) {
 
 	}
@@ -59,6 +60,7 @@ struct Notifications : Mappable {
 		message <- map["message"]
 		profile_image <- map["profile_image"]
 		created_at <- map["created_at"]
+        provider <- map["provider"]
 	}
 
 }

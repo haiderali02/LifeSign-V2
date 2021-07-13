@@ -56,11 +56,20 @@
                                                                     <action selector="didTapUserImageButton:" destination="eib-vf-gMx" eventType="touchUpInside" id="20m-yX-BXh"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="IUM-5Z-CPW">
+                                                                <rect key="frame" x="47" y="47" width="16" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="16" id="NOl-20-1sc"/>
+                                                                    <constraint firstAttribute="height" constant="16" id="XBc-R9-MLV"/>
+                                                                </constraints>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="l6T-n1-ONy" firstAttribute="centerY" secondItem="nIF-7i-Oj3" secondAttribute="centerY" id="7vO-W7-iYQ"/>
+                                                            <constraint firstItem="IUM-5Z-CPW" firstAttribute="bottom" secondItem="l6T-n1-ONy" secondAttribute="bottom" id="GjE-K1-giv"/>
                                                             <constraint firstItem="l6T-n1-ONy" firstAttribute="centerX" secondItem="nIF-7i-Oj3" secondAttribute="centerX" id="VKq-nk-EKh"/>
+                                                            <constraint firstItem="IUM-5Z-CPW" firstAttribute="trailing" secondItem="l6T-n1-ONy" secondAttribute="trailing" id="jsE-p5-aNl"/>
                                                             <constraint firstAttribute="width" constant="70" id="rT7-QI-uA2"/>
                                                         </constraints>
                                                     </view>
@@ -463,6 +472,7 @@
                         <outlet property="imgContainer" destination="nIF-7i-Oj3" id="FVj-vd-cUm"/>
                         <outlet property="infoButton" destination="G2A-uV-T7q" id="UqT-ds-lVP"/>
                         <outlet property="parentStackView" destination="GCA-AL-Eal" id="nUQ-EH-drK"/>
+                        <outlet property="providerIcon" destination="IUM-5Z-CPW" id="w6O-qI-far"/>
                         <outlet property="shopImgView" destination="bLA-cc-UKW" id="G6J-oK-aJb"/>
                         <outlet property="shopLabel" destination="ldA-hN-sdj" id="AcM-ux-G08"/>
                         <outlet property="sosImgView" destination="Cwm-nw-66e" id="RZn-Uq-n8T"/>

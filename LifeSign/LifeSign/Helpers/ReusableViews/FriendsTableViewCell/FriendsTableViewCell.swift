@@ -15,9 +15,12 @@ import SkeletonView
 class FriendsTableViewCell: SwipeTableViewCell {
     
     // MARK:- OUTLETS -
+    
     @IBOutlet weak var buttonViewWidth: NSLayoutConstraint!
     
     @IBOutlet weak var buttonsBackgroundView: UIView!
+    
+    @IBOutlet weak var providerImage: UIImageView!
     
     @IBOutlet weak var userImageView: UIImageView! {
         didSet {

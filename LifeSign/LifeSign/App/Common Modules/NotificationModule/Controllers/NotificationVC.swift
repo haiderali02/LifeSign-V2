@@ -139,6 +139,15 @@ extension NotificationVC: ListViewMethods, SwipeTableViewCellDelegate {
 //            cell?.msgStatusView.isHidden = false
             cell?.msgStatusView.isHidden = notificationData.status != 0 ? true : false
             
+            if notificationData.provider == .app {
+                cell?.providerImage.image = nil
+            } else if notificationData.provider == .facebook {
+                cell?.providerImage.image = R.image.ic_facebook_headd()
+            } else if notificationData.provider == .apple {
+                cell?.providerImage.image = R.image.ic_apple_head()
+            }
+            
+            
             cell?.configureCell(withTitle: notificationData.message, subTitle: notificationData.created_at, userImage: notificationData.profile_image, type: .notification, timeAgo: notificationData.full_name)
             cell?.seperatorView.isHidden = false
         } else {

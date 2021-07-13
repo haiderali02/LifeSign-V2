@@ -138,6 +138,17 @@ extension BlockFriendVC: ListViewMethods {
         if !isBeingFetched {
             friendCell?.removeAnimation()
             let userData = self.userFriendsData[indexPath.row]
+            
+            friendCell?.providerImage.image = nil
+            
+            if userData.provider == .app {
+                friendCell?.providerImage.image = nil
+            } else if userData.provider == .facebook {
+                friendCell?.providerImage.image = R.image.ic_facebook_headd()
+            } else if userData.provider == .apple {
+                friendCell?.providerImage.image = R.image.ic_apple_head()
+            }
+            
             friendCell?.configureCell(withTitle: userData.first_name + " " + userData.last_name, subTitle: userData.timezone, userImage: userData.profile_image, type: .myFriend, userRequestStatus: nil)
             friendCell?.trailingButton.tag = indexPath.row
             friendCell?.trailingButton.setTitle(AppStrings.getUnblockedString(), for: .normal)

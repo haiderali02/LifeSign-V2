@@ -13,7 +13,8 @@ struct SOSListObject : Mappable {
 	var sos_send_datetime : String = ""
 	var sos_read_datetime : String = ""
 	var sos_sender : Bool = false
-
+    var provider: String = ""
+    
 	init?(map: Map) {
 
 	}
@@ -30,6 +31,7 @@ struct SOSListObject : Mappable {
 		sos_send_datetime <- map["sos_send_datetime"]
 		sos_read_datetime <- map["sos_read_datetime"]
 		sos_sender <- map["sos_sender"]
+        provider <- map["provider"]
 	}
 
 }

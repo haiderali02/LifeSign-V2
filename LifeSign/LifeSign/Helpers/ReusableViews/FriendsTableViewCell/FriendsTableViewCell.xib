@@ -53,12 +53,21 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="tMR-5J-JZo">
+                                                <rect key="frame" x="59" y="56" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="VF1-6i-NGv"/>
+                                                    <constraint firstAttribute="height" constant="16" id="Yc5-9G-gH1"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="4e6-Jl-yk0" firstAttribute="centerY" secondItem="W3u-cd-c1G" secondAttribute="centerY" id="2hu-mw-PIf"/>
+                                            <constraint firstItem="tMR-5J-JZo" firstAttribute="trailing" secondItem="4e6-Jl-yk0" secondAttribute="trailing" id="5qP-xh-2L8"/>
                                             <constraint firstItem="4e6-Jl-yk0" firstAttribute="centerX" secondItem="W3u-cd-c1G" secondAttribute="centerX" id="7Pd-Mx-hN5"/>
                                             <constraint firstAttribute="width" constant="75" id="K1P-c2-40E"/>
+                                            <constraint firstItem="tMR-5J-JZo" firstAttribute="bottom" secondItem="4e6-Jl-yk0" secondAttribute="bottom" id="yKT-Qd-tIK"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75q-Tv-T0u">
@@ -183,6 +192,7 @@
                 <outlet property="buttonViewWidth" destination="TNx-JH-oL9" id="pIz-Cm-bBD"/>
                 <outlet property="buttonsBackgroundView" destination="VaH-Da-0Jb" id="Mc7-V5-hWv"/>
                 <outlet property="msgStatusView" destination="ea8-lQ-bwd" id="Lk2-R5-7Ay"/>
+                <outlet property="providerImage" destination="tMR-5J-JZo" id="MgS-yJ-x7M"/>
                 <outlet property="rejectButton" destination="wMR-7e-jhY" id="Rkw-iQ-hIX"/>
                 <outlet property="seperatorView" destination="igq-jx-pei" id="FSu-EC-iBi"/>
                 <outlet property="seperatorViewHeigt" destination="IQB-YM-mfz" id="DIX-rv-H8e"/>

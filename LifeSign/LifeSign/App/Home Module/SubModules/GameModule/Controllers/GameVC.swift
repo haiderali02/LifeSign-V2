@@ -195,6 +195,8 @@ class GameVC: LifeSignBaseVC {
                     playMyTurn(progressGame, userFriend, sender)
                 }
             }
+        } else {
+            sender.hideLoading()
         }
     }
     

@@ -33,6 +33,7 @@ class HomeContainerVC: LifeSignBaseVC {
     
     @IBOutlet weak var infoButton: UIButton!
     
+    @IBOutlet weak var providerIcon: UIImageView!
     // MARK:- TABBAR -
     
     @IBOutlet weak var sosLabel: UILabel! {
@@ -170,6 +171,15 @@ class HomeContainerVC: LifeSignBaseVC {
         shopLabel.text = AppStrings.getShopTabSting()
         sosLabel.text = AppStrings.getSOSTitle()
         friendsLabel.text = AppStrings.getFriendsString()
+        
+        if UserManager.shared.provider == .app {
+            providerIcon.image = nil
+        } else if UserManager.shared.provider == .facebook {
+            providerIcon.image = R.image.ic_facebook_headd()
+        } else if UserManager.shared.provider == .apple {
+            providerIcon.image = R.image.ic_apple_head()
+        }
+        
     }
     
     func configureUserImage() {
