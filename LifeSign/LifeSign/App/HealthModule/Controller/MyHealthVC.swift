@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class MyHealthVC: LifeSignBaseVC{
     
@@ -39,6 +40,12 @@ class MyHealthVC: LifeSignBaseVC{
             calorieBtn.layer.cornerRadius = calorieBtn.frame.height / 2
         }
     }
+    
+    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var chartImageView: UIImageView!
+    @IBOutlet weak var chartTitleLabel: UILabel!
+    @IBOutlet weak var chartSubtitleLabel: UILabel!
+    
     @IBOutlet weak var calorieLbl: UILabel!
     
     @IBOutlet weak var chartBackView: UIView!
@@ -111,7 +118,7 @@ class MyHealthVC: LifeSignBaseVC{
     }
     
     func setUI() {
-        
+        self.settingUpHealthBtn(0)
     }
     
     func observers(){
@@ -140,6 +147,9 @@ extension MyHealthVC{
             stepsBtn.isSelected = false
             calorieBtn.isSelected = false
             
+            chartTitleLabel.text = "Heart Rate"
+            chartSubtitleLabel.text = "102 BPM"
+            chartImageView.image = R.image.ic_healt_profile()
             // chartImage.image = R.image.chart_one()
             
             heartBtn.backgroundColor = R.color.appGreenColor()
@@ -169,6 +179,9 @@ extension MyHealthVC{
             stepsBtn.isSelected = false
             calorieBtn.isSelected = false
             
+            chartTitleLabel.text = "Sleep"
+            chartSubtitleLabel.text = ""
+            chartImageView.image = R.image.ic_sleep_yellowIcon()
 //            chartImage.image = R.image.chart_two()
             
             heartBtn.backgroundColor = R.color.appYellowColor()
@@ -197,6 +210,9 @@ extension MyHealthVC{
             stepsBtn.isSelected = true
             calorieBtn.isSelected = false
             
+            chartTitleLabel.text = "Steps"
+            chartSubtitleLabel.text = "1456"
+            chartImageView.image = R.image.ic_stepsYellowIcon()
 //            chartImage.image = R.image.chart_three()
             
             heartBtn.backgroundColor = R.color.appYellowColor()
@@ -225,7 +241,9 @@ extension MyHealthVC{
             sleepBtn.isSelected = false
             stepsBtn.isSelected = false
             calorieBtn.isSelected = true
-            
+            chartTitleLabel.text = "Calories"
+            chartSubtitleLabel.text = "185"
+            chartImageView.image = R.image.ic_calories_yellowIcon()
 //            chartImage.image = R.image.chart_four()
             
             heartBtn.backgroundColor = R.color.appYellowColor()

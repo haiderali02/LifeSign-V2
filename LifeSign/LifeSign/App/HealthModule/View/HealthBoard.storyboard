@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
         <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
@@ -794,8 +797,8 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRk-UT-M5Q" userLabel="ChartBackView">
                                                                 <rect key="frame" x="0.0" y="135" width="414" height="340"/>
                                                                 <subviews>
-                                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-kS-y8s" userLabel="ChartView" customClass="ChartMarkerView">
-                                                                        <rect key="frame" x="8" y="8" width="398" height="324"/>
+                                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-kS-y8s" userLabel="ChartView" customClass="BarChartView" customModule="Charts">
+                                                                        <rect key="frame" x="8" y="93" width="398" height="239"/>
                                                                         <color key="backgroundColor" name="appBackgroundColor"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -803,16 +806,43 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sleep_yellow-icon" translatesAutoresizingMaskIntoConstraints="NO" id="r0x-tb-YI0">
+                                                                        <rect key="frame" x="8" y="8" width="35" height="35"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="35" id="OMU-h6-pY1"/>
+                                                                            <constraint firstAttribute="height" constant="35" id="kNM-05-gfV"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYm-7h-8mo">
+                                                                        <rect key="frame" x="59" y="8" width="339" height="30.5"/>
+                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="26"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqI-vC-Vxe">
+                                                                        <rect key="frame" x="59" y="46.5" width="347" height="30.5"/>
+                                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="26"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" name="appBackgroundColor"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="0PA-kS-y8s" firstAttribute="top" secondItem="aqI-vC-Vxe" secondAttribute="bottom" constant="16" id="04q-ul-ofn"/>
                                                                     <constraint firstAttribute="height" constant="340" id="1nd-Tj-pW1">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                                                                     </constraint>
                                                                     <constraint firstAttribute="trailing" secondItem="0PA-kS-y8s" secondAttribute="trailing" constant="8" id="1ub-sd-h8Z"/>
+                                                                    <constraint firstItem="aqI-vC-Vxe" firstAttribute="leading" secondItem="bYm-7h-8mo" secondAttribute="leading" id="3Zr-bg-yPr"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="aqI-vC-Vxe" secondAttribute="trailing" constant="8" id="T0Q-nv-bqh"/>
                                                                     <constraint firstAttribute="bottom" secondItem="0PA-kS-y8s" secondAttribute="bottom" constant="8" id="UnJ-0T-U2y"/>
-                                                                    <constraint firstItem="0PA-kS-y8s" firstAttribute="top" secondItem="MRk-UT-M5Q" secondAttribute="top" constant="8" id="ZsG-M1-Rtv"/>
+                                                                    <constraint firstItem="r0x-tb-YI0" firstAttribute="leading" secondItem="MRk-UT-M5Q" secondAttribute="leading" constant="8" id="bGu-4W-kmZ"/>
+                                                                    <constraint firstItem="r0x-tb-YI0" firstAttribute="top" secondItem="MRk-UT-M5Q" secondAttribute="top" constant="8" id="bcH-oz-AWJ"/>
+                                                                    <constraint firstItem="bYm-7h-8mo" firstAttribute="top" secondItem="MRk-UT-M5Q" secondAttribute="top" constant="8" id="jQO-BH-8cc"/>
+                                                                    <constraint firstItem="bYm-7h-8mo" firstAttribute="leading" secondItem="r0x-tb-YI0" secondAttribute="trailing" constant="16" id="lkh-k0-g77"/>
                                                                     <constraint firstItem="0PA-kS-y8s" firstAttribute="leading" secondItem="MRk-UT-M5Q" secondAttribute="leading" constant="8" id="seh-V8-2nI"/>
+                                                                    <constraint firstItem="aqI-vC-Vxe" firstAttribute="top" secondItem="bYm-7h-8mo" secondAttribute="bottom" constant="8" id="sn1-K6-dOp"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="bYm-7h-8mo" secondAttribute="trailing" constant="16" id="xPu-bz-41s"/>
                                                                 </constraints>
                                                             </view>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Su8-or-sNf" userLabel="SpacerView">
@@ -843,8 +873,8 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resting heart rate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHc-Cw-aD0">
-                                                                                <rect key="frame" x="65" y="22.5" width="213" height="20.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <rect key="frame" x="65" y="24.5" width="213" height="16.5"/>
+                                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -903,13 +933,13 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="127.5" height="110"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="108" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMk-hj-sva">
-                                                                                        <rect key="frame" x="8" y="15" width="111.5" height="33.5"/>
-                                                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                                        <rect key="frame" x="8" y="15" width="111.5" height="43"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                                                         <color key="textColor" name="appYellowColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Heart Rate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjG-j5-BHW">
-                                                                                        <rect key="frame" x="8" y="58.5" width="111.5" height="14.5"/>
+                                                                                        <rect key="frame" x="8" y="68" width="111.5" height="14.5"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                         <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -935,13 +965,13 @@
                                                                                 <rect key="frame" x="135.5" y="0.0" width="127" height="110"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0A-6J-Agy">
-                                                                                        <rect key="frame" x="8" y="15" width="111" height="33.5"/>
-                                                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                                        <rect key="frame" x="8" y="15" width="111" height="43"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                                                         <color key="textColor" name="appYellowColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum Heart Rate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17l-GF-LG8">
-                                                                                        <rect key="frame" x="8" y="58.5" width="111" height="29"/>
+                                                                                        <rect key="frame" x="8" y="68" width="111" height="29"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -967,13 +997,13 @@
                                                                                 <rect key="frame" x="270.5" y="0.0" width="127.5" height="110"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHw-Hh-zCz">
-                                                                                        <rect key="frame" x="8" y="15" width="111.5" height="33.5"/>
-                                                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                                        <rect key="frame" x="8" y="15" width="111.5" height="43"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                                                                         <color key="textColor" name="appYellowColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Heart Rate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SR-rb-mrv">
-                                                                                        <rect key="frame" x="8" y="58.5" width="111.5" height="14.5"/>
+                                                                                        <rect key="frame" x="8" y="68" width="111.5" height="14.5"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1485,12 +1515,16 @@
                         <outlet property="averageHeartView" destination="dcC-cb-Fq9" id="b53-QP-jVq"/>
                         <outlet property="awakeLbl" destination="JA3-Yv-q0U" id="ETH-Qc-Bt1"/>
                         <outlet property="awakeTimeLbl" destination="b4y-Am-tHr" id="XTW-GB-gXD"/>
+                        <outlet property="barChartView" destination="0PA-kS-y8s" id="DlQ-aU-vZg"/>
                         <outlet property="caloriBackView" destination="qc2-VA-VA6" id="2p0-lK-5Pu"/>
                         <outlet property="calorieBtn" destination="Vce-cz-RCQ" id="COt-4I-b5V"/>
                         <outlet property="calorieBurnDetailLbl" destination="LXt-XJ-Fzg" id="flf-Hn-hhv"/>
                         <outlet property="calorieBurnLbl" destination="yEp-tG-ZbU" id="nHO-rJ-DW9"/>
                         <outlet property="calorieLbl" destination="xEw-4L-2sL" id="hXl-go-u4E"/>
                         <outlet property="chartBackView" destination="MRk-UT-M5Q" id="SIM-sB-QGo"/>
+                        <outlet property="chartImageView" destination="r0x-tb-YI0" id="Rd8-xg-2o6"/>
+                        <outlet property="chartSubtitleLabel" destination="aqI-vC-Vxe" id="SyU-Px-Cyv"/>
+                        <outlet property="chartTitleLabel" destination="bYm-7h-8mo" id="l6C-GX-MYR"/>
                         <outlet property="deepLbl" destination="8Xz-pw-tG9" id="UcJ-Aw-59E"/>
                         <outlet property="deepTimeLbl" destination="lcu-OE-Uhd" id="lFQ-3S-mEO"/>
                         <outlet property="heartBtn" destination="0Es-u9-5VF" id="PtU-jg-ff2"/>
