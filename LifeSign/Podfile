@@ -18,6 +18,7 @@ target 'LifeSign' do
   pod 'RevealingSplashView'
   pod 'AdvancedPageControl'
   pod 'SkeletonView'
+  pod 'Charts'
   pod 'Socket.IO-Client-Swift', '~> 15.2.0'
   #pod 'Starscream', '~> 4.0.0'
   pod "CBPinEntryView"

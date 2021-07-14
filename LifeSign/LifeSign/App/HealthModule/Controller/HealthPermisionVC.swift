@@ -13,10 +13,30 @@ class HealthPermisionVC: LifeSignBaseVC {
     // MARK:- OUTLETS -
     @IBOutlet weak var doneButton: UIButton!
     
-    @IBOutlet weak var chkBoxHeart: UIButton!
-    @IBOutlet weak var chkBoxStep: UIButton!
-    @IBOutlet weak var chkBoxCalories: UIButton!
-    @IBOutlet weak var chkBoxSleep: UIButton!
+    @IBOutlet weak var chkBoxHeart: UIButton! {
+        didSet {
+            chkBoxHeart.setImage(R.image.ic_checked(), for: .selected)
+            chkBoxHeart.setImage(R.image.ic_unchecked(), for: .normal)
+        }
+    }
+    @IBOutlet weak var chkBoxStep: UIButton! {
+        didSet {
+            chkBoxStep.setImage(R.image.ic_checked(), for: .selected)
+            chkBoxStep.setImage(R.image.ic_unchecked(), for: .normal)
+        }
+    }
+    @IBOutlet weak var chkBoxCalories: UIButton! {
+        didSet {
+            chkBoxCalories.setImage(R.image.ic_checked(), for: .selected)
+            chkBoxCalories.setImage(R.image.ic_unchecked(), for: .normal)
+        }
+    }
+    @IBOutlet weak var chkBoxSleep: UIButton!  {
+        didSet {
+            chkBoxSleep.setImage(R.image.ic_checked(), for: .selected)
+            chkBoxSleep.setImage(R.image.ic_unchecked(), for: .normal)
+        }
+    }
     
     @IBOutlet weak var heartLabel: UILabel!
     @IBOutlet weak var stepsLabel: UILabel!

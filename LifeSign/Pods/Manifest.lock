@@ -3,6 +3,9 @@ PODS:
   - Alamofire (5.4.1)
   - Cache (5.3.0)
   - CBPinEntryView (1.7.1)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - CountryPickerView (3.1.3)
   - DateTimePicker (2.5.2)
   - EmptyDataSet-Swift (5.0.0)
@@ -845,6 +848,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Cache
   - CBPinEntryView
+  - Charts
   - CountryPickerView
   - DateTimePicker
   - EmptyDataSet-Swift (~> 5.0.0)
@@ -933,6 +937,7 @@ SPEC REPOS:
     - TimeZonePicker
     - YPImagePicker
   trunk:
+    - Charts
     - FitpoloSDK-iOS
 
 SPEC CHECKSUMS:
@@ -940,6 +945,7 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Cache: 48762993ec44e1d93483c4d4a13edd18452326f4
   CBPinEntryView: 5a91ba422bd8a38eea587511c92c89b19be78454
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   CountryPickerView: 383c09949f7455de9892db7ce3400b10da090150
   DateTimePicker: 5b6386eb8f9839192e77748f620b9d9f12f41c28
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
@@ -993,6 +999,6 @@ SPEC CHECKSUMS:
   TimeZonePicker: 7f3e60375dc3754a44f4a417f01e5c707b2b72b4
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: 09f3040a4dea4e12b17f295c85bc1290a90ec9fb
+PODFILE CHECKSUM: 030f27f173bd1aff69ebf19b98841e1d3550e2bf
 
 COCOAPODS: 1.10.1
