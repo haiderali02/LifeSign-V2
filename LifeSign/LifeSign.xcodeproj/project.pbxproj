@@ -201,6 +201,7 @@
 		94ED6FF2260B6DE7000109D4 /* SOSListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED6FF1260B6DE7000109D4 /* SOSListingVC.swift */; };
 		94ED6FF6260B73E6000109D4 /* CustomSegmentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED6FF5260B73E6000109D4 /* CustomSegmentBar.swift */; };
 		94ED6FFC260B8212000109D4 /* SOSContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED6FFB260B8212000109D4 /* SOSContainerVC.swift */; };
+		94EE5618269EFFB300FD4B56 /* HealthPermisionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE5617269EFFB300FD4B56 /* HealthPermisionVC.swift */; };
 		94F6F70E25F7A63B0086D865 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94F6F71025F7A63B0086D865 /* Localizable.strings */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
 		C90395261FC62399006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
@@ -427,6 +428,7 @@
 		94ED6FF1260B6DE7000109D4 /* SOSListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSListingVC.swift; sourceTree = "<group>"; };
 		94ED6FF5260B73E6000109D4 /* CustomSegmentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentBar.swift; sourceTree = "<group>"; };
 		94ED6FFB260B8212000109D4 /* SOSContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSContainerVC.swift; sourceTree = "<group>"; };
+		94EE5617269EFFB300FD4B56 /* HealthPermisionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthPermisionVC.swift; sourceTree = "<group>"; };
 		94F6F70F25F7A63B0086D865 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94F6F71325F7A6610086D865 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		94F6F71525F7A6AF0086D865 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				1841E1B1268B2A1D00BE0C5F /* MyHealthVC.swift */,
 				1841E1B3268B2A3A00BE0C5F /* FriendHealthVC.swift */,
 				1841E1B5268B2A5500BE0C5F /* FriendRequestVC.swift */,
+				94EE5617269EFFB300FD4B56 /* HealthPermisionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1898,6 +1901,7 @@
 				942180C0261F300B005ABF82 /* SettingsVC.swift in Sources */,
 				94EBC0142630129900C1D8D7 /* DailySignVC.swift in Sources */,
 				94E59E5325FF4D9E0092A1D8 /* DesignableView.swift in Sources */,
+				94EE5618269EFFB300FD4B56 /* HealthPermisionVC.swift in Sources */,
 				94D7D39C2636923200B4967F /* ShopCell.swift in Sources */,
 				94ED6FEA260B6DA8000109D4 /* SOSSndRcvVC.swift in Sources */,
 				94BA25652611B5D0009D3010 /* Keychain.swift in Sources */,

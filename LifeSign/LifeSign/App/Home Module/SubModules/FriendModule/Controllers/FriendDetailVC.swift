@@ -361,7 +361,11 @@ class FriendDetailVC: LifeSignBaseVC , DateTimePickerDelegate{
         }
     }
     @IBAction func didTapAddInHealth(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        
+        guard let healthPermission = R.storyboard.healthBoard.healthPermisionVC() else {return}
+        self.present(healthPermission, animated: true, completion: nil)
+        
+        // self.dismiss(animated: true, completion: nil)
     }
     @IBAction func didTapBlockFriend(_ sender: UIButton) {
         self.showSpinner(onView: self.view)
