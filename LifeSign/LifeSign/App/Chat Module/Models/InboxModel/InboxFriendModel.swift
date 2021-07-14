@@ -35,6 +35,7 @@ struct ChatBaseResponse : Mappable {
     var success : Bool = false
     var messages : String = ""
     var current_user_id : Int = 0
+    var is_promotion: Bool = false
     var is_buy_package: Bool = false
     var chatBaseData : ChatBaseData?
 
@@ -46,6 +47,7 @@ struct ChatBaseResponse : Mappable {
 
         success <- map["success"]
         messages <- map["messages"]
+        is_promotion <- map["is_promotion"]
         is_buy_package <- map["is_buy_package"]
         current_user_id <- map["current_user_id"]
         chatBaseData <- map["data"]

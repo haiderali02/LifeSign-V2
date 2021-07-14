@@ -89,9 +89,9 @@ class MyHealthVC: LifeSignBaseVC{
     @IBOutlet weak var calorieBurnLbl: UILabel!
     @IBOutlet weak var calorieBurnDetailLbl: UILabel!
     
-    @IBOutlet weak var chartImage: UIImageView!
     
     //MARK:- PROPERTIES -
+
     
     
     //MARK:- LIFE CYCLE -
@@ -112,6 +112,7 @@ class MyHealthVC: LifeSignBaseVC{
         // Do any additional setup after loading the view.
     }
     
+    
     //MARK:- METHODS -
     @objc func setText(){
         
@@ -119,12 +120,17 @@ class MyHealthVC: LifeSignBaseVC{
     
     func setUI() {
         self.settingUpHealthBtn(0)
+        barChartView.delegate = self
     }
     
     func observers(){
         NotificationCenter.default.addObserver(self, selector: #selector(setText), name: .languageCanged, object: nil)
     }
     
+    
+    func configureChart(for Index: Int) {
+        
+    }
     
     //MARK:- ACTIONS -
     
@@ -182,7 +188,7 @@ extension MyHealthVC{
             chartTitleLabel.text = "Sleep"
             chartSubtitleLabel.text = ""
             chartImageView.image = R.image.ic_sleep_yellowIcon()
-//            chartImage.image = R.image.chart_two()
+            //            chartImage.image = R.image.chart_two()
             
             heartBtn.backgroundColor = R.color.appYellowColor()
             heartRateLbl.textColor = R.color.appYellowColor()
@@ -213,7 +219,7 @@ extension MyHealthVC{
             chartTitleLabel.text = "Steps"
             chartSubtitleLabel.text = "1456"
             chartImageView.image = R.image.ic_stepsYellowIcon()
-//            chartImage.image = R.image.chart_three()
+            //            chartImage.image = R.image.chart_three()
             
             heartBtn.backgroundColor = R.color.appYellowColor()
             heartRateLbl.textColor = R.color.appYellowColor()
@@ -244,7 +250,7 @@ extension MyHealthVC{
             chartTitleLabel.text = "Calories"
             chartSubtitleLabel.text = "185"
             chartImageView.image = R.image.ic_calories_yellowIcon()
-//            chartImage.image = R.image.chart_four()
+            //            chartImage.image = R.image.chart_four()
             
             heartBtn.backgroundColor = R.color.appYellowColor()
             heartRateLbl.textColor = R.color.appYellowColor()
@@ -267,6 +273,13 @@ extension MyHealthVC{
             
         }
     }
+    
+    
+}
+
+
+extension MyHealthVC: ChartViewDelegate {
+    
     
     
 }

@@ -31,7 +31,14 @@ extension ChatVC {
             self.removeSpinner()
             if errors == nil {
                 guard let response = chatResponse else {return}
-                
+                if response.is_promotion {
+                    // Disable Send Message Functionality
+                    
+                    self.messageInputBar.isHidden = true
+                    
+                } else {
+                    self.messageInputBar.isHidden = false
+                }
                 var respMessages: [Message] = [Message]()
                 self.isCurrentUserSubcribed = response.is_buy_package
                 self.headerView.subscribedImageView.isHidden = !self.isCurrentUserSubcribed
