@@ -632,6 +632,10 @@ class AppStrings: NSObject {
         return StringsManager.shared.add_in_health_friends_list ?? "Add in Health Friends List"
     }
     
+    static func getHealthString() -> String {
+        return StringsManager.shared.health ?? "Health"
+    }
+    
     static func getAddinBlockString() -> String {
         return StringsManager.shared.block ?? "Block"
     }

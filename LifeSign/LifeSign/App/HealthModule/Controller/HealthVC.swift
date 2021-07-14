@@ -69,7 +69,7 @@ class HealthVC: LifeSignBaseVC {
     //MARK:- METHODS -
     
     @objc func setText(){
-        
+        backBtn.setTitle(AppStrings.getHealthString(), for: .normal)
     }
     
     func setUI() {
@@ -92,6 +92,15 @@ class HealthVC: LifeSignBaseVC {
         NotificationCenter.default.addObserver(self, selector: #selector(setText), name: .languageCanged, object: nil)
     }
     
+    func showUserFriends() {
+        if let controller = R.storyboard.friends.friendsVC() {
+            controller.modalPresentationStyle = .overCurrentContext
+            let navController = UINavigationController(rootViewController: controller)
+            navController.modalPresentationStyle = .overFullScreen
+            controller.mode = .addNew
+            self.present(navController, animated: true, completion: nil)
+        }
+    }
     
     //MARK:- ACTIONS -
     
@@ -101,7 +110,7 @@ class HealthVC: LifeSignBaseVC {
     
     @IBAction func didTapAddFriendBtn(_ sender: UIButton) {
         sender.showAnimation {
-            
+            self.showUserFriends()
         }
     }
     

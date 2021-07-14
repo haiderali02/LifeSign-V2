@@ -306,6 +306,7 @@ extension OkSignVC: CollectionViewMethods {
         
         if userData.agreement_request == .waiting {
             cell?.trailingButton.setTitle(AppStrings.getWaitingString(), for: .normal)
+            cell?.leadingButton.isHidden = true
         } else if userData.agreement_request == .accepted {
             // Default State
             cell?.trailingButton.backgroundColor = UIColor.appGreenColor
@@ -313,6 +314,8 @@ extension OkSignVC: CollectionViewMethods {
             cell?.mainButton.addTarget(self, action: #selector(didTapCardView(_:)), for: .touchUpInside)
             cell?.userNameLabel.textColor = R.color.appLightFontColor()
             cell?.userTimeZoneLabel.textColor = R.color.appLightFontColor()
+            cell?.leadingButton.isHidden = true
+            
             // return cell ?? FriendsCollectionViewCell()
         } else if userData.agreement_request == .pending {
             cell?.configureCellForOKSign(withName: userData.first_name + " " + userData.last_name, userImage: userData.profile_image, state: .acceptReject)
@@ -320,6 +323,7 @@ extension OkSignVC: CollectionViewMethods {
             cell?.mainButton.addTarget(self, action: #selector(didTapCardView(_:)), for: .touchUpInside)
             cell?.userNameLabel.textColor = R.color.appLightFontColor()
             cell?.userTimeZoneLabel.textColor = R.color.appLightFontColor()
+            cell?.leadingButton.isHidden = false
             return cell ?? FriendsCollectionViewCell()
         }
         

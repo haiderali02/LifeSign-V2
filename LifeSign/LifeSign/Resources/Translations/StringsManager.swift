@@ -173,6 +173,7 @@ class StringsManager: Mappable {
     var add_in_lifesign_friends_list : String?
     var add_in_ok_friends_list : String?
     var add_in_health_friends_list : String?
+    var health: String?
     var block : String?
     var delete : String?
     var read : String?
@@ -390,6 +391,7 @@ class StringsManager: Mappable {
         code_resent_successfully <- map["code_resent_successfully"]
         your_transaction_have_been_stored_successfully <- map["your_transaction_have_been_stored_successfully"]
         remind <- map["remind"]
+        health <- map["health"]
         oksign_friends <- map["oksign_friends"]
         im_ok <- map["im_ok"]
         oksign <- map["oksign"]
