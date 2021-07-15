@@ -155,6 +155,7 @@ class EditProfileVC: LifeSignBaseVC {
         emailTextField.isUserInteractionEnabled = false
         
         consentButton.isSelected = UserManager.shared.is_consent
+        marketingButton.isSelected = UserManager.shared.is_consent
         profileImageView.backgroundColor = R.color.appYellowColor()
         profileImageView.kf.indicatorType = .activity
         profileImageView.addSubview(namePrefixLabel)
@@ -230,6 +231,7 @@ class EditProfileVC: LifeSignBaseVC {
             "first_name": firstNamelTextField.text ?? UserManager.shared.first_name,
             "last_name": lastNameTextField.text ?? UserManager.shared.last_name,
             "is_consent": self.marketingButton.isSelected ? "1" : "0",
+            "fcm_token": Constants.APPDELEGATE.fcm_Tokken,
             "phone_number": self.contactTextField.text ?? UserManager.shared.phone_number,
             "country_code": self.countryPickerView.selectedCountry.phoneCode
         ] as [String : Any]
