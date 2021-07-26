@@ -64,70 +64,6 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Reachability (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
-  - FitpoloSDK-iOS (0.2.0):
-    - FitpoloSDK-iOS/adopter (= 0.2.0)
-    - FitpoloSDK-iOS/category (= 0.2.0)
-    - FitpoloSDK-iOS/centralManager (= 0.2.0)
-    - FitpoloSDK-iOS/header (= 0.2.0)
-    - FitpoloSDK-iOS/interface (= 0.2.0)
-    - FitpoloSDK-iOS/log (= 0.2.0)
-    - FitpoloSDK-iOS/task (= 0.2.0)
-    - FitpoloSDK-iOS/update (= 0.2.0)
-  - FitpoloSDK-iOS/adopter (0.2.0):
-    - FitpoloSDK-iOS/header
-  - FitpoloSDK-iOS/category (0.2.0)
-  - FitpoloSDK-iOS/centralManager (0.2.0):
-    - FitpoloSDK-iOS/adopter
-    - FitpoloSDK-iOS/category
-    - FitpoloSDK-iOS/header
-    - FitpoloSDK-iOS/log
-    - FitpoloSDK-iOS/task/operation
-  - FitpoloSDK-iOS/header (0.2.0)
-  - FitpoloSDK-iOS/interface (0.2.0):
-    - FitpoloSDK-iOS/adopter
-    - FitpoloSDK-iOS/category
-    - FitpoloSDK-iOS/centralManager
-    - FitpoloSDK-iOS/header
-    - FitpoloSDK-iOS/interface/device (= 0.2.0)
-    - FitpoloSDK-iOS/interface/userData (= 0.2.0)
-    - FitpoloSDK-iOS/log
-    - FitpoloSDK-iOS/task/operation
-  - FitpoloSDK-iOS/interface/device (0.2.0):
-    - FitpoloSDK-iOS/adopter
-    - FitpoloSDK-iOS/category
-    - FitpoloSDK-iOS/centralManager
-    - FitpoloSDK-iOS/header
-    - FitpoloSDK-iOS/log
-    - FitpoloSDK-iOS/task/operation
-  - FitpoloSDK-iOS/interface/userData (0.2.0):
-    - FitpoloSDK-iOS/adopter
-    - FitpoloSDK-iOS/category
-    - FitpoloSDK-iOS/centralManager
-    - FitpoloSDK-iOS/header
-    - FitpoloSDK-iOS/log
-    - FitpoloSDK-iOS/task/operation
-  - FitpoloSDK-iOS/log (0.2.0):
-    - FitpoloSDK-iOS/header
-  - FitpoloSDK-iOS/task (0.2.0):
-    - FitpoloSDK-iOS/task/fitpolo701 (= 0.2.0)
-    - FitpoloSDK-iOS/task/fitpoloCurrent (= 0.2.0)
-    - FitpoloSDK-iOS/task/operation (= 0.2.0)
-  - FitpoloSDK-iOS/task/fitpolo701 (0.2.0):
-    - FitpoloSDK-iOS/adopter
-    - FitpoloSDK-iOS/header
-    - FitpoloSDK-iOS/log
-  - FitpoloSDK-iOS/task/fitpoloCurrent (0.2.0):
-    - FitpoloSDK-iOS/adopter
-    - FitpoloSDK-iOS/header
-    - FitpoloSDK-iOS/log
-  - FitpoloSDK-iOS/task/operation (0.2.0):
-    - FitpoloSDK-iOS/header
-    - FitpoloSDK-iOS/task/fitpolo701
-    - FitpoloSDK-iOS/task/fitpoloCurrent
-  - FitpoloSDK-iOS/update (0.2.0):
-    - FitpoloSDK-iOS/adopter
-    - FitpoloSDK-iOS/centralManager
-    - FitpoloSDK-iOS/header
   - GoogleAppMeasurement (7.7.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/MethodSwizzler (~> 7.0)
@@ -855,7 +791,6 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - Firebase/Analytics
   - Firebase/Messaging
-  - FitpoloSDK-iOS
   - ImageViewer.swift (~> 3.0)
   - IQKeyboardManagerSwift
   - Kingfisher (~> 6.0)
@@ -938,7 +873,6 @@ SPEC REPOS:
     - YPImagePicker
   trunk:
     - Charts
-    - FitpoloSDK-iOS
 
 SPEC CHECKSUMS:
   AdvancedPageControl: df5912b03c7b78a7719d4f479b79f7eb3a2966bb
@@ -958,7 +892,6 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 42c86e7b02ff75b7f27f85833bf5dcb5f38a9774
   FirebaseInstanceID: cf940324a20ac14a27ad1e931d15ac9d335526db
   FirebaseMessaging: ce33c2537fdda1d1a4bc82b2245e3c3bf9107684
-  FitpoloSDK-iOS: 59f25ef1ca8fce9fbfd450941a672cf0f7d98995
   GoogleAppMeasurement: 0c3b134b2c0a90c4c24833873894bfe0e42a0384
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
   GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
@@ -999,6 +932,6 @@ SPEC CHECKSUMS:
   TimeZonePicker: 7f3e60375dc3754a44f4a417f01e5c707b2b72b4
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: 030f27f173bd1aff69ebf19b98841e1d3550e2bf
+PODFILE CHECKSUM: abc2ade83037cd5f05c68c29a990b839eadda94f
 
 COCOAPODS: 1.10.1

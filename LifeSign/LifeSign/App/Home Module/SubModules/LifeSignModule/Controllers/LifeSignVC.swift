@@ -141,7 +141,8 @@ extension LifeSignVC: ListViewMethods {
             return self.configureDailySign(tableView: tableView, forIndexPath: indexPath)
         } else if indexPath.row == 1 {
             // Return Watch Cell
-            return self.configureHealthCell(tableView: tableView, forIndexPath: indexPath)
+            return UITableViewCell()
+            // return self.configureHealthCell(tableView: tableView, forIndexPath: indexPath)
         } else if indexPath.row == 2 {
             return self.configureSOSCell(tableView: tableView, forIndexPath: indexPath)
         } else if indexPath.row == 3 {
@@ -158,7 +159,7 @@ extension LifeSignVC: ListViewMethods {
         }
         // HEALTH CELL
         else if indexPath.row == 1 {
-            return 550
+            return 0 //550
         }
         // SOS VIEW HEIGHT = 590
         

@@ -250,7 +250,6 @@ extension InboxVC: CollectionViewMethods {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.inboxCollectionCell, for: indexPath)
         
-        
         if inboxFriends.count == 0 {
             cell?.showAnimation()
         } else {
@@ -271,6 +270,9 @@ extension InboxVC: CollectionViewMethods {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let chatVC = R.storyboard.chatBoard.chatVC() {
+            
+            if self.inboxFriends.count == 0 {return}
+            
             let myFriend = inboxFriends[indexPath.row ]
             
             chatVC.userFriend = myFriend

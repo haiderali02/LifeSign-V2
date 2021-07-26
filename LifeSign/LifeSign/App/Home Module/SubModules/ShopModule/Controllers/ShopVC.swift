@@ -167,7 +167,18 @@ class ShopVC: LifeSignBaseVC {
     
     private func saveInAppInDataBase() {
         self.showSpinner(onView: self.view)
-        LifeSignManager.savePackageInDatabase(identifier: purchasedID, transaction_id: Helper.getRandomAlphaNumericString(length: 8)) { status, errors in
+        var newPurchaseId = self.purchasedID
+        
+        if self.purchasedID == "" {
+            return
+        }
+        
+        let twelveIndex = self.purchasedID.index(self.purchasedID.startIndex, offsetBy: 12)
+        newPurchaseId.insert(contentsOf: "Dev", at: twelveIndex)
+        
+        print("NewSre: \(newPurchaseId)")
+        
+        LifeSignManager.savePackageInDatabase(identifier: newPurchaseId, transaction_id: Helper.getRandomAlphaNumericString(length: 8)) { status, errors in
             self.removeSpinner()
             if errors == nil {
                 AlertController.showAlert(witTitle: AppStrings.getSuccessString(), withMessage: AppStrings.getPurchaseSuccessString(), style: .success, controller: self)

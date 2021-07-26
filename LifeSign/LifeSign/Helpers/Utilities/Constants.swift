@@ -52,7 +52,8 @@ struct Constants {
     
     static let socketDic = ["websocket","polling","flashsocket"]
     
-    static let timerInterval: Int = 30
+    // static let timerInterval: Int = 30
+    static let timerInterval: Int = 60
     static let thirthyMinBefore: Int = -30
     
     
@@ -102,8 +103,6 @@ struct Constants {
         }()
         
         let userImageView = UIImageView()
-        
-        
         
         userImageView.addSubview(namePrefixLabel)
         
@@ -168,7 +167,9 @@ struct Constants {
     static let smallFonts = R.font.robotoMedium(size: 8) ?? .systemFont(ofSize: 8, weight: .medium)
     static let fontSize12 = R.font.robotoRegular(size: 12) ?? .systemFont(ofSize: 12, weight: .regular)
     
-    static let DailySignShopItems: [String] = [
+    // DEV
+    
+    /* static let DailySignShopItems: [String] = [
         "com.LifeSignDev.2extra_contacts",
         "com.LifeSignDev.10extra_contacts",
         "com.LifeSignDev.unlimited_friend_contacts"
@@ -191,8 +192,36 @@ struct Constants {
         "com.LifeSignDev.over140ch_1contact",
         "com.LifeSignDev.over140ch_10contact",
         "com.LifeSignDev.over140ch_unlimitedcontact"
-    ]        
+    ] */
    
+    // LIVE
+    
+    static let DailySignShopItems: [String] = [
+        "com.LifeSign.2extra_contacts",
+        "com.LifeSign.10extra_contacts",
+        "com.LifeSign.unlimited_friend_contacts"
+    ]
+    static let PokeGameShopItems: [String] = [
+        "com.LifeSign.20autoclicks",
+        "com.LifeSign.200autoclicks",
+        "com.LifeSign.500autoclicks",
+        "com.LifeSign.1000autoclicks",
+        "com.LifeSign.5000autoclicks",
+        "com.LifeSign.2extragames",
+        "com.LifeSign.10extragames",
+        "com.LifeSign.unlimitedextragames"
+    ]
+    static let ServicesShopItems: [String] = [
+        "com.LifeSign.removeads",
+        "com.LifeSign.8extra_sms",
+        "com.LifeSign.25extra_sms",
+        "com.LifeSign.100extra_sms",
+        "com.LifeSign.over140ch_1contact",
+        "com.LifeSign.over140ch_10contact",
+        "com.LifeSign.over140ch_unlimitedcontact"
+    ]
+    
+    
     static let okSignInfoData: [[String: Any]] = [
         [
             "name": AppStrings.dailySignRedColor(),

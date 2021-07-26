@@ -1,4 +1,4 @@
-cdsource 'https://github.com/CocoaPods/Specs.git'
+#cdsource 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '10.0'
 
@@ -46,7 +46,7 @@ target 'LifeSign' do
   pod 'DateTimePicker'
   pod 'MessageKit'
   pod 'Lightbox'
-  pod 'FitpoloSDK-iOS'
+  #pod 'FitpoloSDK-iOS'
   
   target 'LifeSignTests' do
     inherit! :search_paths
