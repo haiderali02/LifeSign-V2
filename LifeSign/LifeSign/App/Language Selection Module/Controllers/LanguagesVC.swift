@@ -9,9 +9,6 @@
 import UIKit
 import LanguageManager_iOS
 
-
-
-
 class LanguagesVC: LifeSignBaseVC {
 
     // MARK:- OUTLETS -

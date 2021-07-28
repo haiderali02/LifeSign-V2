@@ -20,6 +20,7 @@ struct ChatManager {
     static func configuration() -> URLSessionConfiguration {
         let staticHeaders = ["Content-Type": "application/json"]
         let configuration = Session.default.session.configuration
+        configuration.urlCache = nil
         configuration.timeoutIntervalForRequest = 30.0
         configuration.httpAdditionalHeaders = staticHeaders
         return configuration
@@ -27,7 +28,7 @@ struct ChatManager {
     
     static var authHeaders: HTTPHeaders {
         HTTPHeaders(["Authorization": "Bearer" + " " + UserManager.shared.access_token,
-                     "X-localization": LangObjectModel.shared.symbol ?? "en",
+                     "X-localization": LangObjectModel.shared.symbol,
                      "Tag": UIDevice.current.identifierForVendor?.uuidString ?? "",
                      "Cache-Control": "no-cache"])
     }

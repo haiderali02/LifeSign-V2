@@ -93,6 +93,7 @@ class UserManager: Mappable {
          timezone  = ""
          enable_autoclicks  = false
          access_token  = ""
+         
          fcm_token  = ""
          provider = ""
          userResources = nil

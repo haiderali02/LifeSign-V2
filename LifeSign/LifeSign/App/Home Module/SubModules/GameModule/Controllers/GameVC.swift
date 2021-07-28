@@ -79,7 +79,7 @@ class GameVC: LifeSignBaseVC {
     }
     
     func implementUnityAds() {
-        UnityAds.initialize(Constants.DEV_APP_ID, testMode: true)
+        UnityAds.initialize(Constants.DEV_APP_ID, testMode: Constants.IS_DEV_MODE)
         UnityAds.add(self)
     }
     

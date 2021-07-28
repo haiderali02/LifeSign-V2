@@ -221,6 +221,10 @@ class LoginVC: LifeSignBaseVC {
                 if errors == nil {
                     self.btnLogin.hideLoading()
                     if userActive {
+                        let user = UserManager()
+                        user.access_token = ""
+                        UserManager.shared.saveUser(user: user)
+                        UserManager.shared.deleteUser()
                         UserManager.shared.saveUser(user: userData!)
                         self.btnLogin.hideLoading()
                         let homeVC = R.storyboard.home.homeContainerVC() ?? HomeContainerVC()

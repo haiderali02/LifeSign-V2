@@ -181,6 +181,7 @@ class UserProfileVC: LifeSignBaseVC {
         FriendManager.logoutUser { (logout) in
             if let shouldLogout = logout {
                 if shouldLogout {
+                    UserManager.shared.deleteUser()
                     SocketHelper.shared.closeConnection()
                     NotificationCenter.default.post(name: .userLogout, object: nil)
                     UserManager.shared.deleteUser()

@@ -20,6 +20,7 @@ struct LifeSignManager {
     static func configuration() -> URLSessionConfiguration {
         let staticHeaders = ["Content-Type": "application/json"]
         let configuration = Session.default.session.configuration
+        configuration.urlCache = nil
         configuration.timeoutIntervalForRequest = 30.0
         configuration.httpAdditionalHeaders = staticHeaders
         return configuration

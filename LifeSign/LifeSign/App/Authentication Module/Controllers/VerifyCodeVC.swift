@@ -68,6 +68,7 @@ class VerifyCodeVC: LifeSignBaseVC {
     var counter = 30
     var timer: Timer?
     var mode: VerifyMode = .userSignup
+    
     // MARK:- VIEWLIFECYCLE -
     
     override func viewDidLoad() {
@@ -166,6 +167,10 @@ extension VerifyCodeVC {
         AuthManager.activateAccount(email: self.userEmail, code: code) { (success, userData, errors) in
             if errors == nil {
                 // Save User
+                let user = UserManager()
+                user.access_token = ""
+                UserManager.shared.saveUser(user: user)
+                UserManager.shared.deleteUser()
                 UserManager.shared.saveUser(user: userData!)
                 let homeVC = R.storyboard.home.homeContainerVC() ?? HomeContainerVC()
                 self.push(controller: homeVC, animated: true)

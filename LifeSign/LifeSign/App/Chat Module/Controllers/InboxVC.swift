@@ -166,9 +166,10 @@ class InboxVC: LifeSignBaseVC {
                         self.myFriendsCollectionView.reloadData()
                     }
                     if let inboxMessages = resp.inboxBaseData?.messages?.inboxMessages {
-                        self.inboxMessages = inboxMessages.sorted(by: { msg1, msg2 in
+                       /* self.inboxMessages = inboxMessages.sorted(by: { msg1, msg2 in
                             return msg1.is_read == false
-                        })
+                        }) */
+                        self.inboxMessages = inboxMessages
                         self.recentChatTableView.reloadData()
                     }
                 }
@@ -208,7 +209,7 @@ class InboxVC: LifeSignBaseVC {
         }
         
         self.inboxMessages = self.inboxMessages.sorted(by: { msg1, msg2 in
-            return msg1.is_read == false
+            return true
         })
         
         self.recentChatTableView.reloadData()

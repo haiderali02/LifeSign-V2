@@ -147,6 +147,8 @@ struct Constants {
     static let LIVE_APP_ID = "3980122"
     static let DEV_APP_ID = "4164116"
     
+    static let IS_DEV_MODE: Bool = true
+    
     static let LIVE_VIDE_AD_PLACEMENT = "video"
     static let DEV_VIDE_AD_PLACEMENT = "RewardAd"
     static let UNITY_BANNER_PALCEMENT: String = "Banner_Ads"
