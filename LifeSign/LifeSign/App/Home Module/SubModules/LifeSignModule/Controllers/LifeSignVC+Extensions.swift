@@ -43,7 +43,7 @@ extension LifeSignVC {
                     }
                 }
                 
-                self.homeTableView.reloadData()
+                // self.homeTableView.reloadData()
             } else {
                 // ErrorHandler.handleError(errors: errors ?? [""], inController: self)
             }
@@ -216,7 +216,7 @@ extension LifeSignVC : HealthCellDelegates{
                         }
                     }
                     NotificationCenter.default.post(name: .refreshData, object: nil)
-                    self.homeTableView.reloadData()
+                    // self.homeTableView.reloadData()
                 }
             } else {
                 ErrorHandler.handleError(errors: errors ?? [""], inController: self)
@@ -254,6 +254,8 @@ extension LifeSignVC : HealthCellDelegates{
         
         cell?.viewCheckFriendRequestButton.addTarget(self, action: #selector(didTapViewAllCheckFriends(_:)), for: .touchUpInside)
         cell?.viewTellFriendRequestButton.addTarget(self, action: #selector(didTapViewAllTellFriends(_:)), for: .touchUpInside)
+        
+        
         
         cell?.userCheckFriends = self.userCheckFriends
         cell?.userTellFriends = self.userTellFriends
@@ -454,7 +456,7 @@ extension LifeSignVC {
                     self.userDailySignFriends.append(users)
                 }
                 
-                self.homeTableView.reloadData()
+                // self.homeTableView.reloadData()
             } else {
                 // ErrorHandler.handleError(errors: errors ?? [""], inController: self)
             }

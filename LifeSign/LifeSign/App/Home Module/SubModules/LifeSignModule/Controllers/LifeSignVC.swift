@@ -92,6 +92,7 @@ class LifeSignVC: LifeSignBaseVC {
         self.getUserOKSignFriends(searchString: nil)
         
         disPatchWaiting.notify(queue: .main) {
+            self.homeTableView.reloadData()
             print("All Request Done :=- PULL TO REFRESH")
         }
         
@@ -115,6 +116,7 @@ class LifeSignVC: LifeSignBaseVC {
         disPatchWaiting.enter()
         self.getUserSOSFriends(searcString: nil)
         disPatchWaiting.notify(queue: .main) {
+            self.homeTableView.reloadData()
             print("All Request Done :=- REFRESH HOME")
         }
     }

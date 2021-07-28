@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>725272540562-237ljdrdnig6otjit99vcq66jiq7v15b.apps.googleusercontent.com</string>
+	<string>725272540562-798jhggn2iv6c6rtu58oeabj4kq2qp0a.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.725272540562-237ljdrdnig6otjit99vcq66jiq7v15b</string>
+	<string>com.googleusercontent.apps.725272540562-798jhggn2iv6c6rtu58oeabj4kq2qp0a</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBz3gQvfFedRN1xCgrep8taW0cT-BlNIv4</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.LifeSign.dev</string>
+	<string>com.LifeSign</string>
 	<key>PROJECT_ID</key>
 	<string>lifesign-dev</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:725272540562:ios:00f238c2bf5dbfcb94bd4b</string>
+	<string>1:725272540562:ios:b2f67d899aa98fa194bd4b</string>
 	<key>DATABASE_URL</key>
 	<string>https://lifesign-dev.firebaseio.com</string>
 </dict>

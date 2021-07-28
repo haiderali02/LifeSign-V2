@@ -96,6 +96,8 @@ class OKSignHomeCell: UITableViewCell {
         return formatter
     }()
     
+    var timer: Timer?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -103,7 +105,7 @@ class OKSignHomeCell: UITableViewCell {
         NotificationCenter.default.addObserver(self, selector: #selector(self.setText), name: .languageCanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.setText), name: .refreshData, object: nil)
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_ ) in
             self.checkFriendCollectionView.reloadItems(at: self.selectedIndexCheckFriends)
             self.TellFriendCollectionView.reloadItems(at: self.selectedIndexTellFriends)
         }
@@ -133,7 +135,8 @@ class OKSignHomeCell: UITableViewCell {
         self.TellFriendCollectionView.emptyDataSetView { (dataSet) in
             dataSet.detailLabelString(NSAttributedString(string: AppStrings.getNoDatFoundString()))
         }
-        
+        timer?.invalidate()
+        timer = nil
         self.checkFriendCollectionView.reloadData()
         self.TellFriendCollectionView.reloadData()
     }

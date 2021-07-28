@@ -39,7 +39,6 @@
 		94146946261DE8730064B11B /* SOSListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94146943261DE8730064B11B /* SOSListData.swift */; };
 		94146947261DE8730064B11B /* SOSListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94146944261DE8730064B11B /* SOSListingResponse.swift */; };
 		9414F0BA2614C09300007D8A /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9414F0B92614C09300007D8A /* EditProfileVC.swift */; };
-		941551152626AA3C00A45B27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 941551142626AA3C00A45B27 /* GoogleService-Info.plist */; };
 		942180C0261F300B005ABF82 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942180BF261F300B005ABF82 /* SettingsVC.swift */; };
 		94236D902631473000CBC627 /* ChatBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94236D8F2631473000CBC627 /* ChatBoard.storyboard */; };
 		94236D972631476800CBC627 /* InboxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94236D962631476800CBC627 /* InboxVC.swift */; };
@@ -123,6 +122,7 @@
 		94A3660D2671DF070027F7EE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A3660C2671DF070027F7EE /* CoreMedia.framework */; };
 		94A3660F2671DF130027F7EE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A3660E2671DF130027F7EE /* CoreTelephony.framework */; };
 		94A366112671DF230027F7EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A366102671DF230027F7EE /* SystemConfiguration.framework */; };
+		94A6C9B126B16E1C00B5B970 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94A6C9B026B16E1C00B5B970 /* GoogleService-Info.plist */; };
 		94A829FF2613450E0078DA7C /* ListViewAnimaton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A829FE2613450E0078DA7C /* ListViewAnimaton.swift */; };
 		94AD3C592615D97C0012CCF4 /* NotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3C552615D97B0012CCF4 /* NotificationResponse.swift */; };
 		94AD3C5A2615D97C0012CCF4 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AD3C562615D97B0012CCF4 /* NotificationData.swift */; };
@@ -259,7 +259,6 @@
 		94146943261DE8730064B11B /* SOSListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOSListData.swift; sourceTree = "<group>"; };
 		94146944261DE8730064B11B /* SOSListingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOSListingResponse.swift; sourceTree = "<group>"; };
 		9414F0B92614C09300007D8A /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
-		941551142626AA3C00A45B27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		942180BF261F300B005ABF82 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		94236D8F2631473000CBC627 /* ChatBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatBoard.storyboard; sourceTree = "<group>"; };
 		94236D962631476800CBC627 /* InboxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxVC.swift; sourceTree = "<group>"; };
@@ -345,6 +344,7 @@
 		94A3660E2671DF130027F7EE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		94A366102671DF230027F7EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		94A366122671E14D0027F7EE /* LifeSign-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeSign-Bridging-Header.h"; sourceTree = "<group>"; };
+		94A6C9B026B16E1C00B5B970 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94A829FE2613450E0078DA7C /* ListViewAnimaton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewAnimaton.swift; sourceTree = "<group>"; };
 		94AD3C552615D97B0012CCF4 /* NotificationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationResponse.swift; sourceTree = "<group>"; };
 		94AD3C562615D97B0012CCF4 /* NotificationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
@@ -711,8 +711,8 @@
 		2AFB31071F38542E009C4586 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				941551142626AA3C00A45B27 /* GoogleService-Info.plist */,
 				2ABEE6D31F38828A00531205 /* Configuration.plist */,
+				94A6C9B026B16E1C00B5B970 /* GoogleService-Info.plist */,
 				2A1E77421F384BFD006C84D4 /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -1639,6 +1639,7 @@
 				94B8FA2B260B61800054BA2F /* LifeSign.storyboard in Resources */,
 				94BA25D52611CBC6009D3010 /* iamOk_notification.mp3 in Resources */,
 				94AE7FEE261309E400445CF5 /* Notifications.storyboard in Resources */,
+				94A6C9B126B16E1C00B5B970 /* GoogleService-Info.plist in Resources */,
 				94B8FA2F260B61AA0054BA2F /* Friends.storyboard in Resources */,
 				947E3D3A2681CB7000FF877A /* RoundUserCell.xib in Resources */,
 				946E018D25F8CC2E00E50229 /* Roboto-ThinItalic.ttf in Resources */,
@@ -1657,7 +1658,6 @@
 				94BA25D42611CBC6009D3010 /* sos_sent_sound.mp3 in Resources */,
 				948CB55625EFA00300F32ED1 /* logo.gif in Resources */,
 				94751DEF26679D2F001C526E /* LeaderBoardCell.xib in Resources */,
-				941551152626AA3C00A45B27 /* GoogleService-Info.plist in Resources */,
 				944D25C02681B65800241053 /* HealthHomeCell.xib in Resources */,
 				94EBBFCD262FE6FF00C1D8D7 /* DailySignHomeCell.xib in Resources */,
 				187E0F80268AF543006E83CB /* WatchBoard.storyboard in Resources */,
