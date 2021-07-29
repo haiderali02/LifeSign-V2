@@ -144,15 +144,26 @@ struct Constants {
     
     // UNITY ADS IDs -
     
+//    static let LIVE_APP_ID = "3980122"
+//    static let DEV_APP_ID = "4164116"
+
     static let LIVE_APP_ID = "3980122"
-    static let DEV_APP_ID = "4164116"
-    
+    static let DEV_APP_ID = "3980122"
     static let IS_DEV_MODE: Bool = true
     
+    
+//    static let LIVE_VIDE_AD_PLACEMENT = "video"
+//    static let DEV_VIDE_AD_PLACEMENT = "RewardAd"
+    
     static let LIVE_VIDE_AD_PLACEMENT = "video"
-    static let DEV_VIDE_AD_PLACEMENT = "RewardAd"
+    static let DEV_VIDE_AD_PLACEMENT = "video"
+    
+//    static let UNITY_BANNER_PALCEMENT: String = "Banner_Ads"
+//    static let devBanner: String = "BannerView"
+
     static let UNITY_BANNER_PALCEMENT: String = "Banner_Ads"
-    static let devBanner: String = "BannerView"
+    static let devBanner: String = "Banner_Ads"
+    
     
     // Fonts
     static let textFieldFont = R.font.robotoMediumItalic(size: 14) ?? .systemFont(ofSize: 14, weight: .medium)

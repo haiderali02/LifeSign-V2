@@ -99,7 +99,7 @@ class LifeSignVC: LifeSignBaseVC {
     }
     
     @objc func setText() {
-        // self.backBtn.setTitle(AppStrings.getNotificationString(), for: .normal)
+        self.homeTableView.reloadData()
     }
     
     func observerLanguageChange() {
