@@ -181,6 +181,7 @@ class ShopVC: LifeSignBaseVC {
         LifeSignManager.savePackageInDatabase(identifier: newPurchaseId, transaction_id: Helper.getRandomAlphaNumericString(length: 8)) { status, errors in
             self.removeSpinner()
             if errors == nil {
+                self.shopTableView.reloadData()
                 AlertController.showAlert(witTitle: AppStrings.getSuccessString(), withMessage: AppStrings.getPurchaseSuccessString(), style: .success, controller: self)
             } else {
                 ErrorHandler.handleError(errors: errors ?? [""], inController: self)
@@ -234,7 +235,7 @@ class ShopVC: LifeSignBaseVC {
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.removeSpinner()
-                
+                self.shopTableView.reloadData()
                 AlertController.showAlert(witTitle: AppStrings.getSuccessString(), withMessage: AppStrings.getRestoreSuccessString(), style: .success, controller: self)
                 
             }
@@ -288,6 +289,10 @@ extension ShopVC: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
         var product: SKProduct = SKProduct()
         cell?.showAnimation()
         
+        cell?.buyButton.isEnabled = true
+        cell?.priceButton.isEnabled = true
+        
+        guard let resources = UserManager.shared.userResources else {return UITableViewCell()}
         
         if lifeSignButton.isSelected && skProductsDS.count > 0 {
             cell?.removeAnimation()
@@ -297,6 +302,12 @@ extension ShopVC: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
             cell?.buyButton.addTarget(self, action: #selector(didTapBuyProduct(_:)), for: .touchUpInside)
             cell?.priceButton.addTarget(self, action: #selector(didTapBuyProduct(_:)), for: .touchUpInside)
             
+            cell?.priceLabel.alpha = resources.daily_sign_unlimited ? 0.36 : 1.0
+            cell?.buyButton.alpha = resources.daily_sign_unlimited ? 0.36 : 1.0
+            cell?.priceButton.alpha = resources.daily_sign_unlimited ? 0.36 : 1.0
+            
+            cell?.buyButton.isEnabled = !resources.daily_sign_unlimited
+            cell?.priceButton.isEnabled = !resources.daily_sign_unlimited
             
             switch indexPath.row {
             case 0:
@@ -320,6 +331,13 @@ extension ShopVC: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
             cell?.buyButton.addTarget(self, action: #selector(didTapBuyProduct(_:)), for: .touchUpInside)
             cell?.priceButton.addTarget(self, action: #selector(didTapBuyProduct(_:)), for: .touchUpInside)
             
+            cell?.priceLabel.alpha =  1.0
+            cell?.buyButton.alpha =  1.0
+            cell?.priceButton.alpha =  1.0
+            
+            cell?.buyButton.isEnabled = true
+            cell?.priceButton.isEnabled = true
+            
             switch indexPath.row {
             case 0:
                 // 20 Auto Clicks
@@ -338,12 +356,37 @@ extension ShopVC: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
                 cell?.configureCell(title: StringsManager.shared.five_thousand_auto_clicks ?? "5000 Auto clicks", price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             case 5:
                 // 2 Extra Games
+                
+                cell?.priceLabel.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                cell?.buyButton.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                cell?.priceButton.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                
+                cell?.buyButton.isEnabled = !resources.game_contact_unlimited
+                cell?.priceButton.isEnabled = !resources.game_contact_unlimited
+                
                 cell?.configureCell(title: StringsManager.shared.two_ext_poke_games ?? "2 Extra Poke Games", price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             case 6:
                 // 10 Extra Games
+                
+                cell?.priceLabel.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                cell?.buyButton.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                cell?.priceButton.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                
+                cell?.buyButton.isEnabled = !resources.game_contact_unlimited
+                cell?.priceButton.isEnabled = !resources.game_contact_unlimited
+                
+                
                 cell?.configureCell(title: StringsManager.shared.ten_ext_poke_games ?? "10 Extra Poke Games", price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             case 7:
                 // Unlimitted Extra Games
+                
+                cell?.priceLabel.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                cell?.buyButton.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                cell?.priceButton.alpha = resources.game_contact_unlimited ? 0.36 : 1.0
+                
+                cell?.buyButton.isEnabled = !resources.game_contact_unlimited
+                cell?.priceButton.isEnabled = !resources.game_contact_unlimited
+                
                 cell?.configureCell(title: StringsManager.shared.unli_ext_poke_games ?? "Unlimited Extra Poke Games", price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             default:
                 print("de")
@@ -355,6 +398,13 @@ extension ShopVC: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
             cell?.priceButton.tag = indexPath.row
             cell?.buyButton.addTarget(self, action: #selector(didTapBuyProduct(_:)), for: .touchUpInside)
             cell?.priceButton.addTarget(self, action: #selector(didTapBuyProduct(_:)), for: .touchUpInside)
+            
+            cell?.priceLabel.alpha =  1.0
+            cell?.buyButton.alpha =  1.0
+            cell?.priceButton.alpha =  1.0
+            
+            cell?.buyButton.isEnabled = true
+            cell?.priceButton.isEnabled = true
             
             switch indexPath.row {
             case 0:
@@ -371,12 +421,38 @@ extension ShopVC: SkeletonTableViewDelegate, SkeletonTableViewDataSource {
                 cell?.configureCell(title: AppStrings.getHundredExtraSMS(), price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             case 4:
                 // Message 140 to 1 Contact
+                
+                cell?.priceLabel.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                cell?.buyButton.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                cell?.priceButton.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                
+                cell?.buyButton.isEnabled = !resources.message_contact_unlimited
+                cell?.priceButton.isEnabled = !resources.message_contact_unlimited
+                
+                
                 cell?.configureCell(title: AppStrings.msg_140_1_contact(), price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             case 5:
                 // Message 140 to 10 Contact
+                
+                cell?.priceLabel.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                cell?.buyButton.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                cell?.priceButton.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                
+                cell?.buyButton.isEnabled = !resources.message_contact_unlimited
+                cell?.priceButton.isEnabled = !resources.message_contact_unlimited
+                
+                
                 cell?.configureCell(title: AppStrings.msg_140_10_contact(), price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             case 6:
                 // Message 140 to Unlimitted
+                
+                cell?.priceLabel.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                cell?.buyButton.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                cell?.priceButton.alpha = resources.message_contact_unlimited ? 0.36 : 1.0
+                
+                cell?.buyButton.isEnabled = !resources.message_contact_unlimited
+                cell?.priceButton.isEnabled = !resources.message_contact_unlimited
+                
                 cell?.configureCell(title: AppStrings.msg_140_unlimitted_contact(), price: "\(product.priceLocale.currencySymbol ?? "$") \(product.price)", buyButton: AppStrings.getBuyString())
             default:
                 print("de")

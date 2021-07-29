@@ -1691,31 +1691,31 @@ Tell your loved ones that you are OK. </string>
                                                                                 <rect key="frame" x="8" y="8" width="358" height="54"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-qh-0JO">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="54"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="54"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download gdpr" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nU-0a-xau">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="27"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="27"/>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eng and dn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-9g-gV4">
-                                                                                                <rect key="frame" x="0.0" y="27" width="358" height="27"/>
+                                                                                                <rect key="frame" x="0.0" y="27" width="116.5" height="27"/>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
                                                                                     </stackView>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfE-DQ-9u3">
+                                                                                        <rect key="frame" x="334" y="0.0" width="24" height="54"/>
+                                                                                        <state key="normal" image="ic_download"/>
+                                                                                        <connections>
+                                                                                            <action selector="downloadGDPRInfo:" destination="QXb-Wk-Xt1" eventType="touchUpInside" id="D15-aP-YxN"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfE-DQ-9u3">
-                                                                                <rect key="frame" x="0.0" y="8" width="374" height="54"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <connections>
-                                                                                    <action selector="downloadGDPRInfo:" destination="QXb-Wk-Xt1" eventType="touchUpInside" id="D15-aP-YxN"/>
-                                                                                </connections>
-                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" name="appBoxesColor"/>
                                                                         <constraints>
@@ -1752,25 +1752,25 @@ Tell your loved ones that you are OK. </string>
                                                                                 <rect key="frame" x="8" y="8" width="358" height="54"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-0j-MUp">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="54"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="54"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESTORE PURCHASES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFj-63-1j2">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="54"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="54"/>
                                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                                 <nil key="textColor"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
                                                                                     </stackView>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyR-Rw-8Rk">
+                                                                                        <rect key="frame" x="334" y="0.0" width="24" height="54"/>
+                                                                                        <state key="normal" image="ic_restore"/>
+                                                                                        <connections>
+                                                                                            <action selector="didTapRestorePurchase:" destination="QXb-Wk-Xt1" eventType="touchUpInside" id="KzP-kK-f6p"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyR-Rw-8Rk">
-                                                                                <rect key="frame" x="0.0" y="8" width="374" height="54"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <connections>
-                                                                                    <action selector="didTapRestorePurchase:" destination="QXb-Wk-Xt1" eventType="touchUpInside" id="KzP-kK-f6p"/>
-                                                                                </connections>
-                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" name="appBoxesColor"/>
                                                                         <constraints>
@@ -2502,11 +2502,13 @@ Tell your loved ones that you are OK. </string>
         <image name="ic_back" width="24" height="24"/>
         <image name="ic_block_users" width="42" height="42"/>
         <image name="ic_down" width="24" height="24"/>
+        <image name="ic_download" width="24" height="24"/>
         <image name="ic_eng_flag" width="17" height="13"/>
         <image name="ic_game_board" width="233" height="233"/>
         <image name="ic_ls_settings" width="24" height="24"/>
         <image name="ic_profile_friends" width="42" height="42"/>
         <image name="ic_profile_watc" width="42" height="42"/>
+        <image name="ic_restore" width="24" height="24"/>
         <image name="ic_right" width="24" height="24"/>
         <image name="ic_unchecked" width="24" height="24"/>
         <image name="share" width="512" height="512"/>

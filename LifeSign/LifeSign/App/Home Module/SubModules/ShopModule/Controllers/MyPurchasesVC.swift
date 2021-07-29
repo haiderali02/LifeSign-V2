@@ -70,6 +70,8 @@ class MyPurchasesVC: LifeSignBaseVC {
     
     @objc func setText() {
         
+        whatIhaveLabel.text = AppStrings.watIHaveAvailable()
+        
         availableDailySignContactLabel.text = "" + AppStrings.getPurchasesDSContactString()
         availableExtraClicksLabel.text = "" + AppStrings.getPurchasesClicksString()
         extraPockGamesLabel.text = "" + AppStrings.getPurchasesGamesString()
@@ -89,6 +91,26 @@ class MyPurchasesVC: LifeSignBaseVC {
         removeAdsLabel.text = AppStrings.getPurchasesRemovedAdsString()
         availabelMessageContactLabel.text = "\(resources.message_contact) " + AppStrings.getMessageContactPurchased()
         availableSMS.text = "\(resources.total_sms) " + AppStrings.getPurchasesSMSString()
+        
+        if resources.daily_sign_unlimited {
+            
+            // Unlimitted LifeSign Contacts Purchases
+            availableDailySignContactLabel.text = "\(AppStrings.getUnlimitted()) " + AppStrings.getPurchasesDSContactString()
+
+        }
+        
+        if resources.game_contact_unlimited {
+            
+            // Unlimitted Game Contacts Purchases
+            extraPockGamesLabel.text = "\(AppStrings.getUnlimitted()) " + AppStrings.getPurchasesGamesString()
+
+        }
+        
+        if resources.message_contact_unlimited {
+            
+            // Unlimitted Game Contacts Purchases
+            availabelMessageContactLabel.text = "\(AppStrings.getUnlimitted()) " + AppStrings.getMessageContactPurchased()
+        }
         
         for buttons in collection {
             buttons.setTitle(AppStrings.getAddFriendString(), for: .normal)

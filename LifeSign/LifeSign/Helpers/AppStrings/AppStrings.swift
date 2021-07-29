@@ -18,6 +18,10 @@ class AppStrings: NSObject {
         return StringsManager.shared.back ?? "Back"
     }
     
+    static func getUnlimitted() -> String {
+        return StringsManager.shared.unlimited ?? "Unlimited"
+    }
+    
     static func getSearchString() -> String {
         return StringsManager.shared.search ?? "Search"
     }
@@ -812,6 +816,11 @@ class AppStrings: NSObject {
     static func getPurchasesDSContactString() -> String {
         return StringsManager.shared.extra_dailysign_contacts_available ?? "Extra DailySign contacts available"
     }
+    
+    static func watIHaveAvailable() -> String {
+        return StringsManager.shared.what_i_have_available ?? "What I have available"
+    }
+    
     static func getPurchasesClicksString() -> String {
         return StringsManager.shared.extra_clicks_available ?? "Extra clicks available"
     }

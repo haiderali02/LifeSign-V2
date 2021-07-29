@@ -18,6 +18,7 @@ class StringsManager: Mappable {
     var back : String?
     var search : String?
     var you : String?
+    var unlimited : String?
     var request_pending : String?
     var request_sent : String?
     var accept : String?
@@ -219,6 +220,7 @@ class StringsManager: Mappable {
     var watch_video__earn_2_free_autoclicks : String?
     var watch_video__earn_1_free_sms : String?
     var extra_dailysign_contacts_available : String?
+    var what_i_have_available: String?
     var extra_clicks_available : String?
     var extra_poke_games_available : String?
     var remove_ads_in_bottom : String? = "Remove Ads in bottom"
@@ -369,6 +371,7 @@ class StringsManager: Mappable {
         password_and_confirm_password_should_be_same <- map["password_and_confirm_password_should_be_same"]
         new_password_and_confirm_password_should_be_same <- map["new_password_and_confirm_password_should_be_same"]
         ok <- map["ok"]
+        what_i_have_available <- map["what_i_have_available"]
         email_address <- map["email_address"]
         password <- map["password"]
         old_password <- map["old_password"]
@@ -394,6 +397,7 @@ class StringsManager: Mappable {
         health <- map["health"]
         oksign_friends <- map["oksign_friends"]
         im_ok <- map["im_ok"]
+        unlimited <- map["unlimited"]
         oksign <- map["oksign"]
         check_friends <- map["check_friends"]
         lifesign_friends <- map["lifesign_friends"]

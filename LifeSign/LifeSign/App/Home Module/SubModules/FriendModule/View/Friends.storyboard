@@ -321,7 +321,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ilC-cr-xTp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="679"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="619"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOx-Nm-sfg" userLabel="SpacerView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
@@ -624,7 +624,7 @@
                                                                     <constraint firstAttribute="height" constant="1" id="SgD-gy-WMk"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVR-Zz-JZb" userLabel="Health">
+                                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVR-Zz-JZb" userLabel="Health">
                                                                 <rect key="frame" x="0.0" y="448" width="320" height="60"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFa-mk-CvZ" customClass="MDCCard">
@@ -679,14 +679,14 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWR-X8-VcY" userLabel="SpacerView">
-                                                                <rect key="frame" x="0.0" y="508" width="320" height="1"/>
+                                                                <rect key="frame" x="0.0" y="448" width="320" height="1"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="qwJ-8m-E9w"/>
                                                                 </constraints>
                                                             </view>
                                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-Cp-Erc" userLabel="NotificationView">
-                                                                <rect key="frame" x="0.0" y="509" width="320" height="60"/>
+                                                                <rect key="frame" x="0.0" y="449" width="320" height="60"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-cm-Ccv" customClass="MDCCard">
                                                                         <rect key="frame" x="20" y="0.0" width="280" height="60"/>
@@ -731,14 +731,14 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEN-Z0-j4e" userLabel="SpacerView">
-                                                                <rect key="frame" x="0.0" y="509" width="320" height="1"/>
+                                                                <rect key="frame" x="0.0" y="449" width="320" height="1"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="0Qw-Ie-Hb7"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rg1-A0-62K" userLabel="Block">
-                                                                <rect key="frame" x="0.0" y="510" width="320" height="60"/>
+                                                                <rect key="frame" x="0.0" y="450" width="320" height="60"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlF-E0-aR5" customClass="MDCCard">
                                                                         <rect key="frame" x="20" y="0.0" width="280" height="60"/>
@@ -787,14 +787,14 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO5-9I-PJt" userLabel="SpacerView">
-                                                                <rect key="frame" x="0.0" y="570" width="320" height="1"/>
+                                                                <rect key="frame" x="0.0" y="510" width="320" height="1"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="Vwh-2j-iVL"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDh-GQ-Mv8" userLabel="Delete">
-                                                                <rect key="frame" x="0.0" y="571" width="320" height="60"/>
+                                                                <rect key="frame" x="0.0" y="511" width="320" height="60"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoV-J8-nLZ" customClass="MDCCard">
                                                                         <rect key="frame" x="20" y="0.0" width="280" height="60"/>
@@ -843,14 +843,14 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-Cf-f1K" userLabel="SpacerView">
-                                                                <rect key="frame" x="0.0" y="631" width="320" height="40"/>
+                                                                <rect key="frame" x="0.0" y="571" width="320" height="40"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="Wga-9B-60K"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czf-0k-gSW" userLabel="SpacerView">
-                                                                <rect key="frame" x="0.0" y="671" width="320" height="8"/>
+                                                                <rect key="frame" x="0.0" y="611" width="320" height="8"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="8" id="nXf-kK-xiR"/>
@@ -951,7 +951,7 @@
             <size key="intrinsicContentSize" width="97" height="17"/>
         </designable>
         <designable name="kXn-AN-ibD">
-            <size key="intrinsicContentSize" width="113" height="34"/>
+            <size key="intrinsicContentSize" width="73" height="34"/>
         </designable>
         <designable name="qqs-b7-I1H">
             <size key="intrinsicContentSize" width="76" height="30"/>
