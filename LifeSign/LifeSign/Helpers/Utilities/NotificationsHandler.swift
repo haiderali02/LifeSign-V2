@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import UserNotifications
+import AppTrackingTransparency
+
 
 class NotificationsHandler: NSObject {
 
@@ -22,6 +24,8 @@ class NotificationsHandler: NSObject {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) {_, _ in
             // do nothing for now
+          
+            
         }
 
         application.registerForRemoteNotifications()

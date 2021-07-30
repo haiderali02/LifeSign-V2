@@ -14,6 +14,7 @@ import FBSDKLoginKit
 import UserNotifications
 import Firebase
 import FirebaseMessaging
+import AppTrackingTransparency
 
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
@@ -55,6 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
             self.fcm_Tokken = token
           }
         }
+        
+        
         
         UIApplication.shared.applicationIconBadgeNumber = 0
         
@@ -146,8 +149,22 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 options: authOptions,
                 completionHandler: {granted, error in
                     if granted {
+                        if #available(iOS 14, *) {
+                            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                                //you got permission to track
+                            })
+                        } else {
+                            //you got permission to track, iOS 14 is not yet installed
+                        }
                         print("Permession Granted for Notification")
                     } else {
+                        if #available(iOS 14, *) {
+                            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                                //you got permission to track
+                            })
+                        } else {
+                            //you got permission to track, iOS 14 is not yet installed
+                        }
                         print("Permession Not granter Notification")
                     }
             })

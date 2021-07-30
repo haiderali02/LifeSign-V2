@@ -14,6 +14,7 @@ import SkeletonView
 
 protocol FriendCollectionViewDelegate: AnyObject {
     func shouldReloadWith(isCurrentUserWon: Bool)
+    func autoPlayMyTurn(play: Bool, progressGame: UserGameProgress, userFriend: Items)
 }
 
 
@@ -161,6 +162,9 @@ class FriendsCollectionViewCell: UICollectionViewCell {
                 isGameOver = false
                 userNameLabel.textColor = .white
                 userTimeZoneLabel.textColor = .white
+                
+                self.delegate?.autoPlayMyTurn(play: UserManager.shared.enable_autoclicks, progressGame: prgressGame, userFriend: userFriend)
+                
             }
         } else if prgressGame.click_by_user_id == UserManager.shared.user_id {
             // Opponent Turn
@@ -183,7 +187,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
             isGameOver = false
             userNameLabel.textColor = .white
             userTimeZoneLabel.textColor = .white
-            
+            self.delegate?.autoPlayMyTurn(play: UserManager.shared.enable_autoclicks, progressGame: prgressGame, userFriend: userFriend)
         }
         
         handleWinOrLossStatus(prgressGame, nowTime, nextTime, userFriend)
@@ -330,6 +334,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
                         let desiredComponents: Set<Calendar.Component> = [.hour, .minute, .second]
                         let components = Calendar.current.dateComponents(desiredComponents, from: nowTime, to: timer)
                         let timerComponents = self.componentsFormatter.string(from: components)
+                        
                         self.userTimeZoneLabel.text = (timerComponents ?? "")
                     }
                     self.imgBadgeWon.isHidden = true

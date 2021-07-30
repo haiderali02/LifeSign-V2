@@ -135,7 +135,16 @@ class GameHeaderReusableView: UICollectionReusableView {
         btnAutoClickEnable.setTitle("\(UserManager.shared.userResources?.auto_clicked ?? 0) " + AppStrings.getAutoClicks(), for: .normal)
         btnAutoClickEnable.isSelected = UserManager.shared.enable_autoclicks
         userBadgeNumber.text = "\(UserManager.shared.game_points)"
+        
+        
+        
         userAvailableFreeGamesLabel.text = AppStrings.youHaveString() + " \(UserManager.shared.userResources?.game_contact ?? 0) " + AppStrings.freeGamesString()
+        
+        if let unlimitedGame = UserManager.shared.userResources?.game_contact_unlimited {
+            if unlimitedGame {
+                userAvailableFreeGamesLabel.text = AppStrings.youHaveString() + " \(AppStrings.getUnlimitted()) " + AppStrings.freeGamesString()
+            }
+        }
         
         hitlisteButton.setTitle(AppStrings.getLeaderBoardString(), for: .normal)
         

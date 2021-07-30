@@ -509,7 +509,13 @@ extension GameVC: CollectionViewMethods {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.isBeingFetched ? 3 : (self.userGameFriends.count + self.allowedUsers) // +1 is For Add new
+        guard let unlimitedGamePurchased = UserManager.shared.userResources?.game_contact_unlimited else {return 0}
+        if unlimitedGamePurchased {
+            return self.isBeingFetched ? 3 : (self.userGameFriends.count + 1) // +1 is For Add new
+        } else {
+            return self.isBeingFetched ? 3 : (self.userGameFriends.count + self.allowedUsers) // +1 is For Add new
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -664,6 +670,31 @@ extension GameVC: UADSBannerViewDelegate, UnityAdsDelegate, UnityAdsShowDelegate
 }
 
 extension GameVC: FriendCollectionViewDelegate {
+    
+    func autoPlayMyTurn(play: Bool, progressGame: UserGameProgress, userFriend: Items) {
+        if play {
+            if progressGame.utc_time != "" {
+                var nextTime = Date()
+                nextTime = progressGame.utc_time.getDateObjectFromString()
+                let nowTime = Date()
+                nextTime = progressGame.utc_time.getDateObjectFromString()
+                if let timer = Calendar.current.date(byAdding: .minute, value: 0, to: nextTime) {
+                    let desiredComponents: Set<Calendar.Component> = [.hour, .minute, .second]
+                    let components = Calendar.current.dateComponents(desiredComponents, from: nowTime, to: timer)
+                    if let secondsInComponents = components.second,
+                       let hrsInComponent = components.hour,
+                       let minutes = components.minute
+                       {
+                        if hrsInComponent < 1 && minutes < 1 && secondsInComponents < 59 {
+                            SocketHelper.shared.sendGameStartEvent(gameID: progressGame.game_id, clickByUser_id: UserManager.shared.user_id, startUserId: progressGame.game_start_by_user_id, friendID: userFriend.friend_id, gameStartTime: progressGame.game_start_time, fcmTokken: userFriend.fcm_token, message: userFriend.message)
+                        }
+                    }
+                }
+            }
+        } else {
+            return
+        }
+    }
     
     func shouldReloadWith(isCurrentUserWon: Bool) {
         if isCurrentUserWon {
