@@ -286,6 +286,7 @@ class FriendsVC: LifeSignBaseVC {
     
     
     @IBAction func didTapLocalPerson(_ sender: UIButton) {
+        self.currentPageNumber = 1
         localPeopleBtn.isSelected = true
         internationalPeopleBtn.isSelected = false
         nationalPeopleBtn.isSelected = false
@@ -294,6 +295,7 @@ class FriendsVC: LifeSignBaseVC {
     }
     
     @IBAction func didTapInternationalPerson(_ sender: UIButton) {
+        self.currentPageNumber = 1
         localPeopleBtn.isSelected = false
         internationalPeopleBtn.isSelected = true
         nationalPeopleBtn.isSelected = false
@@ -301,6 +303,7 @@ class FriendsVC: LifeSignBaseVC {
         self.getLifeSignUsers(type: .international, searchString: nil, pageNumer: self.currentPageNumber)
     }
     @IBAction func didTapNationalPeroson(_ sender: UIButton) {
+        self.currentPageNumber = 1
         localPeopleBtn.isSelected = false
         internationalPeopleBtn.isSelected = false
         nationalPeopleBtn.isSelected = true

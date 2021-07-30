@@ -66,20 +66,12 @@ class LifeSignVC: LifeSignBaseVC {
     // MARK:- FUNCTIONS -
     
     func setUI () {
-        
+        self.showSpinner(onView: self.view)
         refreshControl.attributedTitle = nil
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         homeTableView.addSubview(refreshControl)
-        disPatchWaiting.enter()
-        self.getUserDailySignFriends(searcString: nil)
-        disPatchWaiting.enter()
-        self.getUserSOSFriends(searcString: nil)
-        disPatchWaiting.enter()
-        self.getUserOKSignFriends(searchString: nil)
         
-        disPatchWaiting.notify(queue: .main) {
-            print("All Request Done :=- MAIN")
-        }
+        self.refresh(self.refreshControl)
         
     }
     
@@ -93,6 +85,7 @@ class LifeSignVC: LifeSignBaseVC {
         
         disPatchWaiting.notify(queue: .main) {
             self.homeTableView.reloadData()
+            self.removeSpinner()
             print("All Request Done :=- PULL TO REFRESH")
         }
         

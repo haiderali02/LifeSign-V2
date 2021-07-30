@@ -3,7 +3,8 @@
 import Foundation
 import ObjectMapper
 
-struct Items : Mappable {
+struct Items : Mappable, Hashable {
+    
     var friend_request_id : Int = 0
     var user_id : Int = 0
     var friend_id: Int = 0
@@ -62,6 +63,10 @@ struct Items : Mappable {
 
 	}
 
+    static func == (lhs: Items, rhs: Items) -> Bool {
+        return (lhs.user_id == rhs.user_id) || (lhs.friend_id == rhs.friend_id)
+    }
+    
 	mutating func mapping(map: Map) {
 
         friend_request_id <- map["friend_request_id"]
@@ -119,7 +124,9 @@ struct Items : Mappable {
 }
 
 
-class UserGameProgress: Mappable {
+struct UserGameProgress: Mappable, Hashable {
+   
+    
     
     var click_by_user_id: Int = 0
     var friend_id: Int = 0
@@ -133,18 +140,18 @@ class UserGameProgress: Mappable {
     var hits: Int = 0
     var time: String = ""
     
+    static func == (lhs: UserGameProgress, rhs: UserGameProgress) -> Bool {
+        return lhs.game_id == rhs.game_id
+    }
+    
     init() {
         
     }
-    required init?(map: Map) {
+    init?(map: Map) {
         self.mapping(map: map)
     }
-    convenience init(dic:[String:Any]) {
-        let map = Map.init(mappingType: .fromJSON, JSON: dic)
-        self.init(map:map)!
-    }
     
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         click_by_user_id <- map["click_by_user_id"]
         current_hit_time <- map["current_hit_time"]
         friend_id <- map["friend_id"]

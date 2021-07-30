@@ -37,7 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
         LangObjectModel.shared.loadLanguage()
         
-        NFX.sharedInstance().start()
+        // NFX.sharedInstance().start()
+        
         setupAppGeneral()
         configureNotification(application: application)
         
@@ -66,6 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         print("App Become ACTIVE")
+        if UserManager.shared.isLoggedIn() {
+            NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
+        }
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {

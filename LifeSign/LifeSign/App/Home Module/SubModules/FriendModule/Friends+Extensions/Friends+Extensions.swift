@@ -113,7 +113,10 @@ extension FriendsVC {
     func getUserFriends(searcString: String?, pageNumer: Int = 0, userLimit: Int? = 20) {
         self.isBeingFetched = true
         FriendManager.getUserFriends(searchString: searcString, limit: userLimit, PageNumber: pageNumer) { (friendsData, errors, links) in
-            self.userFriendsData.removeAll()
+            if self.currentPageNumber == 1 {
+                self.userFriendsData.removeAll()
+            }
+            
             self.isBeingFetched = false
             self.friendsTableView.reloadData()
             if errors == nil {
@@ -126,7 +129,7 @@ extension FriendsVC {
                     return
                 }
                 if !(pageNumer > 1) {
-                    self.userFriendsData.removeAll()
+                    // self.userFriendsData.removeAll()
                 }
                 self.paginationLinks = links
                 
@@ -154,7 +157,9 @@ extension FriendsVC {
     func getLifeSignUsers(type: PeopleTypes, searchString: String?, pageNumer: Int = 1) {
         self.isBeingFetched = true
         FriendManager.getLifeSignUsers(type: type, searchString: searchString, limit: 20, PageNumber: pageNumer) { (friendsData, errors, links) in
-            self.peopleData.removeAll()
+            if self.currentPageNumber == 1 {
+                self.peopleData.removeAll()
+            }
             self.isBeingFetched = false
             self.friendsTableView.reloadData()
             if errors == nil {

@@ -189,6 +189,9 @@ class EditProfileVC: LifeSignBaseVC {
         if decimalRange != nil || text.hasSpecialCharacters() {
             textField.text?.removeLast()
         }
+        if text.count > 20 {
+            textField.text?.removeLast()
+        }
     }
     
     
@@ -225,11 +228,21 @@ class EditProfileVC: LifeSignBaseVC {
     
     @IBAction func didTapUpdateProfile(_ sender: UIButton) {
         
+        if firstNamelTextField.text?.count ?? 0 <= 1 {
+            firstNamelTextField.text = UserManager.shared.first_name
+            return
+        }
+        
+        if lastNameTextField.text?.count ?? 0 <= 1 {
+            lastNameTextField.text = UserManager.shared.last_name
+            return
+        }
+        
         self.saveButton.showLoading()
         
         let params = [
-            "first_name": firstNamelTextField.text ?? UserManager.shared.first_name,
-            "last_name": lastNameTextField.text ?? UserManager.shared.last_name,
+            "first_name": firstNamelTextField.text?.capitalized ?? UserManager.shared.first_name,
+            "last_name": lastNameTextField.text?.capitalized ?? UserManager.shared.last_name,
             "is_consent": self.marketingButton.isSelected ? "1" : "0",
             "fcm_token": Constants.APPDELEGATE.fcm_Tokken,
             "phone_number": self.contactTextField.text ?? UserManager.shared.phone_number,

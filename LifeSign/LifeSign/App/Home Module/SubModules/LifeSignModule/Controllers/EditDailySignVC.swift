@@ -87,6 +87,8 @@ class EditDailySignVC: LifeSignBaseVC, DateTimePickerDelegate {
             }
         }
         
+        
+        
         timerEditView.isHidden = userFreind.initiator == 0 ? true : false
         
     }
@@ -104,18 +106,27 @@ class EditDailySignVC: LifeSignBaseVC, DateTimePickerDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(setText), name: .languageCanged, object: nil)
     }
     
+    @objc func textDidChange(_ textField: UITextField) {
+        guard let text = textField.text else {return}
+        if text.count > 16 {
+            textField.text?.removeLast()
+        }
+    }
+    
     // MARK:- ACTIONS -
     
     @IBAction func didTapEditNickName(_ sender: UIButton) {
         let alertController = UIAlertController(title: AppStrings.getEditNickName(), message: nil, preferredStyle: .alert)
         alertController.addTextField { (userNameField) in
             userNameField.placeholder = AppStrings.getSignupFullNameTitle()
+            userNameField.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
             userNameField.text = self.userFreind.full_name
         }
         alertController.addAction(UIAlertAction(title: AppStrings.getSaveButton(), style: .default, handler: { (_ ) in
             // Save Action
             
             if let field = alertController.textFields?[0] {
+                
                 guard let userNickName = field.text else {return}
                 print("User New Name Sould be: \(userNickName)")
                 self.showSpinner(onView: self.view)

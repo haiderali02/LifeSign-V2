@@ -538,7 +538,8 @@ extension GameVC: CollectionViewMethods {
         cell?.mainButton.isHidden = true
         cell?.mainButton.addTarget(self, action: #selector(didTapCardView(_:)), for: .touchUpInside)
         cell?.delegate = self
-        
+        cell?.userImageView.image = nil
+        cell?.userNameLabel.text = nil
         
         if (indexPath.row > userGameFriends.count) || (indexPath.row == userGameFriends.count) {
             cell?.hideAnimation()

@@ -193,6 +193,10 @@ class SignUpVC: LifeSignBaseVC {
         if decimalRange != nil || text.hasSpecialCharacters() {
             textField.text?.removeLast()
         }
+        
+        if text.count > 40 {
+            textField.text?.removeLast()
+        }
     }
     
     private func setUI () {
@@ -274,6 +278,11 @@ extension SignUpVC {
     
     func validateFieldsAndPassData() {
         self.btnNext.showLoading()
+        if fullNameTextField.text?.count ?? 0 <= 1 {
+            self.fullNameTextField.text?.removeAll()
+            self.btnNext.hideLoading()
+            return
+        }
         if fullNameTextField.text != "" && fullNameTextField.text != "" && passwordTextField.text != "" && confirmPasswordTextField.text != "" {
             
             if confirmPasswordTextField.text != passwordTextField.text {
