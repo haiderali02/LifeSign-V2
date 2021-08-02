@@ -408,7 +408,7 @@ class GameVC: LifeSignBaseVC {
                 //
                 // MARK:- CANCEL GAME FRIEND SENT REQUEST -
                 //
-                GameManager.acceptRejectGameFriendRequest(friendID: gameFriend.friend_id, gameRequestStatus: .rejected) { status, errors in
+                GameManager.acceptRejectGameFriendRequest(friendID: gameFriend.friend_id, gameRequestStatus: .cancel) { status, errors in
                     sender.hideLoading()
                     if errors == nil {
                         self.getUserGameFriends()

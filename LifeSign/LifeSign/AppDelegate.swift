@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
         LangObjectModel.shared.loadLanguage()
         
-        NFX.sharedInstance().start()
+        // NFX.sharedInstance().start()
         
         setupAppGeneral()
         configureNotification(application: application)
