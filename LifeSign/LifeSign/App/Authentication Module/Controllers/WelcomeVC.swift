@@ -203,9 +203,10 @@ extension WelcomeVC : ASAuthorizationControllerDelegate {
                 "provider_id": userIdentifier,
                 "fcm_token"  : Constants.APPDELEGATE.fcm_Tokken,
                 "device": "ios",
+                "full_name": fullName?.givenName ?? "",
                 "provider": "apple",
                 "language" : LangObjectModel.shared.symbol,
-            ]
+            ] as [String : Any]
             
             AuthManager.socialLogin(params: params, type: .apple, action: .login) { (status, userData, errors) in
                 if errors == nil {

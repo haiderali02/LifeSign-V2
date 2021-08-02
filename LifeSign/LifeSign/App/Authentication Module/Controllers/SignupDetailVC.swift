@@ -156,6 +156,8 @@ class SignupDetailVC: LifeSignBaseVC {
         timeZoneTextField.addTarget(self, action: #selector(showTimeZonePicker), for: .editingDidBegin)
         phoneCountryCode = self.countryPickerView.selectedCountry.phoneCode
         
+        self.userFullNameTextField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
+        
         switch LoginMode {
         case .app, .facebook:
             self.userFullNameView.isHidden = true
@@ -165,6 +167,20 @@ class SignupDetailVC: LifeSignBaseVC {
             }
         }
         
+    }
+    
+    @objc func textDidChange(_ textField: UITextField) {
+        let decimalCharacters = CharacterSet.decimalDigits
+        guard let text = textField.text else {return}
+        
+        let decimalRange = text.rangeOfCharacter(from: decimalCharacters)
+        if decimalRange != nil || text.hasSpecialCharacters() {
+            textField.text?.removeLast()
+        }
+        
+        if text.count > 40 {
+            textField.text?.removeLast()
+        }
     }
     
     @objc func showTimeZonePicker() {
@@ -200,12 +216,23 @@ class SignupDetailVC: LifeSignBaseVC {
     
     @IBAction func didTapSignUp(_ sender: UIButton) {
         
-        if contactTextField.text != "" && zipCodeTextField.text != "" {
-            self.signupUser()
+        if !self.userFullNameView.isHidden {
+            if contactTextField.text != "" && zipCodeTextField.text != "" && userFullNameTextField.text != "" {
+                if self.userFullNameTextField.text?.count ?? 0 < 2 {
+                    self.userFullNameTextField.text = ""
+                    return
+                }
+                self.signupUser()
+            } else {
+                AlertController.showAlert(witTitle: AppStrings.getAlertString(), withMessage: AppStrings.getAllFieldsRequired(), style: .info, controller: self)
+            }
         } else {
-            AlertController.showAlert(witTitle: AppStrings.getAlertString(), withMessage: AppStrings.getAllFieldsRequired(), style: .info, controller: self)
+            if contactTextField.text != "" && zipCodeTextField.text != "" {
+                self.signupUser()
+            } else {
+                AlertController.showAlert(witTitle: AppStrings.getAlertString(), withMessage: AppStrings.getAllFieldsRequired(), style: .info, controller: self)
+            }
         }
-
     }
     
     @IBAction func didTapLogin(_ sender: UIButton) {

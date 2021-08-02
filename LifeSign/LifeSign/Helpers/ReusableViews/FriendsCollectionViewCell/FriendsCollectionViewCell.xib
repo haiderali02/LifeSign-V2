@@ -214,14 +214,6 @@
             <point key="canvasLocation" x="-116.8" y="114.16256157635469"/>
         </collectionViewCell>
     </objects>
-    <designables>
-        <designable name="GHv-cV-0u8">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="yle-7m-4eg">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <image name="greenBox" width="181" height="186"/>
         <image name="medal" width="512" height="512"/>
