@@ -43,6 +43,7 @@ class SOSMultiAlertVC: LifeSignBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Sound.stopAll()
         setUI()
         setText()
         observerLanguageChange()
@@ -53,7 +54,6 @@ class SOSMultiAlertVC: LifeSignBaseVC {
         super.viewDidDisappear(animated)
         // Sound.stop(file: .sosReceived)
         Sound.stopAll()
-        UserDefaults.standard.setValue(false, forKey: .sosMultiScreenAppeared)
     }
     
     // MARK:- FUNCTIONS -
@@ -77,6 +77,7 @@ class SOSMultiAlertVC: LifeSignBaseVC {
     
     @IBAction func didTapBack(_ sender: UIButton) {
         sender.showAnimation {
+            UserDefaults.standard.setValue(false, forKey: .sosMultiScreenAppeared)
             self.pop(controller: self)
         }
     }
@@ -97,6 +98,7 @@ class SOSMultiAlertVC: LifeSignBaseVC {
             }
             self.friendsCollectionView.reloadData()
             if self.sosReceived.count == 0 {
+                UserDefaults.standard.setValue(false, forKey: .sosMultiScreenAppeared)
                 self.pop(controller: self)
             }
         }

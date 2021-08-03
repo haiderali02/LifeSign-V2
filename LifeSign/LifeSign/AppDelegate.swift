@@ -74,6 +74,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     func applicationDidEnterBackground(_ application: UIApplication) {
         print("App Become InActive")
+        if SocketHelper.shared.isConnected() != 1 {
+            SocketHelper.shared.establishConnection()
+        }
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
     

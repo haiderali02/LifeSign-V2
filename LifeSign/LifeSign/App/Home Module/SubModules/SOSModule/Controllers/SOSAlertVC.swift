@@ -42,6 +42,7 @@ class SOSAlertVC: LifeSignBaseVC {
         
         // Do any additional setup after loading the view.
     }
+  
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         UserDefaults.standard.setValue(false, forKey: .sosScreenAppeared)

@@ -94,7 +94,7 @@ extension OkSignInfoVC: ListViewMethods {
         case 3:
             cell?.descriptionLabel.text = StringsManager.shared.use_this_functionality_every_1_hour 
         case 4:
-            cell?.descriptionLabel.text = StringsManager.shared.send_as_needed_or_ask_okSign ?? "Send as needed or ask for an OkSign, if you want certainly about a friend"
+            cell?.descriptionLabel.text = StringsManager.shared.send_as_needed_or_ask_oksign ?? "Send as needed or ask for an OkSign, if you want certainly about a friend"
         case 5:
             cell?.descriptionLabel.text = StringsManager.shared.check_if_reached_safe_on_their_dest ?? "Check if they reached safe on their destination"
         default:

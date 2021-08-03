@@ -255,10 +255,9 @@ class GameVC: LifeSignBaseVC {
         sender.showAnimation {
             sender.isSelected = !sender.isSelected
             GameManager.enableAutoClicks(enableClics: sender.isSelected ? 1 : 0) { _, _ in
-                    
+                self.friendsCollectionView.reloadData()
+                self.friendsCollectionView.collectionViewLayout.invalidateLayout()
             }
-            self.friendsCollectionView.reloadData()
-            self.friendsCollectionView.collectionViewLayout.invalidateLayout()
         }
     }
     

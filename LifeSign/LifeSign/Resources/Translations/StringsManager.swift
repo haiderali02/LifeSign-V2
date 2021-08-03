@@ -72,7 +72,7 @@ class StringsManager: Mappable {
     var check_your_friends_medical_condition_that_they_are_ok_or_not : String?
     var tell_your_friends_about_your_medical_condition_that_is_ok_or_not : String?
     var use_this_functionality_every_1_hour : String? = "Use this functionality every 1 hour"
-    var send_as_needed_or_ask_okSign: String?
+    var send_as_needed_or_ask_oksign: String? = "Send as needed or ask for an OkSign, if you want certainly about a friend"
     var check_if_reached_safe_on_their_dest: String? = "Check if they reached safe on their destination"
     var emergency_help_needed : String?
     var reset : String?
@@ -494,7 +494,7 @@ class StringsManager: Mappable {
         invitation_sent <- map["invitation_sent"]
         cancel_request <- map["cancel_request"]
         my_friends <- map["my_friends"]
-        send_as_needed_or_ask_okSign <- map["send_as_needed_or_ask_okSign"]
+        send_as_needed_or_ask_oksign <- map["send_as_needed_or_ask_oksign"]
         request_sent_successfully <- map["request_sent_successfully"]
         unable_to_send_request_this_time <- map["unable_to_send_request_this_time"]
         unable_to_accept_request_this_time <- map["unable_to_accept_request_this_time"]

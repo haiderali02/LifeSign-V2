@@ -142,7 +142,6 @@ class FriendsVC: LifeSignBaseVC {
         setupUI()
         setText()
         observerLanguageChange()
-        
     }
     
     // MARK:- FUNCTIONS -
