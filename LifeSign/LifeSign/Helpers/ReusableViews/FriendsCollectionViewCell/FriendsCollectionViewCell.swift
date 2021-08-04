@@ -229,17 +229,16 @@ class FriendsCollectionViewCell: UICollectionViewCell {
                 self.countDownTimer = nil
                 
                 isGameOver = true
+                
                 configurePlayAgain(userFriend, buttonTitle: AppStrings.playAgainString(), labelTitle: AppStrings.youWonString(), cardColor: .appBoxColor)
                 imgBadgeWon.isHidden = false
                 GameManager.endGameAndDecideWinner(game_id: prgressGame.game_id, winner_user_id: prgressGame.click_by_user_id) { status, errors in
-                    
+                    self.isGameOver = true
                     self.delegate?.shouldReloadWith(isCurrentUserWon: true)
                     
                     // NotificationCenter.default.post(name: .reloadGameScreen, object: nil)
                 }
-                
             }
-            
         } else {
             // My Turn
             if nowTime > nextTime {
