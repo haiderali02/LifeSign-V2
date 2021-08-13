@@ -619,16 +619,16 @@
 		2AB31D9F1F38741400B7D1F3 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				946E01E225F8F22000E50229 /* WalkThrough Module */,
+				948CB55925EFA0DF00F32ED1 /* Authentication Module */,
+				944210AA260A0BC10012A997 /* Home Module */,
 				187E0F88268B120F006E83CB /* HealthModule */,
 				944D25B92681B61400241053 /* WatchModule */,
 				94236D892631462B00CBC627 /* Chat Module */,
 				9428B912261441E9003B58B2 /* User Profile Module */,
 				94AE7FE32613096700445CF5 /* Common Modules */,
-				944210AA260A0BC10012A997 /* Home Module */,
 				2A1DD4E21F38A09700712195 /* Launch Module */,
-				946E01E225F8F22000E50229 /* WalkThrough Module */,
 				94E9FFBA2600D69100C73FA3 /* Language Selection Module */,
-				948CB55925EFA0DF00F32ED1 /* Authentication Module */,
 			);
 			path = App;
 			sourceTree = "<group>";

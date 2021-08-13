@@ -165,6 +165,7 @@ class GameVC: LifeSignBaseVC {
     }
     
     fileprivate func playMyTurn(_ progressGame: UserGameProgress, _ userFriend: Items, _ sender: DesignableButton) {
+        
         SocketHelper.shared.sendGameStartEvent(gameID: progressGame.game_id, clickByUser_id: UserManager.shared.user_id, startUserId: progressGame.game_start_by_user_id, friendID: userFriend.friend_id, gameStartTime: progressGame.game_start_time, fcmTokken: userFriend.fcm_token, message: userFriend.message)
         
         
