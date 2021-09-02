@@ -58,8 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
           }
         }
         
-        
-        
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         return true

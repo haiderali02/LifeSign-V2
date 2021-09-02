@@ -312,7 +312,9 @@ extension FriendManager {
                 
                 switch response.result {
                 case .success(let data):
-                    guard let apiResp = data as? [String: Any], let status = apiResp["success"] as? Bool else {return completion(nil, nil, nil)}
+                    guard let apiResp = data as? [String: Any],
+                          let status = apiResp["success"] as? Bool
+                    else {return completion(nil, nil, nil)}
                     
                     if status == true {
                         print("===--- USER UPDATED SUCCESS ---===")
