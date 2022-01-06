@@ -95,6 +95,15 @@ class MyPurchasesVC: LifeSignBaseVC {
         if resources.daily_sign_unlimited {
             
             // Unlimitted LifeSign Contacts Purchases
+            
+            for buttons in self.collection {
+                if buttons.tag == 1 {
+                    buttons.alpha = 0.5
+                    buttons.isEnabled = false
+                }
+            }
+            
+            
             availableDailySignContactLabel.text = "\(AppStrings.getUnlimitted()) " + AppStrings.getPurchasesDSContactString()
 
         }
@@ -102,13 +111,29 @@ class MyPurchasesVC: LifeSignBaseVC {
         if resources.game_contact_unlimited {
             
             // Unlimitted Game Contacts Purchases
+            
+            for buttons in self.collection {
+                if buttons.tag == 3 {
+                    buttons.alpha = 0.5
+                    buttons.isEnabled = false
+                }
+            }
+            
             extraPockGamesLabel.text = "\(AppStrings.getUnlimitted()) " + AppStrings.getPurchasesGamesString()
 
         }
         
         if resources.message_contact_unlimited {
             
-            // Unlimitted Game Contacts Purchases
+            // Unlimitted Message Contacts Purchases
+            
+            for buttons in self.collection {
+                if buttons.tag == 5 {
+                    buttons.alpha = 0.5
+                    buttons.isEnabled = false
+                }
+            }
+            
             availabelMessageContactLabel.text = "\(AppStrings.getUnlimitted()) " + AppStrings.getMessageContactPurchased()
         }
         

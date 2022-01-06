@@ -585,6 +585,10 @@ extension GameVC: CollectionViewMethods {
         
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "GameHeaderReusableView", for: indexPath) as! GameHeaderReusableView
         
+        if let unlimitedGamePurchase = UserManager.shared.userResources?.game_contact_unlimited {
+            headerView.btnBuyMoreGames.isHidden = unlimitedGamePurchase
+        }
+        
         switch kind {
         
         case UICollectionView.elementKindSectionHeader:

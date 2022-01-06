@@ -31,6 +31,7 @@ class CustomBannerColors: BannerColorsProtocol {
 class AlertController: NSObject {
     static func showAlert(witTitle: String, withMessage: String, style: BannerStyle, controller: UIViewController) {
         let bannerView = FloatingNotificationBanner(title: witTitle != "" ? witTitle : nil, subtitle: withMessage, titleFont: witTitle != "" ? Constants.bigButtonFont : nil , titleColor: witTitle != "" ? .white : nil, titleTextAlign: witTitle != "" ? .left : nil, subtitleFont: Constants.labelFont, subtitleColor: .white, subtitleTextAlign: .left, leftView: nil, rightView: nil, style: style, colors: CustomBannerColors(), iconPosition: .top)
+        bannerView.duration = 1.5
         bannerView.show(on: controller)
     }
     
