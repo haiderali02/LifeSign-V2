@@ -10,6 +10,7 @@ import UIKit
 import SYBadgeButton
 import SwiftySound
 import ImageViewer_swift
+import UnityAds
 
 class HomeContainerVC: LifeSignBaseVC {
     
@@ -151,7 +152,13 @@ class HomeContainerVC: LifeSignBaseVC {
         configureUserImage()
         setText()
         updateCounters()
+        implementUnityAds()
     }
+    
+    func implementUnityAds() {
+        UnityAds.initialize(Constants.DEV_APP_ID, testMode: Constants.IS_DEV_MODE)
+        UnityAds.add(self)
+    }g
     
     func observesChanges() {
         NotificationCenter.default.addObserver(self, selector: #selector(setupUI), name: .userUpdated, object: nil)
@@ -556,32 +563,48 @@ extension HomeContainerVC: SOSHomeCellProtoCol {
 }
 
 
-extension HomeContainerVC: UADSBannerViewDelegate {
+extension HomeContainerVC: UADSBannerViewDelegate, UnityAdsDelegate, UnityAdsShowDelegate {
     
-    func unityAdsBannerDidLoad(_ placementId: String!, view: UIView!) {
-        print("Banner Ready With ID: \(placementId ?? "")")
+    func unityAdsShowComplete(_ placementId: String, withFinish state: UnityAdsShowCompletionState) {
+        print("Ads Completed: \(placementId)")
+        switch state {
+        case .showCompletionStateCompleted:
+            print("Add Completed")
+        case .showCompletionStateSkipped:
+            print("Add Skipped")
+        default:
+            return
+        }
+        
     }
     
-    func unityAdsBannerDidUnload(_ placementId: String!) {
-        print("Banner Ad Unloaded: \(placementId ?? "")")
+    func unityAdsShowFailed(_ placementId: String, withError error: UnityAdsShowError, withMessage message: String) {
+        print("Ads Failed To Display: \(placementId)")
     }
     
-    func unityAdsBannerDidShow(_ placementId: String!) {
-        print("Banner Ad Did Show: \(placementId ?? "")")
+    func unityAdsShowStart(_ placementId: String) {
+        print("Ads Display Started: \(placementId)")
     }
     
-    func unityAdsBannerDidHide(_ placementId: String!) {
-        print("Banner Ad Did Show: \(placementId ?? "")")
+    func unityAdsShowClick(_ placementId: String) {
+        print("Ads Display Clicked: \(placementId)")
     }
     
-    func unityAdsBannerDidClick(_ placementId: String!) {
-        print("Banner Ad Did Clicked: \(placementId ?? "")")
+    
+    func unityAdsReady(_ placementId: String) {
+        print("Ad Ready With ID: \(placementId)")
     }
     
-    func unityAdsBannerDidError(_ message: String!) {
-        print("Banner Ad Error: \(message ?? "")")
+    func unityAdsDidError(_ error: UnityAdsError, withMessage message: String) {
+        print("Error Loading Unity Ad: \(message)")
     }
     
+    func unityAdsDidStart(_ placementId: String) {
+        print("Ad Started With ID: \(placementId)")
+    }
+    func unityAdsDidFinish(_ placementId: String, with state: UnityAdsFinishState) {
+        print("Ad Finished With ID: \(placementId)")
+    }
 }
 
 

@@ -646,7 +646,7 @@ extension GameVC: UADSBannerViewDelegate, UnityAdsDelegate, UnityAdsShowDelegate
     }
     
     func unityAdsShowFailed(_ placementId: String, withError error: UnityAdsShowError, withMessage message: String) {
-        print("Ads Failed To Display: \(placementId)")
+        print("Ads Failed To Display: \(placementId) : \(message)")
     }
     
     func unityAdsShowStart(_ placementId: String) {

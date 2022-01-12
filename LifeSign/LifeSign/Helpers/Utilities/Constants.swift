@@ -155,8 +155,8 @@ struct Constants {
 //    static let LIVE_VIDE_AD_PLACEMENT = "video"
 //    static let DEV_VIDE_AD_PLACEMENT = "RewardAd"
     
-    static let LIVE_VIDE_AD_PLACEMENT = "video"
-    static let DEV_VIDE_AD_PLACEMENT = "video"
+    static let LIVE_VIDE_AD_PLACEMENT = "rewardedVideo"
+    static let DEV_VIDE_AD_PLACEMENT = "rewardedVideo"
     
 //    static let UNITY_BANNER_PALCEMENT: String = "Banner_Ads"
 //    static let devBanner: String = "BannerView"
