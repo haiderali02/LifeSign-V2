@@ -149,7 +149,13 @@ struct Constants {
 
     static let LIVE_APP_ID = "3980122"
     static let DEV_APP_ID = "3980122"
+    
+    #if DEBUG
     static let IS_DEV_MODE: Bool = true
+    #else
+    static let IS_DEV_MODE: Bool = false
+    #endif
+    
     
     
 //    static let LIVE_VIDE_AD_PLACEMENT = "video"

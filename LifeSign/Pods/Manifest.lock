@@ -98,7 +98,7 @@ PODS:
     - InputBarAccessoryView/Core (= 4.3.3)
   - InputBarAccessoryView/Core (4.3.3)
   - IQKeyboardManagerSwift (6.5.6)
-  - Kingfisher (6.1.1)
+  - Kingfisher (7.1.2)
   - LanguageManager-iOS (1.2.3)
   - Lightbox (2.4.2):
     - Imaginary (~> 4.3.1)
@@ -793,7 +793,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - ImageViewer.swift (~> 3.0)
   - IQKeyboardManagerSwift
-  - Kingfisher (~> 6.0)
+  - Kingfisher (~> 7.0)
   - LanguageManager-iOS
   - Lightbox
   - MaterialComponents
@@ -839,7 +839,6 @@ SPEC REPOS:
     - Imaginary
     - InputBarAccessoryView
     - IQKeyboardManagerSwift
-    - Kingfisher
     - LanguageManager-iOS
     - Lightbox
     - MarqueeLabel
@@ -873,6 +872,7 @@ SPEC REPOS:
     - YPImagePicker
   trunk:
     - Charts
+    - Kingfisher
 
 SPEC CHECKSUMS:
   AdvancedPageControl: df5912b03c7b78a7719d4f479b79f7eb3a2966bb
@@ -899,7 +899,7 @@ SPEC CHECKSUMS:
   Imaginary: 18c5bba364229eef383b925199db442e71d175e1
   InputBarAccessoryView: 8e7fc09e9cba75e0fee5da13450e15c194806f69
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   LanguageManager-iOS: 020a6849c97949683926773fd5b82baceaa142db
   Lightbox: 8837c35c1150fa0410d94296e369b432d37f18c7
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
@@ -932,6 +932,6 @@ SPEC CHECKSUMS:
   TimeZonePicker: 7f3e60375dc3754a44f4a417f01e5c707b2b72b4
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: abc2ade83037cd5f05c68c29a990b839eadda94f
+PODFILE CHECKSUM: 619f61fe9f38be586e5e366dcc8c36ad4090d755
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

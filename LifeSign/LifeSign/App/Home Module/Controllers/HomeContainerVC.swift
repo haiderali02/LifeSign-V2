@@ -158,7 +158,7 @@ class HomeContainerVC: LifeSignBaseVC {
     func implementUnityAds() {
         UnityAds.initialize(Constants.DEV_APP_ID, testMode: Constants.IS_DEV_MODE)
         UnityAds.add(self)
-    }g
+    }
     
     func observesChanges() {
         NotificationCenter.default.addObserver(self, selector: #selector(setupUI), name: .userUpdated, object: nil)
